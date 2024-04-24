@@ -11,6 +11,75 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `AudioBufferSourceOptions`*"]
     pub type AudioBufferSourceOptions;
 }
+#[doc = "The trait to access properties on the `AudioBufferSourceOptions` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `AudioBufferSourceOptions`*"]
+pub trait AudioBufferSourceOptionsGetters {
+    #[cfg(feature = "AudioBuffer")]
+    #[doc = "Get the `buffer` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `AudioBuffer`, `AudioBufferSourceOptions`*"]
+    fn buffer(&self) -> Option<&AudioBuffer>;
+    #[doc = "Get the `detune` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `AudioBufferSourceOptions`*"]
+    fn detune(&self) -> f32;
+    #[doc = "Get the `loop` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `AudioBufferSourceOptions`*"]
+    fn loop_(&self) -> bool;
+    #[doc = "Get the `loopEnd` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `AudioBufferSourceOptions`*"]
+    fn loop_end(&self) -> f64;
+    #[doc = "Get the `loopStart` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `AudioBufferSourceOptions`*"]
+    fn loop_start(&self) -> f64;
+    #[doc = "Get the `playbackRate` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `AudioBufferSourceOptions`*"]
+    fn playback_rate(&self) -> f32;
+}
+impl AudioBufferSourceOptionsGetters for AudioBufferSourceOptions {
+    #[cfg(feature = "AudioBuffer")]
+    fn buffer(&self) -> Option<&AudioBuffer> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("buffer"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn detune(&self) -> f32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("detune"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn loop_(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("loop"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn loop_end(&self) -> f64 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("loopEnd"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn loop_start(&self) -> f64 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("loopStart"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn playback_rate(&self) -> f32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("playbackRate"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl AudioBufferSourceOptions {
     #[doc = "Construct a new `AudioBufferSourceOptions`."]
     #[doc = ""]

@@ -11,6 +11,35 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `BlobPropertyBag`*"]
     pub type BlobPropertyBag;
 }
+#[doc = "The trait to access properties on the `BlobPropertyBag` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `BlobPropertyBag`*"]
+pub trait BlobPropertyBagGetters {
+    #[cfg(feature = "EndingTypes")]
+    #[doc = "Get the `endings` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `BlobPropertyBag`, `EndingTypes`*"]
+    fn endings(&self) -> EndingTypes;
+    #[doc = "Get the `type` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `BlobPropertyBag`*"]
+    fn type_(&self) -> &str;
+}
+impl BlobPropertyBagGetters for BlobPropertyBag {
+    #[cfg(feature = "EndingTypes")]
+    fn endings(&self) -> EndingTypes {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("endings"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn type_(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("type"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl BlobPropertyBag {
     #[doc = "Construct a new `BlobPropertyBag`."]
     #[doc = ""]

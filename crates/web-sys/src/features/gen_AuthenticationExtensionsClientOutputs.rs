@@ -11,6 +11,23 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `AuthenticationExtensionsClientOutputs`*"]
     pub type AuthenticationExtensionsClientOutputs;
 }
+#[doc = "The trait to access properties on the `AuthenticationExtensionsClientOutputs` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `AuthenticationExtensionsClientOutputs`*"]
+pub trait AuthenticationExtensionsClientOutputsGetters {
+    #[doc = "Get the `appid` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `AuthenticationExtensionsClientOutputs`*"]
+    fn appid(&self) -> bool;
+}
+impl AuthenticationExtensionsClientOutputsGetters for AuthenticationExtensionsClientOutputs {
+    fn appid(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("appid"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl AuthenticationExtensionsClientOutputs {
     #[doc = "Construct a new `AuthenticationExtensionsClientOutputs`."]
     #[doc = ""]

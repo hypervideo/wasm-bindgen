@@ -11,6 +11,43 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `RtcOfferOptions`*"]
     pub type RtcOfferOptions;
 }
+#[doc = "The trait to access properties on the `RtcOfferOptions` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `RtcOfferOptions`*"]
+pub trait RtcOfferOptionsGetters {
+    #[doc = "Get the `iceRestart` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcOfferOptions`*"]
+    fn ice_restart(&self) -> bool;
+    #[doc = "Get the `offerToReceiveAudio` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcOfferOptions`*"]
+    fn offer_to_receive_audio(&self) -> bool;
+    #[doc = "Get the `offerToReceiveVideo` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcOfferOptions`*"]
+    fn offer_to_receive_video(&self) -> bool;
+}
+impl RtcOfferOptionsGetters for RtcOfferOptions {
+    fn ice_restart(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("iceRestart"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn offer_to_receive_audio(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("offerToReceiveAudio"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn offer_to_receive_video(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("offerToReceiveVideo"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl RtcOfferOptions {
     #[doc = "Construct a new `RtcOfferOptions`."]
     #[doc = ""]

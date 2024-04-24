@@ -11,6 +11,65 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `RtcIceServer`*"]
     pub type RtcIceServer;
 }
+#[doc = "The trait to access properties on the `RtcIceServer` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `RtcIceServer`*"]
+pub trait RtcIceServerGetters {
+    #[doc = "Get the `credential` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcIceServer`*"]
+    fn credential(&self) -> &str;
+    #[cfg(feature = "RtcIceCredentialType")]
+    #[doc = "Get the `credentialType` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcIceCredentialType`, `RtcIceServer`*"]
+    fn credential_type(&self) -> RtcIceCredentialType;
+    #[doc = "Get the `url` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcIceServer`*"]
+    fn url(&self) -> &str;
+    #[doc = "Get the `urls` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcIceServer`*"]
+    fn urls(&self) -> &::wasm_bindgen::JsValue;
+    #[doc = "Get the `username` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcIceServer`*"]
+    fn username(&self) -> &str;
+}
+impl RtcIceServerGetters for RtcIceServer {
+    fn credential(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("credential"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "RtcIceCredentialType")]
+    fn credential_type(&self) -> RtcIceCredentialType {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("credentialType"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn url(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("url"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn urls(&self) -> &::wasm_bindgen::JsValue {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("urls"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn username(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("username"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl RtcIceServer {
     #[doc = "Construct a new `RtcIceServer`."]
     #[doc = ""]

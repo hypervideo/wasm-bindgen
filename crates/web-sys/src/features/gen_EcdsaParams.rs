@@ -11,6 +11,33 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `EcdsaParams`*"]
     pub type EcdsaParams;
 }
+#[doc = "The trait to access properties on the `EcdsaParams` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `EcdsaParams`*"]
+pub trait EcdsaParamsGetters {
+    #[doc = "Get the `name` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `EcdsaParams`*"]
+    fn name(&self) -> &str;
+    #[doc = "Get the `hash` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `EcdsaParams`*"]
+    fn hash(&self) -> &::wasm_bindgen::JsValue;
+}
+impl EcdsaParamsGetters for EcdsaParams {
+    fn name(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("name"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn hash(&self) -> &::wasm_bindgen::JsValue {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("hash"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl EcdsaParams {
     #[doc = "Construct a new `EcdsaParams`."]
     #[doc = ""]

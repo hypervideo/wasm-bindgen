@@ -11,6 +11,33 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `RtcIdentityProviderDetails`*"]
     pub type RtcIdentityProviderDetails;
 }
+#[doc = "The trait to access properties on the `RtcIdentityProviderDetails` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `RtcIdentityProviderDetails`*"]
+pub trait RtcIdentityProviderDetailsGetters {
+    #[doc = "Get the `domain` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcIdentityProviderDetails`*"]
+    fn domain(&self) -> &str;
+    #[doc = "Get the `protocol` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcIdentityProviderDetails`*"]
+    fn protocol(&self) -> &str;
+}
+impl RtcIdentityProviderDetailsGetters for RtcIdentityProviderDetails {
+    fn domain(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("domain"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn protocol(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("protocol"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl RtcIdentityProviderDetails {
     #[doc = "Construct a new `RtcIdentityProviderDetails`."]
     #[doc = ""]

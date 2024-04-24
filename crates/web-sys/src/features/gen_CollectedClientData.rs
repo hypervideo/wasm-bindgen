@@ -11,6 +11,75 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `CollectedClientData`*"]
     pub type CollectedClientData;
 }
+#[doc = "The trait to access properties on the `CollectedClientData` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `CollectedClientData`*"]
+pub trait CollectedClientDataGetters {
+    #[doc = "Get the `challenge` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `CollectedClientData`*"]
+    fn challenge(&self) -> &str;
+    #[cfg(feature = "AuthenticationExtensionsClientInputs")]
+    #[doc = "Get the `clientExtensions` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `AuthenticationExtensionsClientInputs`, `CollectedClientData`*"]
+    fn client_extensions(&self) -> &AuthenticationExtensionsClientInputs;
+    #[doc = "Get the `hashAlgorithm` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `CollectedClientData`*"]
+    fn hash_algorithm(&self) -> &str;
+    #[doc = "Get the `origin` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `CollectedClientData`*"]
+    fn origin(&self) -> &str;
+    #[doc = "Get the `tokenBindingId` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `CollectedClientData`*"]
+    fn token_binding_id(&self) -> &str;
+    #[doc = "Get the `type` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `CollectedClientData`*"]
+    fn type_(&self) -> &str;
+}
+impl CollectedClientDataGetters for CollectedClientData {
+    fn challenge(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("challenge"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "AuthenticationExtensionsClientInputs")]
+    fn client_extensions(&self) -> &AuthenticationExtensionsClientInputs {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("clientExtensions"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn hash_algorithm(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("hashAlgorithm"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn origin(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("origin"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn token_binding_id(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("tokenBindingId"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn type_(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("type"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl CollectedClientData {
     #[doc = "Construct a new `CollectedClientData`."]
     #[doc = ""]

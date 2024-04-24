@@ -11,6 +11,43 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `NotificationAction`*"]
     pub type NotificationAction;
 }
+#[doc = "The trait to access properties on the `NotificationAction` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `NotificationAction`*"]
+pub trait NotificationActionGetters {
+    #[doc = "Get the `action` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `NotificationAction`*"]
+    fn action(&self) -> &str;
+    #[doc = "Get the `icon` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `NotificationAction`*"]
+    fn icon(&self) -> &str;
+    #[doc = "Get the `title` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `NotificationAction`*"]
+    fn title(&self) -> &str;
+}
+impl NotificationActionGetters for NotificationAction {
+    fn action(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("action"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn icon(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("icon"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn title(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("title"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl NotificationAction {
     #[doc = "Construct a new `NotificationAction`."]
     #[doc = ""]

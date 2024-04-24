@@ -16,6 +16,109 @@ extern "C" {
     pub type VideoFrameInit;
 }
 #[cfg(web_sys_unstable_apis)]
+#[doc = "The trait to access properties on the `VideoFrameInit` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `VideoFrameInit`*"]
+pub trait VideoFrameInitGetters {
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "AlphaOption")]
+    #[doc = "Get the `alpha` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `AlphaOption`, `VideoFrameInit`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn alpha(&self) -> AlphaOption;
+    #[cfg(web_sys_unstable_apis)]
+    #[doc = "Get the `displayHeight` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `VideoFrameInit`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn display_height(&self) -> u32;
+    #[cfg(web_sys_unstable_apis)]
+    #[doc = "Get the `displayWidth` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `VideoFrameInit`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn display_width(&self) -> u32;
+    #[cfg(web_sys_unstable_apis)]
+    #[doc = "Get the `duration` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `VideoFrameInit`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn duration(&self) -> f64;
+    #[cfg(web_sys_unstable_apis)]
+    #[doc = "Get the `timestamp` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `VideoFrameInit`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn timestamp(&self) -> f64;
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "DomRectInit")]
+    #[doc = "Get the `visibleRect` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DomRectInit`, `VideoFrameInit`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn visible_rect(&self) -> &DomRectInit;
+}
+#[cfg(web_sys_unstable_apis)]
+impl VideoFrameInitGetters for VideoFrameInit {
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "AlphaOption")]
+    fn alpha(&self) -> AlphaOption {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("alpha"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(web_sys_unstable_apis)]
+    fn display_height(&self) -> u32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("displayHeight"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(web_sys_unstable_apis)]
+    fn display_width(&self) -> u32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("displayWidth"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(web_sys_unstable_apis)]
+    fn duration(&self) -> f64 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("duration"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(web_sys_unstable_apis)]
+    fn timestamp(&self) -> f64 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("timestamp"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "DomRectInit")]
+    fn visible_rect(&self) -> &DomRectInit {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("visibleRect"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
+#[cfg(web_sys_unstable_apis)]
 impl VideoFrameInit {
     #[doc = "Construct a new `VideoFrameInit`."]
     #[doc = ""]

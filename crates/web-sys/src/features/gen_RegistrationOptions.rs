@@ -11,6 +11,45 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `RegistrationOptions`*"]
     pub type RegistrationOptions;
 }
+#[doc = "The trait to access properties on the `RegistrationOptions` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `RegistrationOptions`*"]
+pub trait RegistrationOptionsGetters {
+    #[doc = "Get the `scope` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RegistrationOptions`*"]
+    fn scope(&self) -> &str;
+    #[doc = "Get the `type` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RegistrationOptions`*"]
+    fn type_(&self) -> &str;
+    #[cfg(feature = "ServiceWorkerUpdateViaCache")]
+    #[doc = "Get the `updateViaCache` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RegistrationOptions`, `ServiceWorkerUpdateViaCache`*"]
+    fn update_via_cache(&self) -> ServiceWorkerUpdateViaCache;
+}
+impl RegistrationOptionsGetters for RegistrationOptions {
+    fn scope(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("scope"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn type_(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("type"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "ServiceWorkerUpdateViaCache")]
+    fn update_via_cache(&self) -> ServiceWorkerUpdateViaCache {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("updateViaCache"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl RegistrationOptions {
     #[doc = "Construct a new `RegistrationOptions`."]
     #[doc = ""]

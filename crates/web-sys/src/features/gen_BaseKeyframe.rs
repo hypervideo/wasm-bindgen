@@ -11,6 +11,58 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `BaseKeyframe`*"]
     pub type BaseKeyframe;
 }
+#[doc = "The trait to access properties on the `BaseKeyframe` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `BaseKeyframe`*"]
+pub trait BaseKeyframeGetters {
+    #[cfg(feature = "CompositeOperation")]
+    #[doc = "Get the `composite` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `BaseKeyframe`, `CompositeOperation`*"]
+    fn composite(&self) -> Option<CompositeOperation>;
+    #[doc = "Get the `easing` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `BaseKeyframe`*"]
+    fn easing(&self) -> &str;
+    #[doc = "Get the `offset` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `BaseKeyframe`*"]
+    fn offset(&self) -> Option<f64>;
+    #[doc = "Get the `simulateComputeValuesFailure` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `BaseKeyframe`*"]
+    fn simulate_compute_values_failure(&self) -> bool;
+}
+impl BaseKeyframeGetters for BaseKeyframe {
+    #[cfg(feature = "CompositeOperation")]
+    fn composite(&self) -> Option<CompositeOperation> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("composite"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn easing(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("easing"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn offset(&self) -> Option<f64> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("offset"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn simulate_compute_values_failure(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(
+            self.as_ref(),
+            &JsValue::from("simulateComputeValuesFailure"),
+        );
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl BaseKeyframe {
     #[doc = "Construct a new `BaseKeyframe`."]
     #[doc = ""]

@@ -11,6 +11,55 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `GamepadEventInit`*"]
     pub type GamepadEventInit;
 }
+#[doc = "The trait to access properties on the `GamepadEventInit` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `GamepadEventInit`*"]
+pub trait GamepadEventInitGetters {
+    #[doc = "Get the `bubbles` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `GamepadEventInit`*"]
+    fn bubbles(&self) -> bool;
+    #[doc = "Get the `cancelable` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `GamepadEventInit`*"]
+    fn cancelable(&self) -> bool;
+    #[doc = "Get the `composed` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `GamepadEventInit`*"]
+    fn composed(&self) -> bool;
+    #[cfg(feature = "Gamepad")]
+    #[doc = "Get the `gamepad` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `Gamepad`, `GamepadEventInit`*"]
+    fn gamepad(&self) -> Option<&Gamepad>;
+}
+impl GamepadEventInitGetters for GamepadEventInit {
+    fn bubbles(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("bubbles"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn cancelable(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("cancelable"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn composed(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("composed"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "Gamepad")]
+    fn gamepad(&self) -> Option<&Gamepad> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("gamepad"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl GamepadEventInit {
     #[doc = "Construct a new `GamepadEventInit`."]
     #[doc = ""]

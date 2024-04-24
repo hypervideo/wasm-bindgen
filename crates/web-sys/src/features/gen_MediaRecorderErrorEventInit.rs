@@ -11,6 +11,55 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `MediaRecorderErrorEventInit`*"]
     pub type MediaRecorderErrorEventInit;
 }
+#[doc = "The trait to access properties on the `MediaRecorderErrorEventInit` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `MediaRecorderErrorEventInit`*"]
+pub trait MediaRecorderErrorEventInitGetters {
+    #[doc = "Get the `bubbles` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `MediaRecorderErrorEventInit`*"]
+    fn bubbles(&self) -> bool;
+    #[doc = "Get the `cancelable` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `MediaRecorderErrorEventInit`*"]
+    fn cancelable(&self) -> bool;
+    #[doc = "Get the `composed` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `MediaRecorderErrorEventInit`*"]
+    fn composed(&self) -> bool;
+    #[cfg(feature = "DomException")]
+    #[doc = "Get the `error` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DomException`, `MediaRecorderErrorEventInit`*"]
+    fn error(&self) -> &DomException;
+}
+impl MediaRecorderErrorEventInitGetters for MediaRecorderErrorEventInit {
+    fn bubbles(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("bubbles"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn cancelable(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("cancelable"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn composed(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("composed"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "DomException")]
+    fn error(&self) -> &DomException {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("error"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl MediaRecorderErrorEventInit {
     #[cfg(feature = "DomException")]
     #[doc = "Construct a new `MediaRecorderErrorEventInit`."]

@@ -1,5 +1,6 @@
 use proc_macro2::Literal;
 use proc_macro2::TokenStream;
+use quote::format_ident;
 use quote::quote;
 use std::collections::BTreeSet;
 use syn::{Ident, Type};
@@ -630,7 +631,77 @@ pub struct DictionaryField {
 }
 
 impl DictionaryField {
-    fn generate_rust(&self, options: &Options, parent_name: String) -> TokenStream {
+    fn generate_getter_signature(&self, options: &Options, parent_name: String) -> TokenStream {
+        let DictionaryField {
+            name,
+            js_name,
+            ty,
+            required: _,
+            unstable,
+        } = self;
+
+        let unstable_attr = maybe_unstable_attr(*unstable);
+        let unstable_docs = maybe_unstable_docs(*unstable);
+
+        let mut features = BTreeSet::new();
+
+        add_features(&mut features, ty);
+
+        features.remove(&parent_name);
+
+        let cfg_features = get_cfg_features(options, &features);
+
+        features.insert(parent_name);
+
+        let doc_comment = comment(
+            format!("Get the `{}` field of this object.", js_name),
+            &required_doc_string(options, &features),
+        );
+
+        quote! {
+            #unstable_attr
+            #cfg_features
+            #doc_comment
+            #unstable_docs
+            fn #name(&self) -> #ty;
+        }
+    }
+
+    fn generate_getter_impl(&self, options: &Options, parent_name: String) -> TokenStream {
+        let DictionaryField {
+            name,
+            js_name,
+            ty,
+            required: _,
+            unstable,
+        } = self;
+
+        let unstable_attr = maybe_unstable_attr(*unstable);
+
+        let mut features = BTreeSet::new();
+
+        add_features(&mut features, ty);
+
+        features.remove(&parent_name);
+
+        let cfg_features = get_cfg_features(options, &features);
+
+        quote! {
+            #unstable_attr
+            #cfg_features
+            fn #name(&self) -> #ty {
+                use wasm_bindgen::JsValue;
+                let r = ::js_sys::Reflect::get(
+                    self.as_ref(),
+                    &JsValue::from(#js_name),
+                );
+                let r = r.expect("getting properties should never fail on our dictionary objects");
+                ::wasm_bindgen::JsCast::unchecked_into(r)
+            }
+        }
+    }
+
+    fn generate_setter_impl(&self, options: &Options, parent_name: String) -> TokenStream {
         let DictionaryField {
             name,
             js_name,
@@ -722,14 +793,32 @@ impl Dictionary {
             format!("The `{}` dictionary.", name),
             &get_features_doc(options, name.to_string()),
         );
+
+        let getter_trait_doc_comment = comment(
+            format!(
+                "The trait to access properties on the `{}` dictionary.",
+                name
+            ),
+            &get_features_doc(options, name.to_string()),
+        );
+        let getter_trait_name = format_ident!("{}Getters", name);
+        let getter_trait_fields = fields
+            .iter()
+            .map(|field| field.generate_getter_signature(options, name.to_string()))
+            .collect::<Vec<_>>();
+        let getter_trait_impl_fields = fields
+            .iter()
+            .map(|field| field.generate_getter_impl(options, name.to_string()))
+            .collect::<Vec<_>>();
+
         let ctor_doc_comment = comment(
             format!("Construct a new `{}`.", name),
             &required_doc_string(options, &required_features),
         );
 
-        let fields = fields
+        let setter_fields = fields
             .iter()
-            .map(|field| field.generate_rust(options, name.to_string()))
+            .map(|field| field.generate_setter_impl(options, name.to_string()))
             .collect::<Vec<_>>();
 
         let mut base_stream = quote! {
@@ -749,6 +838,17 @@ impl Dictionary {
             }
 
             #unstable_attr
+            #getter_trait_doc_comment
+            pub trait #getter_trait_name {
+                #(#getter_trait_fields)*
+            }
+
+            #unstable_attr
+            impl #getter_trait_name for #name {
+                #(#getter_trait_impl_fields)*
+            }
+
+            #unstable_attr
             impl #name {
                 #cfg_features
                 #ctor_doc_comment
@@ -760,7 +860,7 @@ impl Dictionary {
                     ret
                 }
 
-                #(#fields)*
+                #(#setter_fields)*
             }
         };
 

@@ -11,6 +11,53 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `DomPointInit`*"]
     pub type DomPointInit;
 }
+#[doc = "The trait to access properties on the `DomPointInit` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `DomPointInit`*"]
+pub trait DomPointInitGetters {
+    #[doc = "Get the `w` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DomPointInit`*"]
+    fn w(&self) -> f64;
+    #[doc = "Get the `x` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DomPointInit`*"]
+    fn x(&self) -> f64;
+    #[doc = "Get the `y` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DomPointInit`*"]
+    fn y(&self) -> f64;
+    #[doc = "Get the `z` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DomPointInit`*"]
+    fn z(&self) -> f64;
+}
+impl DomPointInitGetters for DomPointInit {
+    fn w(&self) -> f64 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("w"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn x(&self) -> f64 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("x"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn y(&self) -> f64 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("y"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn z(&self) -> f64 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("z"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl DomPointInit {
     #[doc = "Construct a new `DomPointInit`."]
     #[doc = ""]

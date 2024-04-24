@@ -11,6 +11,43 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `RcwnPerfStats`*"]
     pub type RcwnPerfStats;
 }
+#[doc = "The trait to access properties on the `RcwnPerfStats` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `RcwnPerfStats`*"]
+pub trait RcwnPerfStatsGetters {
+    #[doc = "Get the `avgLong` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RcwnPerfStats`*"]
+    fn avg_long(&self) -> u32;
+    #[doc = "Get the `avgShort` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RcwnPerfStats`*"]
+    fn avg_short(&self) -> u32;
+    #[doc = "Get the `stddevLong` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RcwnPerfStats`*"]
+    fn stddev_long(&self) -> u32;
+}
+impl RcwnPerfStatsGetters for RcwnPerfStats {
+    fn avg_long(&self) -> u32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("avgLong"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn avg_short(&self) -> u32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("avgShort"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn stddev_long(&self) -> u32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("stddevLong"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl RcwnPerfStats {
     #[doc = "Construct a new `RcwnPerfStats`."]
     #[doc = ""]

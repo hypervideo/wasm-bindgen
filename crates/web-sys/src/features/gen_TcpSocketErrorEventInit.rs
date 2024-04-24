@@ -11,6 +11,63 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `TcpSocketErrorEventInit`*"]
     pub type TcpSocketErrorEventInit;
 }
+#[doc = "The trait to access properties on the `TcpSocketErrorEventInit` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `TcpSocketErrorEventInit`*"]
+pub trait TcpSocketErrorEventInitGetters {
+    #[doc = "Get the `bubbles` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `TcpSocketErrorEventInit`*"]
+    fn bubbles(&self) -> bool;
+    #[doc = "Get the `cancelable` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `TcpSocketErrorEventInit`*"]
+    fn cancelable(&self) -> bool;
+    #[doc = "Get the `composed` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `TcpSocketErrorEventInit`*"]
+    fn composed(&self) -> bool;
+    #[doc = "Get the `message` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `TcpSocketErrorEventInit`*"]
+    fn message(&self) -> &str;
+    #[doc = "Get the `name` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `TcpSocketErrorEventInit`*"]
+    fn name(&self) -> &str;
+}
+impl TcpSocketErrorEventInitGetters for TcpSocketErrorEventInit {
+    fn bubbles(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("bubbles"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn cancelable(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("cancelable"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn composed(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("composed"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn message(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("message"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn name(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("name"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl TcpSocketErrorEventInit {
     #[doc = "Construct a new `TcpSocketErrorEventInit`."]
     #[doc = ""]

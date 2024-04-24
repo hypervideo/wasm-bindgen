@@ -11,6 +11,23 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `RsaHashedImportParams`*"]
     pub type RsaHashedImportParams;
 }
+#[doc = "The trait to access properties on the `RsaHashedImportParams` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `RsaHashedImportParams`*"]
+pub trait RsaHashedImportParamsGetters {
+    #[doc = "Get the `hash` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RsaHashedImportParams`*"]
+    fn hash(&self) -> &::wasm_bindgen::JsValue;
+}
+impl RsaHashedImportParamsGetters for RsaHashedImportParams {
+    fn hash(&self) -> &::wasm_bindgen::JsValue {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("hash"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl RsaHashedImportParams {
     #[doc = "Construct a new `RsaHashedImportParams`."]
     #[doc = ""]

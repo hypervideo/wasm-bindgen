@@ -11,6 +11,75 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `BasicCardResponse`*"]
     pub type BasicCardResponse;
 }
+#[doc = "The trait to access properties on the `BasicCardResponse` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `BasicCardResponse`*"]
+pub trait BasicCardResponseGetters {
+    #[cfg(feature = "PaymentAddress")]
+    #[doc = "Get the `billingAddress` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `BasicCardResponse`, `PaymentAddress`*"]
+    fn billing_address(&self) -> Option<&PaymentAddress>;
+    #[doc = "Get the `cardNumber` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `BasicCardResponse`*"]
+    fn card_number(&self) -> &str;
+    #[doc = "Get the `cardSecurityCode` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `BasicCardResponse`*"]
+    fn card_security_code(&self) -> &str;
+    #[doc = "Get the `cardholderName` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `BasicCardResponse`*"]
+    fn cardholder_name(&self) -> &str;
+    #[doc = "Get the `expiryMonth` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `BasicCardResponse`*"]
+    fn expiry_month(&self) -> &str;
+    #[doc = "Get the `expiryYear` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `BasicCardResponse`*"]
+    fn expiry_year(&self) -> &str;
+}
+impl BasicCardResponseGetters for BasicCardResponse {
+    #[cfg(feature = "PaymentAddress")]
+    fn billing_address(&self) -> Option<&PaymentAddress> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("billingAddress"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn card_number(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("cardNumber"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn card_security_code(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("cardSecurityCode"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn cardholder_name(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("cardholderName"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn expiry_month(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("expiryMonth"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn expiry_year(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("expiryYear"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl BasicCardResponse {
     #[doc = "Construct a new `BasicCardResponse`."]
     #[doc = ""]

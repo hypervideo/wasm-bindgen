@@ -11,6 +11,23 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `ReadableStreamIteratorOptions`*"]
     pub type ReadableStreamIteratorOptions;
 }
+#[doc = "The trait to access properties on the `ReadableStreamIteratorOptions` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `ReadableStreamIteratorOptions`*"]
+pub trait ReadableStreamIteratorOptionsGetters {
+    #[doc = "Get the `preventCancel` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ReadableStreamIteratorOptions`*"]
+    fn prevent_cancel(&self) -> bool;
+}
+impl ReadableStreamIteratorOptionsGetters for ReadableStreamIteratorOptions {
+    fn prevent_cancel(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("preventCancel"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl ReadableStreamIteratorOptions {
     #[doc = "Construct a new `ReadableStreamIteratorOptions`."]
     #[doc = ""]

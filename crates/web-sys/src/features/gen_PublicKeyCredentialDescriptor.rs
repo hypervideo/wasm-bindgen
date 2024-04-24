@@ -11,6 +11,45 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `PublicKeyCredentialDescriptor`*"]
     pub type PublicKeyCredentialDescriptor;
 }
+#[doc = "The trait to access properties on the `PublicKeyCredentialDescriptor` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `PublicKeyCredentialDescriptor`*"]
+pub trait PublicKeyCredentialDescriptorGetters {
+    #[doc = "Get the `id` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `PublicKeyCredentialDescriptor`*"]
+    fn id(&self) -> &::js_sys::Object;
+    #[doc = "Get the `transports` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `PublicKeyCredentialDescriptor`*"]
+    fn transports(&self) -> &::wasm_bindgen::JsValue;
+    #[cfg(feature = "PublicKeyCredentialType")]
+    #[doc = "Get the `type` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `PublicKeyCredentialDescriptor`, `PublicKeyCredentialType`*"]
+    fn type_(&self) -> PublicKeyCredentialType;
+}
+impl PublicKeyCredentialDescriptorGetters for PublicKeyCredentialDescriptor {
+    fn id(&self) -> &::js_sys::Object {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("id"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn transports(&self) -> &::wasm_bindgen::JsValue {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("transports"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "PublicKeyCredentialType")]
+    fn type_(&self) -> PublicKeyCredentialType {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("type"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl PublicKeyCredentialDescriptor {
     #[cfg(feature = "PublicKeyCredentialType")]
     #[doc = "Construct a new `PublicKeyCredentialDescriptor`."]

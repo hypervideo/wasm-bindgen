@@ -11,6 +11,53 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `ChromeFilePropertyBag`*"]
     pub type ChromeFilePropertyBag;
 }
+#[doc = "The trait to access properties on the `ChromeFilePropertyBag` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `ChromeFilePropertyBag`*"]
+pub trait ChromeFilePropertyBagGetters {
+    #[doc = "Get the `lastModified` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ChromeFilePropertyBag`*"]
+    fn last_modified(&self) -> f64;
+    #[doc = "Get the `type` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ChromeFilePropertyBag`*"]
+    fn type_(&self) -> &str;
+    #[doc = "Get the `existenceCheck` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ChromeFilePropertyBag`*"]
+    fn existence_check(&self) -> bool;
+    #[doc = "Get the `name` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ChromeFilePropertyBag`*"]
+    fn name(&self) -> &str;
+}
+impl ChromeFilePropertyBagGetters for ChromeFilePropertyBag {
+    fn last_modified(&self) -> f64 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("lastModified"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn type_(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("type"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn existence_check(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("existenceCheck"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn name(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("name"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl ChromeFilePropertyBag {
     #[doc = "Construct a new `ChromeFilePropertyBag`."]
     #[doc = ""]

@@ -11,6 +11,87 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `SpeechRecognitionEventInit`*"]
     pub type SpeechRecognitionEventInit;
 }
+#[doc = "The trait to access properties on the `SpeechRecognitionEventInit` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `SpeechRecognitionEventInit`*"]
+pub trait SpeechRecognitionEventInitGetters {
+    #[doc = "Get the `bubbles` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `SpeechRecognitionEventInit`*"]
+    fn bubbles(&self) -> bool;
+    #[doc = "Get the `cancelable` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `SpeechRecognitionEventInit`*"]
+    fn cancelable(&self) -> bool;
+    #[doc = "Get the `composed` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `SpeechRecognitionEventInit`*"]
+    fn composed(&self) -> bool;
+    #[cfg(feature = "Document")]
+    #[doc = "Get the `emma` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `Document`, `SpeechRecognitionEventInit`*"]
+    fn emma(&self) -> Option<&Document>;
+    #[doc = "Get the `interpretation` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `SpeechRecognitionEventInit`*"]
+    fn interpretation(&self) -> &::wasm_bindgen::JsValue;
+    #[doc = "Get the `resultIndex` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `SpeechRecognitionEventInit`*"]
+    fn result_index(&self) -> u32;
+    #[cfg(feature = "SpeechRecognitionResultList")]
+    #[doc = "Get the `results` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `SpeechRecognitionEventInit`, `SpeechRecognitionResultList`*"]
+    fn results(&self) -> Option<&SpeechRecognitionResultList>;
+}
+impl SpeechRecognitionEventInitGetters for SpeechRecognitionEventInit {
+    fn bubbles(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("bubbles"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn cancelable(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("cancelable"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn composed(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("composed"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "Document")]
+    fn emma(&self) -> Option<&Document> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("emma"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn interpretation(&self) -> &::wasm_bindgen::JsValue {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("interpretation"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn result_index(&self) -> u32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("resultIndex"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "SpeechRecognitionResultList")]
+    fn results(&self) -> Option<&SpeechRecognitionResultList> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("results"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl SpeechRecognitionEventInit {
     #[doc = "Construct a new `SpeechRecognitionEventInit`."]
     #[doc = ""]

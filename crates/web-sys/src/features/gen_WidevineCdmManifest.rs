@@ -11,6 +11,83 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `WidevineCdmManifest`*"]
     pub type WidevineCdmManifest;
 }
+#[doc = "The trait to access properties on the `WidevineCdmManifest` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `WidevineCdmManifest`*"]
+pub trait WidevineCdmManifestGetters {
+    #[doc = "Get the `description` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `WidevineCdmManifest`*"]
+    fn description(&self) -> &str;
+    #[doc = "Get the `name` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `WidevineCdmManifest`*"]
+    fn name(&self) -> &str;
+    #[doc = "Get the `version` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `WidevineCdmManifest`*"]
+    fn version(&self) -> &str;
+    #[doc = "Get the `x-cdm-codecs` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `WidevineCdmManifest`*"]
+    fn x_cdm_codecs(&self) -> &str;
+    #[doc = "Get the `x-cdm-host-versions` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `WidevineCdmManifest`*"]
+    fn x_cdm_host_versions(&self) -> &str;
+    #[doc = "Get the `x-cdm-interface-versions` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `WidevineCdmManifest`*"]
+    fn x_cdm_interface_versions(&self) -> &str;
+    #[doc = "Get the `x-cdm-module-versions` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `WidevineCdmManifest`*"]
+    fn x_cdm_module_versions(&self) -> &str;
+}
+impl WidevineCdmManifestGetters for WidevineCdmManifest {
+    fn description(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("description"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn name(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("name"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn version(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("version"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn x_cdm_codecs(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("x-cdm-codecs"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn x_cdm_host_versions(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("x-cdm-host-versions"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn x_cdm_interface_versions(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("x-cdm-interface-versions"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn x_cdm_module_versions(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("x-cdm-module-versions"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl WidevineCdmManifest {
     #[doc = "Construct a new `WidevineCdmManifest`."]
     #[doc = ""]

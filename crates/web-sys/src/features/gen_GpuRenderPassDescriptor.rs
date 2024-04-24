@@ -16,6 +16,111 @@ extern "C" {
     pub type GpuRenderPassDescriptor;
 }
 #[cfg(web_sys_unstable_apis)]
+#[doc = "The trait to access properties on the `GpuRenderPassDescriptor` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `GpuRenderPassDescriptor`*"]
+pub trait GpuRenderPassDescriptorGetters {
+    #[cfg(web_sys_unstable_apis)]
+    #[doc = "Get the `label` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `GpuRenderPassDescriptor`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn label(&self) -> &str;
+    #[cfg(web_sys_unstable_apis)]
+    #[doc = "Get the `colorAttachments` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `GpuRenderPassDescriptor`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn color_attachments(&self) -> &::wasm_bindgen::JsValue;
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "GpuRenderPassDepthStencilAttachment")]
+    #[doc = "Get the `depthStencilAttachment` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `GpuRenderPassDepthStencilAttachment`, `GpuRenderPassDescriptor`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn depth_stencil_attachment(&self) -> &GpuRenderPassDepthStencilAttachment;
+    #[cfg(web_sys_unstable_apis)]
+    #[doc = "Get the `maxDrawCount` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `GpuRenderPassDescriptor`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn max_draw_count(&self) -> f64;
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "GpuQuerySet")]
+    #[doc = "Get the `occlusionQuerySet` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `GpuQuerySet`, `GpuRenderPassDescriptor`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn occlusion_query_set(&self) -> &GpuQuerySet;
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "GpuRenderPassTimestampWrites")]
+    #[doc = "Get the `timestampWrites` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `GpuRenderPassDescriptor`, `GpuRenderPassTimestampWrites`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn timestamp_writes(&self) -> &GpuRenderPassTimestampWrites;
+}
+#[cfg(web_sys_unstable_apis)]
+impl GpuRenderPassDescriptorGetters for GpuRenderPassDescriptor {
+    #[cfg(web_sys_unstable_apis)]
+    fn label(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("label"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(web_sys_unstable_apis)]
+    fn color_attachments(&self) -> &::wasm_bindgen::JsValue {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("colorAttachments"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "GpuRenderPassDepthStencilAttachment")]
+    fn depth_stencil_attachment(&self) -> &GpuRenderPassDepthStencilAttachment {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("depthStencilAttachment"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(web_sys_unstable_apis)]
+    fn max_draw_count(&self) -> f64 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("maxDrawCount"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "GpuQuerySet")]
+    fn occlusion_query_set(&self) -> &GpuQuerySet {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("occlusionQuerySet"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "GpuRenderPassTimestampWrites")]
+    fn timestamp_writes(&self) -> &GpuRenderPassTimestampWrites {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("timestampWrites"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
+#[cfg(web_sys_unstable_apis)]
 impl GpuRenderPassDescriptor {
     #[doc = "Construct a new `GpuRenderPassDescriptor`."]
     #[doc = ""]

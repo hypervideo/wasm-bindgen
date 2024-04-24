@@ -16,6 +16,32 @@ extern "C" {
     pub type EncodedAudioChunkMetadata;
 }
 #[cfg(web_sys_unstable_apis)]
+#[doc = "The trait to access properties on the `EncodedAudioChunkMetadata` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `EncodedAudioChunkMetadata`*"]
+pub trait EncodedAudioChunkMetadataGetters {
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "AudioDecoderConfig")]
+    #[doc = "Get the `decoderConfig` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `AudioDecoderConfig`, `EncodedAudioChunkMetadata`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn decoder_config(&self) -> &AudioDecoderConfig;
+}
+#[cfg(web_sys_unstable_apis)]
+impl EncodedAudioChunkMetadataGetters for EncodedAudioChunkMetadata {
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "AudioDecoderConfig")]
+    fn decoder_config(&self) -> &AudioDecoderConfig {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("decoderConfig"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
+#[cfg(web_sys_unstable_apis)]
 impl EncodedAudioChunkMetadata {
     #[doc = "Construct a new `EncodedAudioChunkMetadata`."]
     #[doc = ""]

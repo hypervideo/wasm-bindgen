@@ -11,6 +11,43 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `HttpConnInfo`*"]
     pub type HttpConnInfo;
 }
+#[doc = "The trait to access properties on the `HttpConnInfo` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `HttpConnInfo`*"]
+pub trait HttpConnInfoGetters {
+    #[doc = "Get the `protocolVersion` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `HttpConnInfo`*"]
+    fn protocol_version(&self) -> &str;
+    #[doc = "Get the `rtt` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `HttpConnInfo`*"]
+    fn rtt(&self) -> u32;
+    #[doc = "Get the `ttl` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `HttpConnInfo`*"]
+    fn ttl(&self) -> u32;
+}
+impl HttpConnInfoGetters for HttpConnInfo {
+    fn protocol_version(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("protocolVersion"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn rtt(&self) -> u32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("rtt"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn ttl(&self) -> u32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("ttl"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl HttpConnInfo {
     #[doc = "Construct a new `HttpConnInfo`."]
     #[doc = ""]

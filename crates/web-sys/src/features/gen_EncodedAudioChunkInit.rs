@@ -16,6 +16,77 @@ extern "C" {
     pub type EncodedAudioChunkInit;
 }
 #[cfg(web_sys_unstable_apis)]
+#[doc = "The trait to access properties on the `EncodedAudioChunkInit` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `EncodedAudioChunkInit`*"]
+pub trait EncodedAudioChunkInitGetters {
+    #[cfg(web_sys_unstable_apis)]
+    #[doc = "Get the `data` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `EncodedAudioChunkInit`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn data(&self) -> &::js_sys::Object;
+    #[cfg(web_sys_unstable_apis)]
+    #[doc = "Get the `duration` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `EncodedAudioChunkInit`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn duration(&self) -> f64;
+    #[cfg(web_sys_unstable_apis)]
+    #[doc = "Get the `timestamp` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `EncodedAudioChunkInit`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn timestamp(&self) -> f64;
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "EncodedAudioChunkType")]
+    #[doc = "Get the `type` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `EncodedAudioChunkInit`, `EncodedAudioChunkType`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn type_(&self) -> EncodedAudioChunkType;
+}
+#[cfg(web_sys_unstable_apis)]
+impl EncodedAudioChunkInitGetters for EncodedAudioChunkInit {
+    #[cfg(web_sys_unstable_apis)]
+    fn data(&self) -> &::js_sys::Object {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("data"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(web_sys_unstable_apis)]
+    fn duration(&self) -> f64 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("duration"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(web_sys_unstable_apis)]
+    fn timestamp(&self) -> f64 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("timestamp"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "EncodedAudioChunkType")]
+    fn type_(&self) -> EncodedAudioChunkType {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("type"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
+#[cfg(web_sys_unstable_apis)]
 impl EncodedAudioChunkInit {
     #[cfg(feature = "EncodedAudioChunkType")]
     #[doc = "Construct a new `EncodedAudioChunkInit`."]

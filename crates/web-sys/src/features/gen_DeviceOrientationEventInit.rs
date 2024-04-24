@@ -11,6 +11,83 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `DeviceOrientationEventInit`*"]
     pub type DeviceOrientationEventInit;
 }
+#[doc = "The trait to access properties on the `DeviceOrientationEventInit` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `DeviceOrientationEventInit`*"]
+pub trait DeviceOrientationEventInitGetters {
+    #[doc = "Get the `bubbles` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DeviceOrientationEventInit`*"]
+    fn bubbles(&self) -> bool;
+    #[doc = "Get the `cancelable` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DeviceOrientationEventInit`*"]
+    fn cancelable(&self) -> bool;
+    #[doc = "Get the `composed` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DeviceOrientationEventInit`*"]
+    fn composed(&self) -> bool;
+    #[doc = "Get the `absolute` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DeviceOrientationEventInit`*"]
+    fn absolute(&self) -> bool;
+    #[doc = "Get the `alpha` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DeviceOrientationEventInit`*"]
+    fn alpha(&self) -> Option<f64>;
+    #[doc = "Get the `beta` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DeviceOrientationEventInit`*"]
+    fn beta(&self) -> Option<f64>;
+    #[doc = "Get the `gamma` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DeviceOrientationEventInit`*"]
+    fn gamma(&self) -> Option<f64>;
+}
+impl DeviceOrientationEventInitGetters for DeviceOrientationEventInit {
+    fn bubbles(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("bubbles"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn cancelable(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("cancelable"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn composed(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("composed"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn absolute(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("absolute"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn alpha(&self) -> Option<f64> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("alpha"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn beta(&self) -> Option<f64> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("beta"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn gamma(&self) -> Option<f64> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("gamma"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl DeviceOrientationEventInit {
     #[doc = "Construct a new `DeviceOrientationEventInit`."]
     #[doc = ""]

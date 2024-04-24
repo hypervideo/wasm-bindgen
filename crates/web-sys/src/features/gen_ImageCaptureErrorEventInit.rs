@@ -11,6 +11,55 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `ImageCaptureErrorEventInit`*"]
     pub type ImageCaptureErrorEventInit;
 }
+#[doc = "The trait to access properties on the `ImageCaptureErrorEventInit` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `ImageCaptureErrorEventInit`*"]
+pub trait ImageCaptureErrorEventInitGetters {
+    #[doc = "Get the `bubbles` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ImageCaptureErrorEventInit`*"]
+    fn bubbles(&self) -> bool;
+    #[doc = "Get the `cancelable` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ImageCaptureErrorEventInit`*"]
+    fn cancelable(&self) -> bool;
+    #[doc = "Get the `composed` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ImageCaptureErrorEventInit`*"]
+    fn composed(&self) -> bool;
+    #[cfg(feature = "ImageCaptureError")]
+    #[doc = "Get the `imageCaptureError` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ImageCaptureError`, `ImageCaptureErrorEventInit`*"]
+    fn image_capture_error(&self) -> Option<&ImageCaptureError>;
+}
+impl ImageCaptureErrorEventInitGetters for ImageCaptureErrorEventInit {
+    fn bubbles(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("bubbles"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn cancelable(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("cancelable"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn composed(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("composed"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "ImageCaptureError")]
+    fn image_capture_error(&self) -> Option<&ImageCaptureError> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("imageCaptureError"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl ImageCaptureErrorEventInit {
     #[doc = "Construct a new `ImageCaptureErrorEventInit`."]
     #[doc = ""]

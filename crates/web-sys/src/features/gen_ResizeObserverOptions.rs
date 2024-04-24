@@ -11,6 +11,25 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `ResizeObserverOptions`*"]
     pub type ResizeObserverOptions;
 }
+#[doc = "The trait to access properties on the `ResizeObserverOptions` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `ResizeObserverOptions`*"]
+pub trait ResizeObserverOptionsGetters {
+    #[cfg(feature = "ResizeObserverBoxOptions")]
+    #[doc = "Get the `box` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ResizeObserverBoxOptions`, `ResizeObserverOptions`*"]
+    fn box_(&self) -> ResizeObserverBoxOptions;
+}
+impl ResizeObserverOptionsGetters for ResizeObserverOptions {
+    #[cfg(feature = "ResizeObserverBoxOptions")]
+    fn box_(&self) -> ResizeObserverBoxOptions {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("box"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl ResizeObserverOptions {
     #[doc = "Construct a new `ResizeObserverOptions`."]
     #[doc = ""]

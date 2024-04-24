@@ -11,6 +11,33 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `RtcRtcpParameters`*"]
     pub type RtcRtcpParameters;
 }
+#[doc = "The trait to access properties on the `RtcRtcpParameters` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `RtcRtcpParameters`*"]
+pub trait RtcRtcpParametersGetters {
+    #[doc = "Get the `cname` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcRtcpParameters`*"]
+    fn cname(&self) -> &str;
+    #[doc = "Get the `reducedSize` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcRtcpParameters`*"]
+    fn reduced_size(&self) -> bool;
+}
+impl RtcRtcpParametersGetters for RtcRtcpParameters {
+    fn cname(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("cname"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn reduced_size(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("reducedSize"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl RtcRtcpParameters {
     #[doc = "Construct a new `RtcRtcpParameters`."]
     #[doc = ""]

@@ -11,6 +11,33 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `AesDerivedKeyParams`*"]
     pub type AesDerivedKeyParams;
 }
+#[doc = "The trait to access properties on the `AesDerivedKeyParams` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `AesDerivedKeyParams`*"]
+pub trait AesDerivedKeyParamsGetters {
+    #[doc = "Get the `name` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `AesDerivedKeyParams`*"]
+    fn name(&self) -> &str;
+    #[doc = "Get the `length` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `AesDerivedKeyParams`*"]
+    fn length(&self) -> u32;
+}
+impl AesDerivedKeyParamsGetters for AesDerivedKeyParams {
+    fn name(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("name"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn length(&self) -> u32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("length"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl AesDerivedKeyParams {
     #[doc = "Construct a new `AesDerivedKeyParams`."]
     #[doc = ""]

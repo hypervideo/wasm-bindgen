@@ -11,6 +11,75 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `GamepadAxisMoveEventInit`*"]
     pub type GamepadAxisMoveEventInit;
 }
+#[doc = "The trait to access properties on the `GamepadAxisMoveEventInit` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `GamepadAxisMoveEventInit`*"]
+pub trait GamepadAxisMoveEventInitGetters {
+    #[doc = "Get the `bubbles` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `GamepadAxisMoveEventInit`*"]
+    fn bubbles(&self) -> bool;
+    #[doc = "Get the `cancelable` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `GamepadAxisMoveEventInit`*"]
+    fn cancelable(&self) -> bool;
+    #[doc = "Get the `composed` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `GamepadAxisMoveEventInit`*"]
+    fn composed(&self) -> bool;
+    #[cfg(feature = "Gamepad")]
+    #[doc = "Get the `gamepad` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `Gamepad`, `GamepadAxisMoveEventInit`*"]
+    fn gamepad(&self) -> Option<&Gamepad>;
+    #[doc = "Get the `axis` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `GamepadAxisMoveEventInit`*"]
+    fn axis(&self) -> u32;
+    #[doc = "Get the `value` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `GamepadAxisMoveEventInit`*"]
+    fn value(&self) -> f64;
+}
+impl GamepadAxisMoveEventInitGetters for GamepadAxisMoveEventInit {
+    fn bubbles(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("bubbles"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn cancelable(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("cancelable"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn composed(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("composed"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "Gamepad")]
+    fn gamepad(&self) -> Option<&Gamepad> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("gamepad"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn axis(&self) -> u32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("axis"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn value(&self) -> f64 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("value"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl GamepadAxisMoveEventInit {
     #[doc = "Construct a new `GamepadAxisMoveEventInit`."]
     #[doc = ""]

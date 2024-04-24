@@ -11,6 +11,61 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `DomQuadJson`*"]
     pub type DomQuadJson;
 }
+#[doc = "The trait to access properties on the `DomQuadJson` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `DomQuadJson`*"]
+pub trait DomQuadJsonGetters {
+    #[cfg(feature = "DomPoint")]
+    #[doc = "Get the `p1` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DomPoint`, `DomQuadJson`*"]
+    fn p1(&self) -> &DomPoint;
+    #[cfg(feature = "DomPoint")]
+    #[doc = "Get the `p2` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DomPoint`, `DomQuadJson`*"]
+    fn p2(&self) -> &DomPoint;
+    #[cfg(feature = "DomPoint")]
+    #[doc = "Get the `p3` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DomPoint`, `DomQuadJson`*"]
+    fn p3(&self) -> &DomPoint;
+    #[cfg(feature = "DomPoint")]
+    #[doc = "Get the `p4` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DomPoint`, `DomQuadJson`*"]
+    fn p4(&self) -> &DomPoint;
+}
+impl DomQuadJsonGetters for DomQuadJson {
+    #[cfg(feature = "DomPoint")]
+    fn p1(&self) -> &DomPoint {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("p1"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "DomPoint")]
+    fn p2(&self) -> &DomPoint {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("p2"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "DomPoint")]
+    fn p3(&self) -> &DomPoint {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("p3"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "DomPoint")]
+    fn p4(&self) -> &DomPoint {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("p4"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl DomQuadJson {
     #[doc = "Construct a new `DomQuadJson`."]
     #[doc = ""]

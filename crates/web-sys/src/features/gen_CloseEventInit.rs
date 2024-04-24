@@ -11,6 +11,73 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `CloseEventInit`*"]
     pub type CloseEventInit;
 }
+#[doc = "The trait to access properties on the `CloseEventInit` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `CloseEventInit`*"]
+pub trait CloseEventInitGetters {
+    #[doc = "Get the `bubbles` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `CloseEventInit`*"]
+    fn bubbles(&self) -> bool;
+    #[doc = "Get the `cancelable` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `CloseEventInit`*"]
+    fn cancelable(&self) -> bool;
+    #[doc = "Get the `composed` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `CloseEventInit`*"]
+    fn composed(&self) -> bool;
+    #[doc = "Get the `code` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `CloseEventInit`*"]
+    fn code(&self) -> u16;
+    #[doc = "Get the `reason` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `CloseEventInit`*"]
+    fn reason(&self) -> &str;
+    #[doc = "Get the `wasClean` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `CloseEventInit`*"]
+    fn was_clean(&self) -> bool;
+}
+impl CloseEventInitGetters for CloseEventInit {
+    fn bubbles(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("bubbles"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn cancelable(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("cancelable"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn composed(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("composed"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn code(&self) -> u16 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("code"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn reason(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("reason"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn was_clean(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("wasClean"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl CloseEventInit {
     #[doc = "Construct a new `CloseEventInit`."]
     #[doc = ""]

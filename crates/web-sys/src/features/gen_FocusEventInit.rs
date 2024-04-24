@@ -11,6 +11,77 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `FocusEventInit`*"]
     pub type FocusEventInit;
 }
+#[doc = "The trait to access properties on the `FocusEventInit` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `FocusEventInit`*"]
+pub trait FocusEventInitGetters {
+    #[doc = "Get the `bubbles` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `FocusEventInit`*"]
+    fn bubbles(&self) -> bool;
+    #[doc = "Get the `cancelable` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `FocusEventInit`*"]
+    fn cancelable(&self) -> bool;
+    #[doc = "Get the `composed` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `FocusEventInit`*"]
+    fn composed(&self) -> bool;
+    #[doc = "Get the `detail` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `FocusEventInit`*"]
+    fn detail(&self) -> i32;
+    #[cfg(feature = "Window")]
+    #[doc = "Get the `view` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `FocusEventInit`, `Window`*"]
+    fn view(&self) -> Option<&Window>;
+    #[cfg(feature = "EventTarget")]
+    #[doc = "Get the `relatedTarget` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `EventTarget`, `FocusEventInit`*"]
+    fn related_target(&self) -> Option<&EventTarget>;
+}
+impl FocusEventInitGetters for FocusEventInit {
+    fn bubbles(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("bubbles"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn cancelable(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("cancelable"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn composed(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("composed"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn detail(&self) -> i32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("detail"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "Window")]
+    fn view(&self) -> Option<&Window> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("view"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "EventTarget")]
+    fn related_target(&self) -> Option<&EventTarget> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("relatedTarget"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl FocusEventInit {
     #[doc = "Construct a new `FocusEventInit`."]
     #[doc = ""]

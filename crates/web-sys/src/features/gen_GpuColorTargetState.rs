@@ -16,6 +16,64 @@ extern "C" {
     pub type GpuColorTargetState;
 }
 #[cfg(web_sys_unstable_apis)]
+#[doc = "The trait to access properties on the `GpuColorTargetState` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `GpuColorTargetState`*"]
+pub trait GpuColorTargetStateGetters {
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "GpuBlendState")]
+    #[doc = "Get the `blend` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `GpuBlendState`, `GpuColorTargetState`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn blend(&self) -> &GpuBlendState;
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "GpuTextureFormat")]
+    #[doc = "Get the `format` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `GpuColorTargetState`, `GpuTextureFormat`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn format(&self) -> GpuTextureFormat;
+    #[cfg(web_sys_unstable_apis)]
+    #[doc = "Get the `writeMask` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `GpuColorTargetState`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn write_mask(&self) -> u32;
+}
+#[cfg(web_sys_unstable_apis)]
+impl GpuColorTargetStateGetters for GpuColorTargetState {
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "GpuBlendState")]
+    fn blend(&self) -> &GpuBlendState {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("blend"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "GpuTextureFormat")]
+    fn format(&self) -> GpuTextureFormat {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("format"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(web_sys_unstable_apis)]
+    fn write_mask(&self) -> u32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("writeMask"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
+#[cfg(web_sys_unstable_apis)]
 impl GpuColorTargetState {
     #[cfg(feature = "GpuTextureFormat")]
     #[doc = "Construct a new `GpuColorTargetState`."]

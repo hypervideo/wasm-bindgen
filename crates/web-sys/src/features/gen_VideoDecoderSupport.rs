@@ -16,6 +16,47 @@ extern "C" {
     pub type VideoDecoderSupport;
 }
 #[cfg(web_sys_unstable_apis)]
+#[doc = "The trait to access properties on the `VideoDecoderSupport` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `VideoDecoderSupport`*"]
+pub trait VideoDecoderSupportGetters {
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "VideoDecoderConfig")]
+    #[doc = "Get the `config` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `VideoDecoderConfig`, `VideoDecoderSupport`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn config(&self) -> &VideoDecoderConfig;
+    #[cfg(web_sys_unstable_apis)]
+    #[doc = "Get the `supported` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `VideoDecoderSupport`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn supported(&self) -> bool;
+}
+#[cfg(web_sys_unstable_apis)]
+impl VideoDecoderSupportGetters for VideoDecoderSupport {
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "VideoDecoderConfig")]
+    fn config(&self) -> &VideoDecoderConfig {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("config"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(web_sys_unstable_apis)]
+    fn supported(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("supported"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
+#[cfg(web_sys_unstable_apis)]
 impl VideoDecoderSupport {
     #[doc = "Construct a new `VideoDecoderSupport`."]
     #[doc = ""]

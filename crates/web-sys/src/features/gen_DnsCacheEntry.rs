@@ -11,6 +11,63 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `DnsCacheEntry`*"]
     pub type DnsCacheEntry;
 }
+#[doc = "The trait to access properties on the `DnsCacheEntry` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `DnsCacheEntry`*"]
+pub trait DnsCacheEntryGetters {
+    #[doc = "Get the `expiration` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DnsCacheEntry`*"]
+    fn expiration(&self) -> f64;
+    #[doc = "Get the `family` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DnsCacheEntry`*"]
+    fn family(&self) -> &str;
+    #[doc = "Get the `hostaddr` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DnsCacheEntry`*"]
+    fn hostaddr(&self) -> &::wasm_bindgen::JsValue;
+    #[doc = "Get the `hostname` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DnsCacheEntry`*"]
+    fn hostname(&self) -> &str;
+    #[doc = "Get the `trr` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DnsCacheEntry`*"]
+    fn trr(&self) -> bool;
+}
+impl DnsCacheEntryGetters for DnsCacheEntry {
+    fn expiration(&self) -> f64 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("expiration"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn family(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("family"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn hostaddr(&self) -> &::wasm_bindgen::JsValue {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("hostaddr"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn hostname(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("hostname"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn trr(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("trr"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl DnsCacheEntry {
     #[doc = "Construct a new `DnsCacheEntry`."]
     #[doc = ""]

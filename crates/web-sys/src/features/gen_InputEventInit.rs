@@ -11,6 +11,117 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `InputEventInit`*"]
     pub type InputEventInit;
 }
+#[doc = "The trait to access properties on the `InputEventInit` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `InputEventInit`*"]
+pub trait InputEventInitGetters {
+    #[doc = "Get the `bubbles` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `InputEventInit`*"]
+    fn bubbles(&self) -> bool;
+    #[doc = "Get the `cancelable` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `InputEventInit`*"]
+    fn cancelable(&self) -> bool;
+    #[doc = "Get the `composed` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `InputEventInit`*"]
+    fn composed(&self) -> bool;
+    #[doc = "Get the `detail` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `InputEventInit`*"]
+    fn detail(&self) -> i32;
+    #[cfg(feature = "Window")]
+    #[doc = "Get the `view` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `InputEventInit`, `Window`*"]
+    fn view(&self) -> Option<&Window>;
+    #[doc = "Get the `data` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `InputEventInit`*"]
+    fn data(&self) -> Option<&str>;
+    #[cfg(feature = "DataTransfer")]
+    #[doc = "Get the `dataTransfer` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DataTransfer`, `InputEventInit`*"]
+    fn data_transfer(&self) -> Option<&DataTransfer>;
+    #[doc = "Get the `inputType` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `InputEventInit`*"]
+    fn input_type(&self) -> &str;
+    #[doc = "Get the `isComposing` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `InputEventInit`*"]
+    fn is_composing(&self) -> bool;
+    #[doc = "Get the `targetRanges` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `InputEventInit`*"]
+    fn target_ranges(&self) -> &::wasm_bindgen::JsValue;
+}
+impl InputEventInitGetters for InputEventInit {
+    fn bubbles(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("bubbles"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn cancelable(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("cancelable"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn composed(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("composed"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn detail(&self) -> i32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("detail"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "Window")]
+    fn view(&self) -> Option<&Window> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("view"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn data(&self) -> Option<&str> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("data"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "DataTransfer")]
+    fn data_transfer(&self) -> Option<&DataTransfer> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("dataTransfer"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn input_type(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("inputType"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn is_composing(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("isComposing"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn target_ranges(&self) -> &::wasm_bindgen::JsValue {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("targetRanges"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl InputEventInit {
     #[doc = "Construct a new `InputEventInit`."]
     #[doc = ""]

@@ -16,6 +16,47 @@ extern "C" {
     pub type AudioEncoderSupport;
 }
 #[cfg(web_sys_unstable_apis)]
+#[doc = "The trait to access properties on the `AudioEncoderSupport` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `AudioEncoderSupport`*"]
+pub trait AudioEncoderSupportGetters {
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "AudioEncoderConfig")]
+    #[doc = "Get the `config` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `AudioEncoderConfig`, `AudioEncoderSupport`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn config(&self) -> &AudioEncoderConfig;
+    #[cfg(web_sys_unstable_apis)]
+    #[doc = "Get the `supported` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `AudioEncoderSupport`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn supported(&self) -> bool;
+}
+#[cfg(web_sys_unstable_apis)]
+impl AudioEncoderSupportGetters for AudioEncoderSupport {
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "AudioEncoderConfig")]
+    fn config(&self) -> &AudioEncoderConfig {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("config"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(web_sys_unstable_apis)]
+    fn supported(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("supported"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
+#[cfg(web_sys_unstable_apis)]
 impl AudioEncoderSupport {
     #[doc = "Construct a new `AudioEncoderSupport`."]
     #[doc = ""]

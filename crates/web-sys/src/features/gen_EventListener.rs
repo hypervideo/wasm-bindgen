@@ -11,6 +11,23 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `EventListener`*"]
     pub type EventListener;
 }
+#[doc = "The trait to access properties on the `EventListener` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `EventListener`*"]
+pub trait EventListenerGetters {
+    #[doc = "Get the `handleEvent` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `EventListener`*"]
+    fn handle_event(&self) -> &::js_sys::Function;
+}
+impl EventListenerGetters for EventListener {
+    fn handle_event(&self) -> &::js_sys::Function {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("handleEvent"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl EventListener {
     #[doc = "Construct a new `EventListener`."]
     #[doc = ""]

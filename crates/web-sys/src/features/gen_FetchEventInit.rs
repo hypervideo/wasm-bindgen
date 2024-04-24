@@ -11,6 +11,75 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `FetchEventInit`*"]
     pub type FetchEventInit;
 }
+#[doc = "The trait to access properties on the `FetchEventInit` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `FetchEventInit`*"]
+pub trait FetchEventInitGetters {
+    #[doc = "Get the `bubbles` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `FetchEventInit`*"]
+    fn bubbles(&self) -> bool;
+    #[doc = "Get the `cancelable` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `FetchEventInit`*"]
+    fn cancelable(&self) -> bool;
+    #[doc = "Get the `composed` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `FetchEventInit`*"]
+    fn composed(&self) -> bool;
+    #[doc = "Get the `clientId` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `FetchEventInit`*"]
+    fn client_id(&self) -> Option<&str>;
+    #[doc = "Get the `isReload` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `FetchEventInit`*"]
+    fn is_reload(&self) -> bool;
+    #[cfg(feature = "Request")]
+    #[doc = "Get the `request` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `FetchEventInit`, `Request`*"]
+    fn request(&self) -> &Request;
+}
+impl FetchEventInitGetters for FetchEventInit {
+    fn bubbles(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("bubbles"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn cancelable(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("cancelable"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn composed(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("composed"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn client_id(&self) -> Option<&str> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("clientId"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn is_reload(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("isReload"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "Request")]
+    fn request(&self) -> &Request {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("request"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl FetchEventInit {
     #[cfg(feature = "Request")]
     #[doc = "Construct a new `FetchEventInit`."]

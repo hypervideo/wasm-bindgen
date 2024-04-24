@@ -11,6 +11,287 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `MouseEventInit`*"]
     pub type MouseEventInit;
 }
+#[doc = "The trait to access properties on the `MouseEventInit` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `MouseEventInit`*"]
+pub trait MouseEventInitGetters {
+    #[doc = "Get the `bubbles` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `MouseEventInit`*"]
+    fn bubbles(&self) -> bool;
+    #[doc = "Get the `cancelable` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `MouseEventInit`*"]
+    fn cancelable(&self) -> bool;
+    #[doc = "Get the `composed` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `MouseEventInit`*"]
+    fn composed(&self) -> bool;
+    #[doc = "Get the `detail` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `MouseEventInit`*"]
+    fn detail(&self) -> i32;
+    #[cfg(feature = "Window")]
+    #[doc = "Get the `view` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `MouseEventInit`, `Window`*"]
+    fn view(&self) -> Option<&Window>;
+    #[doc = "Get the `altKey` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `MouseEventInit`*"]
+    fn alt_key(&self) -> bool;
+    #[doc = "Get the `ctrlKey` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `MouseEventInit`*"]
+    fn ctrl_key(&self) -> bool;
+    #[doc = "Get the `metaKey` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `MouseEventInit`*"]
+    fn meta_key(&self) -> bool;
+    #[doc = "Get the `modifierAltGraph` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `MouseEventInit`*"]
+    fn modifier_alt_graph(&self) -> bool;
+    #[doc = "Get the `modifierCapsLock` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `MouseEventInit`*"]
+    fn modifier_caps_lock(&self) -> bool;
+    #[doc = "Get the `modifierFn` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `MouseEventInit`*"]
+    fn modifier_fn(&self) -> bool;
+    #[doc = "Get the `modifierFnLock` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `MouseEventInit`*"]
+    fn modifier_fn_lock(&self) -> bool;
+    #[doc = "Get the `modifierNumLock` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `MouseEventInit`*"]
+    fn modifier_num_lock(&self) -> bool;
+    #[doc = "Get the `modifierOS` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `MouseEventInit`*"]
+    fn modifier_os(&self) -> bool;
+    #[doc = "Get the `modifierScrollLock` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `MouseEventInit`*"]
+    fn modifier_scroll_lock(&self) -> bool;
+    #[doc = "Get the `modifierSymbol` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `MouseEventInit`*"]
+    fn modifier_symbol(&self) -> bool;
+    #[doc = "Get the `modifierSymbolLock` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `MouseEventInit`*"]
+    fn modifier_symbol_lock(&self) -> bool;
+    #[doc = "Get the `shiftKey` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `MouseEventInit`*"]
+    fn shift_key(&self) -> bool;
+    #[doc = "Get the `button` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `MouseEventInit`*"]
+    fn button(&self) -> i16;
+    #[doc = "Get the `buttons` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `MouseEventInit`*"]
+    fn buttons(&self) -> u16;
+    #[doc = "Get the `clientX` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `MouseEventInit`*"]
+    fn client_x(&self) -> i32;
+    #[doc = "Get the `clientY` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `MouseEventInit`*"]
+    fn client_y(&self) -> i32;
+    #[doc = "Get the `movementX` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `MouseEventInit`*"]
+    fn movement_x(&self) -> i32;
+    #[doc = "Get the `movementY` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `MouseEventInit`*"]
+    fn movement_y(&self) -> i32;
+    #[cfg(feature = "EventTarget")]
+    #[doc = "Get the `relatedTarget` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `EventTarget`, `MouseEventInit`*"]
+    fn related_target(&self) -> Option<&EventTarget>;
+    #[doc = "Get the `screenX` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `MouseEventInit`*"]
+    fn screen_x(&self) -> i32;
+    #[doc = "Get the `screenY` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `MouseEventInit`*"]
+    fn screen_y(&self) -> i32;
+}
+impl MouseEventInitGetters for MouseEventInit {
+    fn bubbles(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("bubbles"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn cancelable(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("cancelable"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn composed(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("composed"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn detail(&self) -> i32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("detail"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "Window")]
+    fn view(&self) -> Option<&Window> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("view"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn alt_key(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("altKey"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn ctrl_key(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("ctrlKey"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn meta_key(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("metaKey"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn modifier_alt_graph(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("modifierAltGraph"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn modifier_caps_lock(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("modifierCapsLock"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn modifier_fn(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("modifierFn"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn modifier_fn_lock(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("modifierFnLock"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn modifier_num_lock(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("modifierNumLock"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn modifier_os(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("modifierOS"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn modifier_scroll_lock(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("modifierScrollLock"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn modifier_symbol(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("modifierSymbol"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn modifier_symbol_lock(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("modifierSymbolLock"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn shift_key(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("shiftKey"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn button(&self) -> i16 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("button"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn buttons(&self) -> u16 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("buttons"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn client_x(&self) -> i32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("clientX"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn client_y(&self) -> i32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("clientY"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn movement_x(&self) -> i32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("movementX"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn movement_y(&self) -> i32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("movementY"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "EventTarget")]
+    fn related_target(&self) -> Option<&EventTarget> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("relatedTarget"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn screen_x(&self) -> i32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("screenX"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn screen_y(&self) -> i32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("screenY"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl MouseEventInit {
     #[doc = "Construct a new `MouseEventInit`."]
     #[doc = ""]

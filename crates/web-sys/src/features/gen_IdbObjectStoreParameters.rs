@@ -11,6 +11,33 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `IdbObjectStoreParameters`*"]
     pub type IdbObjectStoreParameters;
 }
+#[doc = "The trait to access properties on the `IdbObjectStoreParameters` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `IdbObjectStoreParameters`*"]
+pub trait IdbObjectStoreParametersGetters {
+    #[doc = "Get the `autoIncrement` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `IdbObjectStoreParameters`*"]
+    fn auto_increment(&self) -> bool;
+    #[doc = "Get the `keyPath` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `IdbObjectStoreParameters`*"]
+    fn key_path(&self) -> Option<&::wasm_bindgen::JsValue>;
+}
+impl IdbObjectStoreParametersGetters for IdbObjectStoreParameters {
+    fn auto_increment(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("autoIncrement"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn key_path(&self) -> Option<&::wasm_bindgen::JsValue> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("keyPath"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl IdbObjectStoreParameters {
     #[doc = "Construct a new `IdbObjectStoreParameters`."]
     #[doc = ""]

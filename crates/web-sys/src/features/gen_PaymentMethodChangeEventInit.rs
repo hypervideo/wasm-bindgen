@@ -11,6 +11,63 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `PaymentMethodChangeEventInit`*"]
     pub type PaymentMethodChangeEventInit;
 }
+#[doc = "The trait to access properties on the `PaymentMethodChangeEventInit` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `PaymentMethodChangeEventInit`*"]
+pub trait PaymentMethodChangeEventInitGetters {
+    #[doc = "Get the `bubbles` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `PaymentMethodChangeEventInit`*"]
+    fn bubbles(&self) -> bool;
+    #[doc = "Get the `cancelable` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `PaymentMethodChangeEventInit`*"]
+    fn cancelable(&self) -> bool;
+    #[doc = "Get the `composed` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `PaymentMethodChangeEventInit`*"]
+    fn composed(&self) -> bool;
+    #[doc = "Get the `methodDetails` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `PaymentMethodChangeEventInit`*"]
+    fn method_details(&self) -> Option<&::js_sys::Object>;
+    #[doc = "Get the `methodName` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `PaymentMethodChangeEventInit`*"]
+    fn method_name(&self) -> &str;
+}
+impl PaymentMethodChangeEventInitGetters for PaymentMethodChangeEventInit {
+    fn bubbles(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("bubbles"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn cancelable(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("cancelable"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn composed(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("composed"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn method_details(&self) -> Option<&::js_sys::Object> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("methodDetails"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn method_name(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("methodName"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl PaymentMethodChangeEventInit {
     #[doc = "Construct a new `PaymentMethodChangeEventInit`."]
     #[doc = ""]

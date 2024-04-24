@@ -11,6 +11,35 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `ClientRectsAndTexts`*"]
     pub type ClientRectsAndTexts;
 }
+#[doc = "The trait to access properties on the `ClientRectsAndTexts` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `ClientRectsAndTexts`*"]
+pub trait ClientRectsAndTextsGetters {
+    #[cfg(feature = "DomRectList")]
+    #[doc = "Get the `rectList` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ClientRectsAndTexts`, `DomRectList`*"]
+    fn rect_list(&self) -> &DomRectList;
+    #[doc = "Get the `textList` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ClientRectsAndTexts`*"]
+    fn text_list(&self) -> &::wasm_bindgen::JsValue;
+}
+impl ClientRectsAndTextsGetters for ClientRectsAndTexts {
+    #[cfg(feature = "DomRectList")]
+    fn rect_list(&self) -> &DomRectList {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("rectList"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn text_list(&self) -> &::wasm_bindgen::JsValue {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("textList"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl ClientRectsAndTexts {
     #[cfg(feature = "DomRectList")]
     #[doc = "Construct a new `ClientRectsAndTexts`."]

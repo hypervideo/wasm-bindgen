@@ -11,6 +11,37 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `ReadableWritablePair`*"]
     pub type ReadableWritablePair;
 }
+#[doc = "The trait to access properties on the `ReadableWritablePair` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `ReadableWritablePair`*"]
+pub trait ReadableWritablePairGetters {
+    #[cfg(feature = "ReadableStream")]
+    #[doc = "Get the `readable` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ReadableStream`, `ReadableWritablePair`*"]
+    fn readable(&self) -> &ReadableStream;
+    #[cfg(feature = "WritableStream")]
+    #[doc = "Get the `writable` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ReadableWritablePair`, `WritableStream`*"]
+    fn writable(&self) -> &WritableStream;
+}
+impl ReadableWritablePairGetters for ReadableWritablePair {
+    #[cfg(feature = "ReadableStream")]
+    fn readable(&self) -> &ReadableStream {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("readable"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "WritableStream")]
+    fn writable(&self) -> &WritableStream {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("writable"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl ReadableWritablePair {
     #[cfg(all(feature = "ReadableStream", feature = "WritableStream",))]
     #[doc = "Construct a new `ReadableWritablePair`."]

@@ -11,6 +11,23 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `DocumentTimelineOptions`*"]
     pub type DocumentTimelineOptions;
 }
+#[doc = "The trait to access properties on the `DocumentTimelineOptions` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `DocumentTimelineOptions`*"]
+pub trait DocumentTimelineOptionsGetters {
+    #[doc = "Get the `originTime` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DocumentTimelineOptions`*"]
+    fn origin_time(&self) -> f64;
+}
+impl DocumentTimelineOptionsGetters for DocumentTimelineOptions {
+    fn origin_time(&self) -> f64 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("originTime"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl DocumentTimelineOptions {
     #[doc = "Construct a new `DocumentTimelineOptions`."]
     #[doc = ""]

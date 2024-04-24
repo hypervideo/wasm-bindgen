@@ -11,6 +11,85 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `DecoderDoctorNotification`*"]
     pub type DecoderDoctorNotification;
 }
+#[doc = "The trait to access properties on the `DecoderDoctorNotification` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `DecoderDoctorNotification`*"]
+pub trait DecoderDoctorNotificationGetters {
+    #[doc = "Get the `decodeIssue` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DecoderDoctorNotification`*"]
+    fn decode_issue(&self) -> &str;
+    #[doc = "Get the `decoderDoctorReportId` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DecoderDoctorNotification`*"]
+    fn decoder_doctor_report_id(&self) -> &str;
+    #[doc = "Get the `docURL` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DecoderDoctorNotification`*"]
+    fn doc_url(&self) -> &str;
+    #[doc = "Get the `formats` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DecoderDoctorNotification`*"]
+    fn formats(&self) -> &str;
+    #[doc = "Get the `isSolved` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DecoderDoctorNotification`*"]
+    fn is_solved(&self) -> bool;
+    #[doc = "Get the `resourceURL` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DecoderDoctorNotification`*"]
+    fn resource_url(&self) -> &str;
+    #[cfg(feature = "DecoderDoctorNotificationType")]
+    #[doc = "Get the `type` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DecoderDoctorNotification`, `DecoderDoctorNotificationType`*"]
+    fn type_(&self) -> DecoderDoctorNotificationType;
+}
+impl DecoderDoctorNotificationGetters for DecoderDoctorNotification {
+    fn decode_issue(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("decodeIssue"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn decoder_doctor_report_id(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("decoderDoctorReportId"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn doc_url(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("docURL"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn formats(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("formats"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn is_solved(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("isSolved"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn resource_url(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("resourceURL"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "DecoderDoctorNotificationType")]
+    fn type_(&self) -> DecoderDoctorNotificationType {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("type"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl DecoderDoctorNotification {
     #[cfg(feature = "DecoderDoctorNotificationType")]
     #[doc = "Construct a new `DecoderDoctorNotification`."]

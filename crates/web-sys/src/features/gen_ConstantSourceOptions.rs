@@ -11,6 +11,23 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `ConstantSourceOptions`*"]
     pub type ConstantSourceOptions;
 }
+#[doc = "The trait to access properties on the `ConstantSourceOptions` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `ConstantSourceOptions`*"]
+pub trait ConstantSourceOptionsGetters {
+    #[doc = "Get the `offset` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ConstantSourceOptions`*"]
+    fn offset(&self) -> f32;
+}
+impl ConstantSourceOptionsGetters for ConstantSourceOptions {
+    fn offset(&self) -> f32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("offset"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl ConstantSourceOptions {
     #[doc = "Construct a new `ConstantSourceOptions`."]
     #[doc = ""]

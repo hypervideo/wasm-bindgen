@@ -11,6 +11,92 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `DeviceMotionEventInit`*"]
     pub type DeviceMotionEventInit;
 }
+#[doc = "The trait to access properties on the `DeviceMotionEventInit` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `DeviceMotionEventInit`*"]
+pub trait DeviceMotionEventInitGetters {
+    #[doc = "Get the `bubbles` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DeviceMotionEventInit`*"]
+    fn bubbles(&self) -> bool;
+    #[doc = "Get the `cancelable` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DeviceMotionEventInit`*"]
+    fn cancelable(&self) -> bool;
+    #[doc = "Get the `composed` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DeviceMotionEventInit`*"]
+    fn composed(&self) -> bool;
+    #[cfg(feature = "DeviceAccelerationInit")]
+    #[doc = "Get the `acceleration` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DeviceAccelerationInit`, `DeviceMotionEventInit`*"]
+    fn acceleration(&self) -> &DeviceAccelerationInit;
+    #[cfg(feature = "DeviceAccelerationInit")]
+    #[doc = "Get the `accelerationIncludingGravity` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DeviceAccelerationInit`, `DeviceMotionEventInit`*"]
+    fn acceleration_including_gravity(&self) -> &DeviceAccelerationInit;
+    #[doc = "Get the `interval` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DeviceMotionEventInit`*"]
+    fn interval(&self) -> Option<f64>;
+    #[cfg(feature = "DeviceRotationRateInit")]
+    #[doc = "Get the `rotationRate` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DeviceMotionEventInit`, `DeviceRotationRateInit`*"]
+    fn rotation_rate(&self) -> &DeviceRotationRateInit;
+}
+impl DeviceMotionEventInitGetters for DeviceMotionEventInit {
+    fn bubbles(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("bubbles"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn cancelable(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("cancelable"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn composed(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("composed"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "DeviceAccelerationInit")]
+    fn acceleration(&self) -> &DeviceAccelerationInit {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("acceleration"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "DeviceAccelerationInit")]
+    fn acceleration_including_gravity(&self) -> &DeviceAccelerationInit {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(
+            self.as_ref(),
+            &JsValue::from("accelerationIncludingGravity"),
+        );
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn interval(&self) -> Option<f64> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("interval"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "DeviceRotationRateInit")]
+    fn rotation_rate(&self) -> &DeviceRotationRateInit {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("rotationRate"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl DeviceMotionEventInit {
     #[doc = "Construct a new `DeviceMotionEventInit`."]
     #[doc = ""]

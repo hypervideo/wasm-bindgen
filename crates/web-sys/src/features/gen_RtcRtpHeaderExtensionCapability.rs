@@ -11,6 +11,23 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `RtcRtpHeaderExtensionCapability`*"]
     pub type RtcRtpHeaderExtensionCapability;
 }
+#[doc = "The trait to access properties on the `RtcRtpHeaderExtensionCapability` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `RtcRtpHeaderExtensionCapability`*"]
+pub trait RtcRtpHeaderExtensionCapabilityGetters {
+    #[doc = "Get the `uri` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcRtpHeaderExtensionCapability`*"]
+    fn uri(&self) -> &str;
+}
+impl RtcRtpHeaderExtensionCapabilityGetters for RtcRtpHeaderExtensionCapability {
+    fn uri(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("uri"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl RtcRtpHeaderExtensionCapability {
     #[doc = "Construct a new `RtcRtpHeaderExtensionCapability`."]
     #[doc = ""]

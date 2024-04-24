@@ -11,6 +11,23 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `FileSystemGetDirectoryOptions`*"]
     pub type FileSystemGetDirectoryOptions;
 }
+#[doc = "The trait to access properties on the `FileSystemGetDirectoryOptions` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `FileSystemGetDirectoryOptions`*"]
+pub trait FileSystemGetDirectoryOptionsGetters {
+    #[doc = "Get the `create` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `FileSystemGetDirectoryOptions`*"]
+    fn create(&self) -> bool;
+}
+impl FileSystemGetDirectoryOptionsGetters for FileSystemGetDirectoryOptions {
+    fn create(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("create"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl FileSystemGetDirectoryOptions {
     #[doc = "Construct a new `FileSystemGetDirectoryOptions`."]
     #[doc = ""]

@@ -11,6 +11,95 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `RtcIceComponentStats`*"]
     pub type RtcIceComponentStats;
 }
+#[doc = "The trait to access properties on the `RtcIceComponentStats` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `RtcIceComponentStats`*"]
+pub trait RtcIceComponentStatsGetters {
+    #[doc = "Get the `id` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcIceComponentStats`*"]
+    fn id(&self) -> &str;
+    #[doc = "Get the `timestamp` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcIceComponentStats`*"]
+    fn timestamp(&self) -> f64;
+    #[cfg(feature = "RtcStatsType")]
+    #[doc = "Get the `type` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcIceComponentStats`, `RtcStatsType`*"]
+    fn type_(&self) -> RtcStatsType;
+    #[doc = "Get the `activeConnection` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcIceComponentStats`*"]
+    fn active_connection(&self) -> bool;
+    #[doc = "Get the `bytesReceived` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcIceComponentStats`*"]
+    fn bytes_received(&self) -> u32;
+    #[doc = "Get the `bytesSent` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcIceComponentStats`*"]
+    fn bytes_sent(&self) -> u32;
+    #[doc = "Get the `component` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcIceComponentStats`*"]
+    fn component(&self) -> i32;
+    #[doc = "Get the `transportId` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcIceComponentStats`*"]
+    fn transport_id(&self) -> &str;
+}
+impl RtcIceComponentStatsGetters for RtcIceComponentStats {
+    fn id(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("id"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn timestamp(&self) -> f64 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("timestamp"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "RtcStatsType")]
+    fn type_(&self) -> RtcStatsType {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("type"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn active_connection(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("activeConnection"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn bytes_received(&self) -> u32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("bytesReceived"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn bytes_sent(&self) -> u32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("bytesSent"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn component(&self) -> i32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("component"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn transport_id(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("transportId"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl RtcIceComponentStats {
     #[doc = "Construct a new `RtcIceComponentStats`."]
     #[doc = ""]

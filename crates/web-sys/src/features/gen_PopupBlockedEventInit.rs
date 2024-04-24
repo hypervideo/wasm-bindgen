@@ -11,6 +11,75 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `PopupBlockedEventInit`*"]
     pub type PopupBlockedEventInit;
 }
+#[doc = "The trait to access properties on the `PopupBlockedEventInit` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `PopupBlockedEventInit`*"]
+pub trait PopupBlockedEventInitGetters {
+    #[doc = "Get the `bubbles` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `PopupBlockedEventInit`*"]
+    fn bubbles(&self) -> bool;
+    #[doc = "Get the `cancelable` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `PopupBlockedEventInit`*"]
+    fn cancelable(&self) -> bool;
+    #[doc = "Get the `composed` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `PopupBlockedEventInit`*"]
+    fn composed(&self) -> bool;
+    #[doc = "Get the `popupWindowFeatures` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `PopupBlockedEventInit`*"]
+    fn popup_window_features(&self) -> &str;
+    #[doc = "Get the `popupWindowName` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `PopupBlockedEventInit`*"]
+    fn popup_window_name(&self) -> &str;
+    #[cfg(feature = "Window")]
+    #[doc = "Get the `requestingWindow` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `PopupBlockedEventInit`, `Window`*"]
+    fn requesting_window(&self) -> Option<&Window>;
+}
+impl PopupBlockedEventInitGetters for PopupBlockedEventInit {
+    fn bubbles(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("bubbles"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn cancelable(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("cancelable"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn composed(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("composed"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn popup_window_features(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("popupWindowFeatures"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn popup_window_name(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("popupWindowName"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "Window")]
+    fn requesting_window(&self) -> Option<&Window> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("requestingWindow"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl PopupBlockedEventInit {
     #[doc = "Construct a new `PopupBlockedEventInit`."]
     #[doc = ""]

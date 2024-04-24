@@ -11,6 +11,43 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `PerformanceEntryFilterOptions`*"]
     pub type PerformanceEntryFilterOptions;
 }
+#[doc = "The trait to access properties on the `PerformanceEntryFilterOptions` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `PerformanceEntryFilterOptions`*"]
+pub trait PerformanceEntryFilterOptionsGetters {
+    #[doc = "Get the `entryType` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `PerformanceEntryFilterOptions`*"]
+    fn entry_type(&self) -> &str;
+    #[doc = "Get the `initiatorType` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `PerformanceEntryFilterOptions`*"]
+    fn initiator_type(&self) -> &str;
+    #[doc = "Get the `name` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `PerformanceEntryFilterOptions`*"]
+    fn name(&self) -> &str;
+}
+impl PerformanceEntryFilterOptionsGetters for PerformanceEntryFilterOptions {
+    fn entry_type(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("entryType"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn initiator_type(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("initiatorType"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn name(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("name"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl PerformanceEntryFilterOptions {
     #[doc = "Construct a new `PerformanceEntryFilterOptions`."]
     #[doc = ""]

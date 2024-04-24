@@ -11,6 +11,55 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `OfflineAudioCompletionEventInit`*"]
     pub type OfflineAudioCompletionEventInit;
 }
+#[doc = "The trait to access properties on the `OfflineAudioCompletionEventInit` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `OfflineAudioCompletionEventInit`*"]
+pub trait OfflineAudioCompletionEventInitGetters {
+    #[doc = "Get the `bubbles` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `OfflineAudioCompletionEventInit`*"]
+    fn bubbles(&self) -> bool;
+    #[doc = "Get the `cancelable` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `OfflineAudioCompletionEventInit`*"]
+    fn cancelable(&self) -> bool;
+    #[doc = "Get the `composed` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `OfflineAudioCompletionEventInit`*"]
+    fn composed(&self) -> bool;
+    #[cfg(feature = "AudioBuffer")]
+    #[doc = "Get the `renderedBuffer` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `AudioBuffer`, `OfflineAudioCompletionEventInit`*"]
+    fn rendered_buffer(&self) -> &AudioBuffer;
+}
+impl OfflineAudioCompletionEventInitGetters for OfflineAudioCompletionEventInit {
+    fn bubbles(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("bubbles"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn cancelable(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("cancelable"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn composed(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("composed"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "AudioBuffer")]
+    fn rendered_buffer(&self) -> &AudioBuffer {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("renderedBuffer"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl OfflineAudioCompletionEventInit {
     #[cfg(feature = "AudioBuffer")]
     #[doc = "Construct a new `OfflineAudioCompletionEventInit`."]

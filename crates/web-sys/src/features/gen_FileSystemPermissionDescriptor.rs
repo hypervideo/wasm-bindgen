@@ -16,6 +16,66 @@ extern "C" {
     pub type FileSystemPermissionDescriptor;
 }
 #[cfg(web_sys_unstable_apis)]
+#[doc = "The trait to access properties on the `FileSystemPermissionDescriptor` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `FileSystemPermissionDescriptor`*"]
+pub trait FileSystemPermissionDescriptorGetters {
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "PermissionName")]
+    #[doc = "Get the `name` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `FileSystemPermissionDescriptor`, `PermissionName`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn name(&self) -> PermissionName;
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "FileSystemHandle")]
+    #[doc = "Get the `handle` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `FileSystemHandle`, `FileSystemPermissionDescriptor`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn handle(&self) -> &FileSystemHandle;
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "FileSystemPermissionMode")]
+    #[doc = "Get the `mode` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `FileSystemPermissionDescriptor`, `FileSystemPermissionMode`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn mode(&self) -> FileSystemPermissionMode;
+}
+#[cfg(web_sys_unstable_apis)]
+impl FileSystemPermissionDescriptorGetters for FileSystemPermissionDescriptor {
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "PermissionName")]
+    fn name(&self) -> PermissionName {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("name"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "FileSystemHandle")]
+    fn handle(&self) -> &FileSystemHandle {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("handle"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "FileSystemPermissionMode")]
+    fn mode(&self) -> FileSystemPermissionMode {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("mode"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
+#[cfg(web_sys_unstable_apis)]
 impl FileSystemPermissionDescriptor {
     #[cfg(all(feature = "FileSystemHandle", feature = "PermissionName",))]
     #[doc = "Construct a new `FileSystemPermissionDescriptor`."]

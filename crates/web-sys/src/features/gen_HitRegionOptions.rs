@@ -11,6 +11,47 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `HitRegionOptions`*"]
     pub type HitRegionOptions;
 }
+#[doc = "The trait to access properties on the `HitRegionOptions` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `HitRegionOptions`*"]
+pub trait HitRegionOptionsGetters {
+    #[cfg(feature = "Element")]
+    #[doc = "Get the `control` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `Element`, `HitRegionOptions`*"]
+    fn control(&self) -> Option<&Element>;
+    #[doc = "Get the `id` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `HitRegionOptions`*"]
+    fn id(&self) -> &str;
+    #[cfg(feature = "Path2d")]
+    #[doc = "Get the `path` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `HitRegionOptions`, `Path2d`*"]
+    fn path(&self) -> Option<&Path2d>;
+}
+impl HitRegionOptionsGetters for HitRegionOptions {
+    #[cfg(feature = "Element")]
+    fn control(&self) -> Option<&Element> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("control"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn id(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("id"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "Path2d")]
+    fn path(&self) -> Option<&Path2d> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("path"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl HitRegionOptions {
     #[doc = "Construct a new `HitRegionOptions`."]
     #[doc = ""]

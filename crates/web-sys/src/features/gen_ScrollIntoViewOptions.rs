@@ -11,6 +11,49 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `ScrollIntoViewOptions`*"]
     pub type ScrollIntoViewOptions;
 }
+#[doc = "The trait to access properties on the `ScrollIntoViewOptions` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `ScrollIntoViewOptions`*"]
+pub trait ScrollIntoViewOptionsGetters {
+    #[cfg(feature = "ScrollBehavior")]
+    #[doc = "Get the `behavior` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ScrollBehavior`, `ScrollIntoViewOptions`*"]
+    fn behavior(&self) -> ScrollBehavior;
+    #[cfg(feature = "ScrollLogicalPosition")]
+    #[doc = "Get the `block` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ScrollIntoViewOptions`, `ScrollLogicalPosition`*"]
+    fn block(&self) -> ScrollLogicalPosition;
+    #[cfg(feature = "ScrollLogicalPosition")]
+    #[doc = "Get the `inline` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ScrollIntoViewOptions`, `ScrollLogicalPosition`*"]
+    fn inline(&self) -> ScrollLogicalPosition;
+}
+impl ScrollIntoViewOptionsGetters for ScrollIntoViewOptions {
+    #[cfg(feature = "ScrollBehavior")]
+    fn behavior(&self) -> ScrollBehavior {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("behavior"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "ScrollLogicalPosition")]
+    fn block(&self) -> ScrollLogicalPosition {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("block"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "ScrollLogicalPosition")]
+    fn inline(&self) -> ScrollLogicalPosition {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("inline"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl ScrollIntoViewOptions {
     #[doc = "Construct a new `ScrollIntoViewOptions`."]
     #[doc = ""]

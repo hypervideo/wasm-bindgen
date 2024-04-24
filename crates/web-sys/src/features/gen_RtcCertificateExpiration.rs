@@ -11,6 +11,23 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `RtcCertificateExpiration`*"]
     pub type RtcCertificateExpiration;
 }
+#[doc = "The trait to access properties on the `RtcCertificateExpiration` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `RtcCertificateExpiration`*"]
+pub trait RtcCertificateExpirationGetters {
+    #[doc = "Get the `expires` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcCertificateExpiration`*"]
+    fn expires(&self) -> f64;
+}
+impl RtcCertificateExpirationGetters for RtcCertificateExpiration {
+    fn expires(&self) -> f64 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("expires"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl RtcCertificateExpiration {
     #[doc = "Construct a new `RtcCertificateExpiration`."]
     #[doc = ""]

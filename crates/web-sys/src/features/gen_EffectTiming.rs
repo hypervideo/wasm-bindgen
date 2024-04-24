@@ -11,6 +11,97 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `EffectTiming`*"]
     pub type EffectTiming;
 }
+#[doc = "The trait to access properties on the `EffectTiming` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `EffectTiming`*"]
+pub trait EffectTimingGetters {
+    #[doc = "Get the `delay` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `EffectTiming`*"]
+    fn delay(&self) -> f64;
+    #[cfg(feature = "PlaybackDirection")]
+    #[doc = "Get the `direction` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `EffectTiming`, `PlaybackDirection`*"]
+    fn direction(&self) -> PlaybackDirection;
+    #[doc = "Get the `duration` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `EffectTiming`*"]
+    fn duration(&self) -> &::wasm_bindgen::JsValue;
+    #[doc = "Get the `easing` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `EffectTiming`*"]
+    fn easing(&self) -> &str;
+    #[doc = "Get the `endDelay` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `EffectTiming`*"]
+    fn end_delay(&self) -> f64;
+    #[cfg(feature = "FillMode")]
+    #[doc = "Get the `fill` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `EffectTiming`, `FillMode`*"]
+    fn fill(&self) -> FillMode;
+    #[doc = "Get the `iterationStart` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `EffectTiming`*"]
+    fn iteration_start(&self) -> f64;
+    #[doc = "Get the `iterations` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `EffectTiming`*"]
+    fn iterations(&self) -> f64;
+}
+impl EffectTimingGetters for EffectTiming {
+    fn delay(&self) -> f64 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("delay"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "PlaybackDirection")]
+    fn direction(&self) -> PlaybackDirection {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("direction"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn duration(&self) -> &::wasm_bindgen::JsValue {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("duration"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn easing(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("easing"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn end_delay(&self) -> f64 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("endDelay"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "FillMode")]
+    fn fill(&self) -> FillMode {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("fill"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn iteration_start(&self) -> f64 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("iterationStart"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn iterations(&self) -> f64 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("iterations"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl EffectTiming {
     #[doc = "Construct a new `EffectTiming`."]
     #[doc = ""]

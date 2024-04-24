@@ -11,6 +11,33 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `LocaleInfo`*"]
     pub type LocaleInfo;
 }
+#[doc = "The trait to access properties on the `LocaleInfo` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `LocaleInfo`*"]
+pub trait LocaleInfoGetters {
+    #[doc = "Get the `direction` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `LocaleInfo`*"]
+    fn direction(&self) -> &str;
+    #[doc = "Get the `locale` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `LocaleInfo`*"]
+    fn locale(&self) -> &str;
+}
+impl LocaleInfoGetters for LocaleInfo {
+    fn direction(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("direction"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn locale(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("locale"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl LocaleInfo {
     #[doc = "Construct a new `LocaleInfo`."]
     #[doc = ""]

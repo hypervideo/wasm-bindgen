@@ -11,6 +11,35 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `IdbOpenDbOptions`*"]
     pub type IdbOpenDbOptions;
 }
+#[doc = "The trait to access properties on the `IdbOpenDbOptions` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `IdbOpenDbOptions`*"]
+pub trait IdbOpenDbOptionsGetters {
+    #[cfg(feature = "StorageType")]
+    #[doc = "Get the `storage` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `IdbOpenDbOptions`, `StorageType`*"]
+    fn storage(&self) -> StorageType;
+    #[doc = "Get the `version` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `IdbOpenDbOptions`*"]
+    fn version(&self) -> f64;
+}
+impl IdbOpenDbOptionsGetters for IdbOpenDbOptions {
+    #[cfg(feature = "StorageType")]
+    fn storage(&self) -> StorageType {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("storage"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn version(&self) -> f64 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("version"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl IdbOpenDbOptions {
     #[doc = "Construct a new `IdbOpenDbOptions`."]
     #[doc = ""]

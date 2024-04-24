@@ -11,6 +11,165 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `SecurityPolicyViolationEventInit`*"]
     pub type SecurityPolicyViolationEventInit;
 }
+#[doc = "The trait to access properties on the `SecurityPolicyViolationEventInit` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `SecurityPolicyViolationEventInit`*"]
+pub trait SecurityPolicyViolationEventInitGetters {
+    #[doc = "Get the `bubbles` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `SecurityPolicyViolationEventInit`*"]
+    fn bubbles(&self) -> bool;
+    #[doc = "Get the `cancelable` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `SecurityPolicyViolationEventInit`*"]
+    fn cancelable(&self) -> bool;
+    #[doc = "Get the `composed` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `SecurityPolicyViolationEventInit`*"]
+    fn composed(&self) -> bool;
+    #[doc = "Get the `blockedURI` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `SecurityPolicyViolationEventInit`*"]
+    fn blocked_uri(&self) -> &str;
+    #[doc = "Get the `columnNumber` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `SecurityPolicyViolationEventInit`*"]
+    fn column_number(&self) -> i32;
+    #[cfg(feature = "SecurityPolicyViolationEventDisposition")]
+    #[doc = "Get the `disposition` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `SecurityPolicyViolationEventDisposition`, `SecurityPolicyViolationEventInit`*"]
+    fn disposition(&self) -> SecurityPolicyViolationEventDisposition;
+    #[doc = "Get the `documentURI` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `SecurityPolicyViolationEventInit`*"]
+    fn document_uri(&self) -> &str;
+    #[doc = "Get the `effectiveDirective` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `SecurityPolicyViolationEventInit`*"]
+    fn effective_directive(&self) -> &str;
+    #[doc = "Get the `lineNumber` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `SecurityPolicyViolationEventInit`*"]
+    fn line_number(&self) -> i32;
+    #[doc = "Get the `originalPolicy` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `SecurityPolicyViolationEventInit`*"]
+    fn original_policy(&self) -> &str;
+    #[doc = "Get the `referrer` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `SecurityPolicyViolationEventInit`*"]
+    fn referrer(&self) -> &str;
+    #[doc = "Get the `sample` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `SecurityPolicyViolationEventInit`*"]
+    fn sample(&self) -> &str;
+    #[doc = "Get the `sourceFile` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `SecurityPolicyViolationEventInit`*"]
+    fn source_file(&self) -> &str;
+    #[doc = "Get the `statusCode` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `SecurityPolicyViolationEventInit`*"]
+    fn status_code(&self) -> u16;
+    #[doc = "Get the `violatedDirective` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `SecurityPolicyViolationEventInit`*"]
+    fn violated_directive(&self) -> &str;
+}
+impl SecurityPolicyViolationEventInitGetters for SecurityPolicyViolationEventInit {
+    fn bubbles(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("bubbles"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn cancelable(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("cancelable"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn composed(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("composed"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn blocked_uri(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("blockedURI"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn column_number(&self) -> i32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("columnNumber"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "SecurityPolicyViolationEventDisposition")]
+    fn disposition(&self) -> SecurityPolicyViolationEventDisposition {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("disposition"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn document_uri(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("documentURI"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn effective_directive(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("effectiveDirective"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn line_number(&self) -> i32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("lineNumber"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn original_policy(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("originalPolicy"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn referrer(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("referrer"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn sample(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("sample"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn source_file(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("sourceFile"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn status_code(&self) -> u16 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("statusCode"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn violated_directive(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("violatedDirective"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl SecurityPolicyViolationEventInit {
     #[doc = "Construct a new `SecurityPolicyViolationEventInit`."]
     #[doc = ""]

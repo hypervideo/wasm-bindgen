@@ -11,6 +11,193 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `JsonWebKey`*"]
     pub type JsonWebKey;
 }
+#[doc = "The trait to access properties on the `JsonWebKey` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `JsonWebKey`*"]
+pub trait JsonWebKeyGetters {
+    #[doc = "Get the `alg` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `JsonWebKey`*"]
+    fn alg(&self) -> &str;
+    #[doc = "Get the `crv` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `JsonWebKey`*"]
+    fn crv(&self) -> &str;
+    #[doc = "Get the `d` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `JsonWebKey`*"]
+    fn d(&self) -> &str;
+    #[doc = "Get the `dp` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `JsonWebKey`*"]
+    fn dp(&self) -> &str;
+    #[doc = "Get the `dq` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `JsonWebKey`*"]
+    fn dq(&self) -> &str;
+    #[doc = "Get the `e` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `JsonWebKey`*"]
+    fn e(&self) -> &str;
+    #[doc = "Get the `ext` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `JsonWebKey`*"]
+    fn ext(&self) -> bool;
+    #[doc = "Get the `k` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `JsonWebKey`*"]
+    fn k(&self) -> &str;
+    #[doc = "Get the `key_ops` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `JsonWebKey`*"]
+    fn key_ops(&self) -> &::wasm_bindgen::JsValue;
+    #[doc = "Get the `kty` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `JsonWebKey`*"]
+    fn kty(&self) -> &str;
+    #[doc = "Get the `n` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `JsonWebKey`*"]
+    fn n(&self) -> &str;
+    #[doc = "Get the `oth` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `JsonWebKey`*"]
+    fn oth(&self) -> &::wasm_bindgen::JsValue;
+    #[doc = "Get the `p` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `JsonWebKey`*"]
+    fn p(&self) -> &str;
+    #[doc = "Get the `q` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `JsonWebKey`*"]
+    fn q(&self) -> &str;
+    #[doc = "Get the `qi` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `JsonWebKey`*"]
+    fn qi(&self) -> &str;
+    #[doc = "Get the `use` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `JsonWebKey`*"]
+    fn use_(&self) -> &str;
+    #[doc = "Get the `x` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `JsonWebKey`*"]
+    fn x(&self) -> &str;
+    #[doc = "Get the `y` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `JsonWebKey`*"]
+    fn y(&self) -> &str;
+}
+impl JsonWebKeyGetters for JsonWebKey {
+    fn alg(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("alg"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn crv(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("crv"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn d(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("d"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn dp(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("dp"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn dq(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("dq"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn e(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("e"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn ext(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("ext"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn k(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("k"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn key_ops(&self) -> &::wasm_bindgen::JsValue {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("key_ops"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn kty(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("kty"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn n(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("n"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn oth(&self) -> &::wasm_bindgen::JsValue {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("oth"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn p(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("p"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn q(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("q"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn qi(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("qi"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn use_(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("use"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn x(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("x"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn y(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("y"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl JsonWebKey {
     #[doc = "Construct a new `JsonWebKey`."]
     #[doc = ""]

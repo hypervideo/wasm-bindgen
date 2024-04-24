@@ -11,6 +11,25 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `ReadableStreamGetReaderOptions`*"]
     pub type ReadableStreamGetReaderOptions;
 }
+#[doc = "The trait to access properties on the `ReadableStreamGetReaderOptions` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `ReadableStreamGetReaderOptions`*"]
+pub trait ReadableStreamGetReaderOptionsGetters {
+    #[cfg(feature = "ReadableStreamReaderMode")]
+    #[doc = "Get the `mode` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ReadableStreamGetReaderOptions`, `ReadableStreamReaderMode`*"]
+    fn mode(&self) -> ReadableStreamReaderMode;
+}
+impl ReadableStreamGetReaderOptionsGetters for ReadableStreamGetReaderOptions {
+    #[cfg(feature = "ReadableStreamReaderMode")]
+    fn mode(&self) -> ReadableStreamReaderMode {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("mode"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl ReadableStreamGetReaderOptions {
     #[doc = "Construct a new `ReadableStreamGetReaderOptions`."]
     #[doc = ""]

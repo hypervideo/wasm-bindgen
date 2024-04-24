@@ -11,6 +11,73 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `WebSocketElement`*"]
     pub type WebSocketElement;
 }
+#[doc = "The trait to access properties on the `WebSocketElement` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `WebSocketElement`*"]
+pub trait WebSocketElementGetters {
+    #[doc = "Get the `encrypted` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `WebSocketElement`*"]
+    fn encrypted(&self) -> bool;
+    #[doc = "Get the `hostport` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `WebSocketElement`*"]
+    fn hostport(&self) -> &str;
+    #[doc = "Get the `msgreceived` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `WebSocketElement`*"]
+    fn msgreceived(&self) -> u32;
+    #[doc = "Get the `msgsent` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `WebSocketElement`*"]
+    fn msgsent(&self) -> u32;
+    #[doc = "Get the `receivedsize` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `WebSocketElement`*"]
+    fn receivedsize(&self) -> f64;
+    #[doc = "Get the `sentsize` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `WebSocketElement`*"]
+    fn sentsize(&self) -> f64;
+}
+impl WebSocketElementGetters for WebSocketElement {
+    fn encrypted(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("encrypted"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn hostport(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("hostport"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn msgreceived(&self) -> u32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("msgreceived"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn msgsent(&self) -> u32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("msgsent"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn receivedsize(&self) -> f64 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("receivedsize"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn sentsize(&self) -> f64 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("sentsize"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl WebSocketElement {
     #[doc = "Construct a new `WebSocketElement`."]
     #[doc = ""]

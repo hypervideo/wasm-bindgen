@@ -11,6 +11,33 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `NativeOsFileReadOptions`*"]
     pub type NativeOsFileReadOptions;
 }
+#[doc = "The trait to access properties on the `NativeOsFileReadOptions` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `NativeOsFileReadOptions`*"]
+pub trait NativeOsFileReadOptionsGetters {
+    #[doc = "Get the `bytes` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `NativeOsFileReadOptions`*"]
+    fn bytes(&self) -> Option<f64>;
+    #[doc = "Get the `encoding` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `NativeOsFileReadOptions`*"]
+    fn encoding(&self) -> Option<&str>;
+}
+impl NativeOsFileReadOptionsGetters for NativeOsFileReadOptions {
+    fn bytes(&self) -> Option<f64> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("bytes"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn encoding(&self) -> Option<&str> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("encoding"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl NativeOsFileReadOptions {
     #[doc = "Construct a new `NativeOsFileReadOptions`."]
     #[doc = ""]

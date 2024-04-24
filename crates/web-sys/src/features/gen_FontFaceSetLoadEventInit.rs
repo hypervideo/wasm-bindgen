@@ -11,6 +11,53 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `FontFaceSetLoadEventInit`*"]
     pub type FontFaceSetLoadEventInit;
 }
+#[doc = "The trait to access properties on the `FontFaceSetLoadEventInit` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `FontFaceSetLoadEventInit`*"]
+pub trait FontFaceSetLoadEventInitGetters {
+    #[doc = "Get the `bubbles` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `FontFaceSetLoadEventInit`*"]
+    fn bubbles(&self) -> bool;
+    #[doc = "Get the `cancelable` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `FontFaceSetLoadEventInit`*"]
+    fn cancelable(&self) -> bool;
+    #[doc = "Get the `composed` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `FontFaceSetLoadEventInit`*"]
+    fn composed(&self) -> bool;
+    #[doc = "Get the `fontfaces` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `FontFaceSetLoadEventInit`*"]
+    fn fontfaces(&self) -> &::wasm_bindgen::JsValue;
+}
+impl FontFaceSetLoadEventInitGetters for FontFaceSetLoadEventInit {
+    fn bubbles(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("bubbles"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn cancelable(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("cancelable"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn composed(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("composed"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn fontfaces(&self) -> &::wasm_bindgen::JsValue {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("fontfaces"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl FontFaceSetLoadEventInit {
     #[doc = "Construct a new `FontFaceSetLoadEventInit`."]
     #[doc = ""]

@@ -11,6 +11,43 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `AesCtrParams`*"]
     pub type AesCtrParams;
 }
+#[doc = "The trait to access properties on the `AesCtrParams` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `AesCtrParams`*"]
+pub trait AesCtrParamsGetters {
+    #[doc = "Get the `name` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `AesCtrParams`*"]
+    fn name(&self) -> &str;
+    #[doc = "Get the `counter` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `AesCtrParams`*"]
+    fn counter(&self) -> &::js_sys::Object;
+    #[doc = "Get the `length` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `AesCtrParams`*"]
+    fn length(&self) -> u8;
+}
+impl AesCtrParamsGetters for AesCtrParams {
+    fn name(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("name"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn counter(&self) -> &::js_sys::Object {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("counter"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn length(&self) -> u8 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("length"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl AesCtrParams {
     #[doc = "Construct a new `AesCtrParams`."]
     #[doc = ""]

@@ -11,6 +11,43 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `AudioBufferOptions`*"]
     pub type AudioBufferOptions;
 }
+#[doc = "The trait to access properties on the `AudioBufferOptions` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `AudioBufferOptions`*"]
+pub trait AudioBufferOptionsGetters {
+    #[doc = "Get the `length` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `AudioBufferOptions`*"]
+    fn length(&self) -> u32;
+    #[doc = "Get the `numberOfChannels` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `AudioBufferOptions`*"]
+    fn number_of_channels(&self) -> u32;
+    #[doc = "Get the `sampleRate` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `AudioBufferOptions`*"]
+    fn sample_rate(&self) -> f32;
+}
+impl AudioBufferOptionsGetters for AudioBufferOptions {
+    fn length(&self) -> u32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("length"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn number_of_channels(&self) -> u32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("numberOfChannels"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn sample_rate(&self) -> f32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("sampleRate"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl AudioBufferOptions {
     #[doc = "Construct a new `AudioBufferOptions`."]
     #[doc = ""]

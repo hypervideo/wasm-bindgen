@@ -11,6 +11,45 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `ScrollToOptions`*"]
     pub type ScrollToOptions;
 }
+#[doc = "The trait to access properties on the `ScrollToOptions` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `ScrollToOptions`*"]
+pub trait ScrollToOptionsGetters {
+    #[cfg(feature = "ScrollBehavior")]
+    #[doc = "Get the `behavior` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ScrollBehavior`, `ScrollToOptions`*"]
+    fn behavior(&self) -> ScrollBehavior;
+    #[doc = "Get the `left` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ScrollToOptions`*"]
+    fn left(&self) -> f64;
+    #[doc = "Get the `top` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ScrollToOptions`*"]
+    fn top(&self) -> f64;
+}
+impl ScrollToOptionsGetters for ScrollToOptions {
+    #[cfg(feature = "ScrollBehavior")]
+    fn behavior(&self) -> ScrollBehavior {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("behavior"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn left(&self) -> f64 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("left"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn top(&self) -> f64 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("top"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl ScrollToOptions {
     #[doc = "Construct a new `ScrollToOptions`."]
     #[doc = ""]

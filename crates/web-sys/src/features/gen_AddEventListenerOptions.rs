@@ -11,6 +11,43 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `AddEventListenerOptions`*"]
     pub type AddEventListenerOptions;
 }
+#[doc = "The trait to access properties on the `AddEventListenerOptions` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `AddEventListenerOptions`*"]
+pub trait AddEventListenerOptionsGetters {
+    #[doc = "Get the `capture` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `AddEventListenerOptions`*"]
+    fn capture(&self) -> bool;
+    #[doc = "Get the `once` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `AddEventListenerOptions`*"]
+    fn once(&self) -> bool;
+    #[doc = "Get the `passive` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `AddEventListenerOptions`*"]
+    fn passive(&self) -> bool;
+}
+impl AddEventListenerOptionsGetters for AddEventListenerOptions {
+    fn capture(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("capture"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn once(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("once"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn passive(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("passive"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl AddEventListenerOptions {
     #[doc = "Construct a new `AddEventListenerOptions`."]
     #[doc = ""]

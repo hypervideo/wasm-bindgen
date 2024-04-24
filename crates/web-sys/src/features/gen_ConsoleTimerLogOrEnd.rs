@@ -11,6 +11,33 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `ConsoleTimerLogOrEnd`*"]
     pub type ConsoleTimerLogOrEnd;
 }
+#[doc = "The trait to access properties on the `ConsoleTimerLogOrEnd` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `ConsoleTimerLogOrEnd`*"]
+pub trait ConsoleTimerLogOrEndGetters {
+    #[doc = "Get the `duration` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ConsoleTimerLogOrEnd`*"]
+    fn duration(&self) -> f64;
+    #[doc = "Get the `name` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ConsoleTimerLogOrEnd`*"]
+    fn name(&self) -> &str;
+}
+impl ConsoleTimerLogOrEndGetters for ConsoleTimerLogOrEnd {
+    fn duration(&self) -> f64 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("duration"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn name(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("name"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl ConsoleTimerLogOrEnd {
     #[doc = "Construct a new `ConsoleTimerLogOrEnd`."]
     #[doc = ""]

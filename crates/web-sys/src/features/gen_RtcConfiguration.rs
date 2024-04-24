@@ -11,6 +11,67 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `RtcConfiguration`*"]
     pub type RtcConfiguration;
 }
+#[doc = "The trait to access properties on the `RtcConfiguration` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `RtcConfiguration`*"]
+pub trait RtcConfigurationGetters {
+    #[cfg(feature = "RtcBundlePolicy")]
+    #[doc = "Get the `bundlePolicy` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcBundlePolicy`, `RtcConfiguration`*"]
+    fn bundle_policy(&self) -> RtcBundlePolicy;
+    #[doc = "Get the `certificates` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcConfiguration`*"]
+    fn certificates(&self) -> &::wasm_bindgen::JsValue;
+    #[doc = "Get the `iceServers` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcConfiguration`*"]
+    fn ice_servers(&self) -> &::wasm_bindgen::JsValue;
+    #[cfg(feature = "RtcIceTransportPolicy")]
+    #[doc = "Get the `iceTransportPolicy` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcConfiguration`, `RtcIceTransportPolicy`*"]
+    fn ice_transport_policy(&self) -> RtcIceTransportPolicy;
+    #[doc = "Get the `peerIdentity` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcConfiguration`*"]
+    fn peer_identity(&self) -> Option<&str>;
+}
+impl RtcConfigurationGetters for RtcConfiguration {
+    #[cfg(feature = "RtcBundlePolicy")]
+    fn bundle_policy(&self) -> RtcBundlePolicy {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("bundlePolicy"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn certificates(&self) -> &::wasm_bindgen::JsValue {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("certificates"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn ice_servers(&self) -> &::wasm_bindgen::JsValue {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("iceServers"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "RtcIceTransportPolicy")]
+    fn ice_transport_policy(&self) -> RtcIceTransportPolicy {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("iceTransportPolicy"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn peer_identity(&self) -> Option<&str> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("peerIdentity"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl RtcConfiguration {
     #[doc = "Construct a new `RtcConfiguration`."]
     #[doc = ""]

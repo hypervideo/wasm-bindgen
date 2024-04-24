@@ -11,6 +11,103 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `FakePluginTagInit`*"]
     pub type FakePluginTagInit;
 }
+#[doc = "The trait to access properties on the `FakePluginTagInit` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `FakePluginTagInit`*"]
+pub trait FakePluginTagInitGetters {
+    #[doc = "Get the `description` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `FakePluginTagInit`*"]
+    fn description(&self) -> &str;
+    #[doc = "Get the `fileName` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `FakePluginTagInit`*"]
+    fn file_name(&self) -> &str;
+    #[doc = "Get the `fullPath` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `FakePluginTagInit`*"]
+    fn full_path(&self) -> &str;
+    #[doc = "Get the `handlerURI` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `FakePluginTagInit`*"]
+    fn handler_uri(&self) -> &str;
+    #[doc = "Get the `mimeEntries` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `FakePluginTagInit`*"]
+    fn mime_entries(&self) -> &::wasm_bindgen::JsValue;
+    #[doc = "Get the `name` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `FakePluginTagInit`*"]
+    fn name(&self) -> &str;
+    #[doc = "Get the `niceName` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `FakePluginTagInit`*"]
+    fn nice_name(&self) -> &str;
+    #[doc = "Get the `sandboxScript` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `FakePluginTagInit`*"]
+    fn sandbox_script(&self) -> &str;
+    #[doc = "Get the `version` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `FakePluginTagInit`*"]
+    fn version(&self) -> &str;
+}
+impl FakePluginTagInitGetters for FakePluginTagInit {
+    fn description(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("description"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn file_name(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("fileName"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn full_path(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("fullPath"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn handler_uri(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("handlerURI"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn mime_entries(&self) -> &::wasm_bindgen::JsValue {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("mimeEntries"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn name(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("name"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn nice_name(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("niceName"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn sandbox_script(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("sandboxScript"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn version(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("version"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl FakePluginTagInit {
     #[doc = "Construct a new `FakePluginTagInit`."]
     #[doc = ""]

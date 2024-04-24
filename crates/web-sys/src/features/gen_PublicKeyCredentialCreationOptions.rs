@@ -11,6 +11,113 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `PublicKeyCredentialCreationOptions`*"]
     pub type PublicKeyCredentialCreationOptions;
 }
+#[doc = "The trait to access properties on the `PublicKeyCredentialCreationOptions` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `PublicKeyCredentialCreationOptions`*"]
+pub trait PublicKeyCredentialCreationOptionsGetters {
+    #[cfg(feature = "AttestationConveyancePreference")]
+    #[doc = "Get the `attestation` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `AttestationConveyancePreference`, `PublicKeyCredentialCreationOptions`*"]
+    fn attestation(&self) -> AttestationConveyancePreference;
+    #[cfg(feature = "AuthenticatorSelectionCriteria")]
+    #[doc = "Get the `authenticatorSelection` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `AuthenticatorSelectionCriteria`, `PublicKeyCredentialCreationOptions`*"]
+    fn authenticator_selection(&self) -> &AuthenticatorSelectionCriteria;
+    #[doc = "Get the `challenge` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `PublicKeyCredentialCreationOptions`*"]
+    fn challenge(&self) -> &::js_sys::Object;
+    #[doc = "Get the `excludeCredentials` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `PublicKeyCredentialCreationOptions`*"]
+    fn exclude_credentials(&self) -> &::wasm_bindgen::JsValue;
+    #[cfg(feature = "AuthenticationExtensionsClientInputs")]
+    #[doc = "Get the `extensions` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `AuthenticationExtensionsClientInputs`, `PublicKeyCredentialCreationOptions`*"]
+    fn extensions(&self) -> &AuthenticationExtensionsClientInputs;
+    #[doc = "Get the `pubKeyCredParams` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `PublicKeyCredentialCreationOptions`*"]
+    fn pub_key_cred_params(&self) -> &::wasm_bindgen::JsValue;
+    #[cfg(feature = "PublicKeyCredentialRpEntity")]
+    #[doc = "Get the `rp` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `PublicKeyCredentialCreationOptions`, `PublicKeyCredentialRpEntity`*"]
+    fn rp(&self) -> &PublicKeyCredentialRpEntity;
+    #[doc = "Get the `timeout` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `PublicKeyCredentialCreationOptions`*"]
+    fn timeout(&self) -> u32;
+    #[cfg(feature = "PublicKeyCredentialUserEntity")]
+    #[doc = "Get the `user` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `PublicKeyCredentialCreationOptions`, `PublicKeyCredentialUserEntity`*"]
+    fn user(&self) -> &PublicKeyCredentialUserEntity;
+}
+impl PublicKeyCredentialCreationOptionsGetters for PublicKeyCredentialCreationOptions {
+    #[cfg(feature = "AttestationConveyancePreference")]
+    fn attestation(&self) -> AttestationConveyancePreference {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("attestation"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "AuthenticatorSelectionCriteria")]
+    fn authenticator_selection(&self) -> &AuthenticatorSelectionCriteria {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("authenticatorSelection"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn challenge(&self) -> &::js_sys::Object {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("challenge"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn exclude_credentials(&self) -> &::wasm_bindgen::JsValue {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("excludeCredentials"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "AuthenticationExtensionsClientInputs")]
+    fn extensions(&self) -> &AuthenticationExtensionsClientInputs {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("extensions"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn pub_key_cred_params(&self) -> &::wasm_bindgen::JsValue {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("pubKeyCredParams"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "PublicKeyCredentialRpEntity")]
+    fn rp(&self) -> &PublicKeyCredentialRpEntity {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("rp"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn timeout(&self) -> u32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("timeout"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "PublicKeyCredentialUserEntity")]
+    fn user(&self) -> &PublicKeyCredentialUserEntity {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("user"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl PublicKeyCredentialCreationOptions {
     #[cfg(all(
         feature = "PublicKeyCredentialRpEntity",

@@ -11,6 +11,63 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `PushSubscriptionInit`*"]
     pub type PushSubscriptionInit;
 }
+#[doc = "The trait to access properties on the `PushSubscriptionInit` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `PushSubscriptionInit`*"]
+pub trait PushSubscriptionInitGetters {
+    #[doc = "Get the `appServerKey` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `PushSubscriptionInit`*"]
+    fn app_server_key(&self) -> Option<&::js_sys::Object>;
+    #[doc = "Get the `authSecret` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `PushSubscriptionInit`*"]
+    fn auth_secret(&self) -> Option<&::js_sys::ArrayBuffer>;
+    #[doc = "Get the `endpoint` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `PushSubscriptionInit`*"]
+    fn endpoint(&self) -> &str;
+    #[doc = "Get the `p256dhKey` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `PushSubscriptionInit`*"]
+    fn p256dh_key(&self) -> Option<&::js_sys::ArrayBuffer>;
+    #[doc = "Get the `scope` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `PushSubscriptionInit`*"]
+    fn scope(&self) -> &str;
+}
+impl PushSubscriptionInitGetters for PushSubscriptionInit {
+    fn app_server_key(&self) -> Option<&::js_sys::Object> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("appServerKey"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn auth_secret(&self) -> Option<&::js_sys::ArrayBuffer> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("authSecret"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn endpoint(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("endpoint"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn p256dh_key(&self) -> Option<&::js_sys::ArrayBuffer> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("p256dhKey"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn scope(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("scope"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl PushSubscriptionInit {
     #[doc = "Construct a new `PushSubscriptionInit`."]
     #[doc = ""]

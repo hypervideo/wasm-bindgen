@@ -11,6 +11,63 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `MediaStreamConstraints`*"]
     pub type MediaStreamConstraints;
 }
+#[doc = "The trait to access properties on the `MediaStreamConstraints` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `MediaStreamConstraints`*"]
+pub trait MediaStreamConstraintsGetters {
+    #[doc = "Get the `audio` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `MediaStreamConstraints`*"]
+    fn audio(&self) -> &::wasm_bindgen::JsValue;
+    #[doc = "Get the `fake` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `MediaStreamConstraints`*"]
+    fn fake(&self) -> bool;
+    #[doc = "Get the `peerIdentity` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `MediaStreamConstraints`*"]
+    fn peer_identity(&self) -> Option<&str>;
+    #[doc = "Get the `picture` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `MediaStreamConstraints`*"]
+    fn picture(&self) -> bool;
+    #[doc = "Get the `video` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `MediaStreamConstraints`*"]
+    fn video(&self) -> &::wasm_bindgen::JsValue;
+}
+impl MediaStreamConstraintsGetters for MediaStreamConstraints {
+    fn audio(&self) -> &::wasm_bindgen::JsValue {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("audio"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn fake(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("fake"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn peer_identity(&self) -> Option<&str> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("peerIdentity"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn picture(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("picture"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn video(&self) -> &::wasm_bindgen::JsValue {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("video"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl MediaStreamConstraints {
     #[doc = "Construct a new `MediaStreamConstraints`."]
     #[doc = ""]

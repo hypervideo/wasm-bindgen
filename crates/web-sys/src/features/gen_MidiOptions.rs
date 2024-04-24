@@ -11,6 +11,33 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `MidiOptions`*"]
     pub type MidiOptions;
 }
+#[doc = "The trait to access properties on the `MidiOptions` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `MidiOptions`*"]
+pub trait MidiOptionsGetters {
+    #[doc = "Get the `software` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `MidiOptions`*"]
+    fn software(&self) -> bool;
+    #[doc = "Get the `sysex` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `MidiOptions`*"]
+    fn sysex(&self) -> bool;
+}
+impl MidiOptionsGetters for MidiOptions {
+    fn software(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("software"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn sysex(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("sysex"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl MidiOptions {
     #[doc = "Construct a new `MidiOptions`."]
     #[doc = ""]

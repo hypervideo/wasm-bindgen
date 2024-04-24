@@ -11,6 +11,127 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `CaretStateChangedEventInit`*"]
     pub type CaretStateChangedEventInit;
 }
+#[doc = "The trait to access properties on the `CaretStateChangedEventInit` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `CaretStateChangedEventInit`*"]
+pub trait CaretStateChangedEventInitGetters {
+    #[doc = "Get the `bubbles` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `CaretStateChangedEventInit`*"]
+    fn bubbles(&self) -> bool;
+    #[doc = "Get the `cancelable` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `CaretStateChangedEventInit`*"]
+    fn cancelable(&self) -> bool;
+    #[doc = "Get the `composed` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `CaretStateChangedEventInit`*"]
+    fn composed(&self) -> bool;
+    #[cfg(feature = "DomRectReadOnly")]
+    #[doc = "Get the `boundingClientRect` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `CaretStateChangedEventInit`, `DomRectReadOnly`*"]
+    fn bounding_client_rect(&self) -> Option<&DomRectReadOnly>;
+    #[doc = "Get the `caretVisible` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `CaretStateChangedEventInit`*"]
+    fn caret_visible(&self) -> bool;
+    #[doc = "Get the `caretVisuallyVisible` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `CaretStateChangedEventInit`*"]
+    fn caret_visually_visible(&self) -> bool;
+    #[doc = "Get the `collapsed` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `CaretStateChangedEventInit`*"]
+    fn collapsed(&self) -> bool;
+    #[cfg(feature = "CaretChangedReason")]
+    #[doc = "Get the `reason` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `CaretChangedReason`, `CaretStateChangedEventInit`*"]
+    fn reason(&self) -> CaretChangedReason;
+    #[doc = "Get the `selectedTextContent` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `CaretStateChangedEventInit`*"]
+    fn selected_text_content(&self) -> &str;
+    #[doc = "Get the `selectionEditable` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `CaretStateChangedEventInit`*"]
+    fn selection_editable(&self) -> bool;
+    #[doc = "Get the `selectionVisible` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `CaretStateChangedEventInit`*"]
+    fn selection_visible(&self) -> bool;
+}
+impl CaretStateChangedEventInitGetters for CaretStateChangedEventInit {
+    fn bubbles(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("bubbles"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn cancelable(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("cancelable"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn composed(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("composed"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "DomRectReadOnly")]
+    fn bounding_client_rect(&self) -> Option<&DomRectReadOnly> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("boundingClientRect"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn caret_visible(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("caretVisible"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn caret_visually_visible(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("caretVisuallyVisible"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn collapsed(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("collapsed"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "CaretChangedReason")]
+    fn reason(&self) -> CaretChangedReason {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("reason"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn selected_text_content(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("selectedTextContent"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn selection_editable(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("selectionEditable"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn selection_visible(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("selectionVisible"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl CaretStateChangedEventInit {
     #[doc = "Construct a new `CaretStateChangedEventInit`."]
     #[doc = ""]

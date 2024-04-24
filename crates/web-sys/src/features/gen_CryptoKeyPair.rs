@@ -11,6 +11,37 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `CryptoKeyPair`*"]
     pub type CryptoKeyPair;
 }
+#[doc = "The trait to access properties on the `CryptoKeyPair` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `CryptoKeyPair`*"]
+pub trait CryptoKeyPairGetters {
+    #[cfg(feature = "CryptoKey")]
+    #[doc = "Get the `privateKey` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `CryptoKey`, `CryptoKeyPair`*"]
+    fn private_key(&self) -> &CryptoKey;
+    #[cfg(feature = "CryptoKey")]
+    #[doc = "Get the `publicKey` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `CryptoKey`, `CryptoKeyPair`*"]
+    fn public_key(&self) -> &CryptoKey;
+}
+impl CryptoKeyPairGetters for CryptoKeyPair {
+    #[cfg(feature = "CryptoKey")]
+    fn private_key(&self) -> &CryptoKey {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("privateKey"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "CryptoKey")]
+    fn public_key(&self) -> &CryptoKey {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("publicKey"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl CryptoKeyPair {
     #[cfg(feature = "CryptoKey")]
     #[doc = "Construct a new `CryptoKeyPair`."]

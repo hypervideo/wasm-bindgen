@@ -11,6 +11,126 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `RtcRtpEncodingParameters`*"]
     pub type RtcRtpEncodingParameters;
 }
+#[doc = "The trait to access properties on the `RtcRtpEncodingParameters` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `RtcRtpEncodingParameters`*"]
+pub trait RtcRtpEncodingParametersGetters {
+    #[doc = "Get the `active` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcRtpEncodingParameters`*"]
+    fn active(&self) -> bool;
+    #[cfg(feature = "RtcDegradationPreference")]
+    #[doc = "Get the `degradationPreference` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcDegradationPreference`, `RtcRtpEncodingParameters`*"]
+    fn degradation_preference(&self) -> RtcDegradationPreference;
+    #[cfg(feature = "RtcFecParameters")]
+    #[doc = "Get the `fec` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcFecParameters`, `RtcRtpEncodingParameters`*"]
+    fn fec(&self) -> &RtcFecParameters;
+    #[doc = "Get the `maxBitrate` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcRtpEncodingParameters`*"]
+    fn max_bitrate(&self) -> u32;
+    #[cfg(feature = "RtcPriorityType")]
+    #[doc = "Get the `priority` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcPriorityType`, `RtcRtpEncodingParameters`*"]
+    fn priority(&self) -> RtcPriorityType;
+    #[doc = "Get the `rid` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcRtpEncodingParameters`*"]
+    fn rid(&self) -> &str;
+    #[cfg(feature = "RtcRtxParameters")]
+    #[doc = "Get the `rtx` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcRtpEncodingParameters`, `RtcRtxParameters`*"]
+    fn rtx(&self) -> &RtcRtxParameters;
+    #[cfg(web_sys_unstable_apis)]
+    #[doc = "Get the `scalabilityMode` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcRtpEncodingParameters`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn scalability_mode(&self) -> &str;
+    #[doc = "Get the `scaleResolutionDownBy` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcRtpEncodingParameters`*"]
+    fn scale_resolution_down_by(&self) -> f32;
+    #[doc = "Get the `ssrc` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcRtpEncodingParameters`*"]
+    fn ssrc(&self) -> u32;
+}
+impl RtcRtpEncodingParametersGetters for RtcRtpEncodingParameters {
+    fn active(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("active"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "RtcDegradationPreference")]
+    fn degradation_preference(&self) -> RtcDegradationPreference {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("degradationPreference"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "RtcFecParameters")]
+    fn fec(&self) -> &RtcFecParameters {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("fec"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn max_bitrate(&self) -> u32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("maxBitrate"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "RtcPriorityType")]
+    fn priority(&self) -> RtcPriorityType {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("priority"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn rid(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("rid"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "RtcRtxParameters")]
+    fn rtx(&self) -> &RtcRtxParameters {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("rtx"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(web_sys_unstable_apis)]
+    fn scalability_mode(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("scalabilityMode"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn scale_resolution_down_by(&self) -> f32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("scaleResolutionDownBy"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn ssrc(&self) -> u32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("ssrc"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl RtcRtpEncodingParameters {
     #[doc = "Construct a new `RtcRtpEncodingParameters`."]
     #[doc = ""]

@@ -11,6 +11,23 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `MediaKeysPolicy`*"]
     pub type MediaKeysPolicy;
 }
+#[doc = "The trait to access properties on the `MediaKeysPolicy` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `MediaKeysPolicy`*"]
+pub trait MediaKeysPolicyGetters {
+    #[doc = "Get the `minHdcpVersion` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `MediaKeysPolicy`*"]
+    fn min_hdcp_version(&self) -> &str;
+}
+impl MediaKeysPolicyGetters for MediaKeysPolicy {
+    fn min_hdcp_version(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("minHdcpVersion"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl MediaKeysPolicy {
     #[doc = "Construct a new `MediaKeysPolicy`."]
     #[doc = ""]

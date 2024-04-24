@@ -11,6 +11,33 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `ConsoleCounterError`*"]
     pub type ConsoleCounterError;
 }
+#[doc = "The trait to access properties on the `ConsoleCounterError` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `ConsoleCounterError`*"]
+pub trait ConsoleCounterErrorGetters {
+    #[doc = "Get the `error` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ConsoleCounterError`*"]
+    fn error(&self) -> &str;
+    #[doc = "Get the `label` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ConsoleCounterError`*"]
+    fn label(&self) -> &str;
+}
+impl ConsoleCounterErrorGetters for ConsoleCounterError {
+    fn error(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("error"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn label(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("label"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl ConsoleCounterError {
     #[doc = "Construct a new `ConsoleCounterError`."]
     #[doc = ""]

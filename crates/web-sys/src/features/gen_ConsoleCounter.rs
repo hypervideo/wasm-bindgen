@@ -11,6 +11,33 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `ConsoleCounter`*"]
     pub type ConsoleCounter;
 }
+#[doc = "The trait to access properties on the `ConsoleCounter` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `ConsoleCounter`*"]
+pub trait ConsoleCounterGetters {
+    #[doc = "Get the `count` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ConsoleCounter`*"]
+    fn count(&self) -> u32;
+    #[doc = "Get the `label` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ConsoleCounter`*"]
+    fn label(&self) -> &str;
+}
+impl ConsoleCounterGetters for ConsoleCounter {
+    fn count(&self) -> u32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("count"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn label(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("label"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl ConsoleCounter {
     #[doc = "Construct a new `ConsoleCounter`."]
     #[doc = ""]

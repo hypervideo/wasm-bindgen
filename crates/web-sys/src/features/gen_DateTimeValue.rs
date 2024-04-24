@@ -11,6 +11,63 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `DateTimeValue`*"]
     pub type DateTimeValue;
 }
+#[doc = "The trait to access properties on the `DateTimeValue` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `DateTimeValue`*"]
+pub trait DateTimeValueGetters {
+    #[doc = "Get the `day` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DateTimeValue`*"]
+    fn day(&self) -> i32;
+    #[doc = "Get the `hour` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DateTimeValue`*"]
+    fn hour(&self) -> i32;
+    #[doc = "Get the `minute` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DateTimeValue`*"]
+    fn minute(&self) -> i32;
+    #[doc = "Get the `month` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DateTimeValue`*"]
+    fn month(&self) -> i32;
+    #[doc = "Get the `year` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DateTimeValue`*"]
+    fn year(&self) -> i32;
+}
+impl DateTimeValueGetters for DateTimeValue {
+    fn day(&self) -> i32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("day"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn hour(&self) -> i32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("hour"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn minute(&self) -> i32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("minute"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn month(&self) -> i32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("month"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn year(&self) -> i32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("year"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl DateTimeValue {
     #[doc = "Construct a new `DateTimeValue`."]
     #[doc = ""]

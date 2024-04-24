@@ -16,6 +16,47 @@ extern "C" {
     pub type ClipboardPermissionDescriptor;
 }
 #[cfg(web_sys_unstable_apis)]
+#[doc = "The trait to access properties on the `ClipboardPermissionDescriptor` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `ClipboardPermissionDescriptor`*"]
+pub trait ClipboardPermissionDescriptorGetters {
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "PermissionName")]
+    #[doc = "Get the `name` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ClipboardPermissionDescriptor`, `PermissionName`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn name(&self) -> PermissionName;
+    #[cfg(web_sys_unstable_apis)]
+    #[doc = "Get the `allowWithoutGesture` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ClipboardPermissionDescriptor`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn allow_without_gesture(&self) -> bool;
+}
+#[cfg(web_sys_unstable_apis)]
+impl ClipboardPermissionDescriptorGetters for ClipboardPermissionDescriptor {
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "PermissionName")]
+    fn name(&self) -> PermissionName {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("name"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(web_sys_unstable_apis)]
+    fn allow_without_gesture(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("allowWithoutGesture"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
+#[cfg(web_sys_unstable_apis)]
 impl ClipboardPermissionDescriptor {
     #[cfg(feature = "PermissionName")]
     #[doc = "Construct a new `ClipboardPermissionDescriptor`."]

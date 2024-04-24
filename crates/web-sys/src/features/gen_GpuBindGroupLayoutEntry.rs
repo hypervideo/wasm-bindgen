@@ -16,6 +16,130 @@ extern "C" {
     pub type GpuBindGroupLayoutEntry;
 }
 #[cfg(web_sys_unstable_apis)]
+#[doc = "The trait to access properties on the `GpuBindGroupLayoutEntry` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `GpuBindGroupLayoutEntry`*"]
+pub trait GpuBindGroupLayoutEntryGetters {
+    #[cfg(web_sys_unstable_apis)]
+    #[doc = "Get the `binding` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `GpuBindGroupLayoutEntry`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn binding(&self) -> u32;
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "GpuBufferBindingLayout")]
+    #[doc = "Get the `buffer` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `GpuBindGroupLayoutEntry`, `GpuBufferBindingLayout`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn buffer(&self) -> &GpuBufferBindingLayout;
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "GpuExternalTextureBindingLayout")]
+    #[doc = "Get the `externalTexture` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `GpuBindGroupLayoutEntry`, `GpuExternalTextureBindingLayout`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn external_texture(&self) -> &GpuExternalTextureBindingLayout;
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "GpuSamplerBindingLayout")]
+    #[doc = "Get the `sampler` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `GpuBindGroupLayoutEntry`, `GpuSamplerBindingLayout`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn sampler(&self) -> &GpuSamplerBindingLayout;
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "GpuStorageTextureBindingLayout")]
+    #[doc = "Get the `storageTexture` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `GpuBindGroupLayoutEntry`, `GpuStorageTextureBindingLayout`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn storage_texture(&self) -> &GpuStorageTextureBindingLayout;
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "GpuTextureBindingLayout")]
+    #[doc = "Get the `texture` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `GpuBindGroupLayoutEntry`, `GpuTextureBindingLayout`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn texture(&self) -> &GpuTextureBindingLayout;
+    #[cfg(web_sys_unstable_apis)]
+    #[doc = "Get the `visibility` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `GpuBindGroupLayoutEntry`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn visibility(&self) -> u32;
+}
+#[cfg(web_sys_unstable_apis)]
+impl GpuBindGroupLayoutEntryGetters for GpuBindGroupLayoutEntry {
+    #[cfg(web_sys_unstable_apis)]
+    fn binding(&self) -> u32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("binding"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "GpuBufferBindingLayout")]
+    fn buffer(&self) -> &GpuBufferBindingLayout {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("buffer"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "GpuExternalTextureBindingLayout")]
+    fn external_texture(&self) -> &GpuExternalTextureBindingLayout {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("externalTexture"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "GpuSamplerBindingLayout")]
+    fn sampler(&self) -> &GpuSamplerBindingLayout {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("sampler"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "GpuStorageTextureBindingLayout")]
+    fn storage_texture(&self) -> &GpuStorageTextureBindingLayout {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("storageTexture"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "GpuTextureBindingLayout")]
+    fn texture(&self) -> &GpuTextureBindingLayout {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("texture"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(web_sys_unstable_apis)]
+    fn visibility(&self) -> u32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("visibility"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
+#[cfg(web_sys_unstable_apis)]
 impl GpuBindGroupLayoutEntry {
     #[doc = "Construct a new `GpuBindGroupLayoutEntry`."]
     #[doc = ""]

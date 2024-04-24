@@ -11,6 +11,35 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `PublicKeyCredentialParameters`*"]
     pub type PublicKeyCredentialParameters;
 }
+#[doc = "The trait to access properties on the `PublicKeyCredentialParameters` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `PublicKeyCredentialParameters`*"]
+pub trait PublicKeyCredentialParametersGetters {
+    #[doc = "Get the `alg` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `PublicKeyCredentialParameters`*"]
+    fn alg(&self) -> i32;
+    #[cfg(feature = "PublicKeyCredentialType")]
+    #[doc = "Get the `type` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `PublicKeyCredentialParameters`, `PublicKeyCredentialType`*"]
+    fn type_(&self) -> PublicKeyCredentialType;
+}
+impl PublicKeyCredentialParametersGetters for PublicKeyCredentialParameters {
+    fn alg(&self) -> i32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("alg"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "PublicKeyCredentialType")]
+    fn type_(&self) -> PublicKeyCredentialType {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("type"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl PublicKeyCredentialParameters {
     #[cfg(feature = "PublicKeyCredentialType")]
     #[doc = "Construct a new `PublicKeyCredentialParameters`."]

@@ -11,6 +11,33 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `RtcIdentityProvider`*"]
     pub type RtcIdentityProvider;
 }
+#[doc = "The trait to access properties on the `RtcIdentityProvider` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `RtcIdentityProvider`*"]
+pub trait RtcIdentityProviderGetters {
+    #[doc = "Get the `generateAssertion` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcIdentityProvider`*"]
+    fn generate_assertion(&self) -> &::js_sys::Function;
+    #[doc = "Get the `validateAssertion` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcIdentityProvider`*"]
+    fn validate_assertion(&self) -> &::js_sys::Function;
+}
+impl RtcIdentityProviderGetters for RtcIdentityProvider {
+    fn generate_assertion(&self) -> &::js_sys::Function {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("generateAssertion"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn validate_assertion(&self) -> &::js_sys::Function {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("validateAssertion"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl RtcIdentityProvider {
     #[doc = "Construct a new `RtcIdentityProvider`."]
     #[doc = ""]

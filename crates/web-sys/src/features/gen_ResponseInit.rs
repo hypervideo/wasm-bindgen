@@ -11,6 +11,43 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `ResponseInit`*"]
     pub type ResponseInit;
 }
+#[doc = "The trait to access properties on the `ResponseInit` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `ResponseInit`*"]
+pub trait ResponseInitGetters {
+    #[doc = "Get the `headers` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ResponseInit`*"]
+    fn headers(&self) -> &::wasm_bindgen::JsValue;
+    #[doc = "Get the `status` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ResponseInit`*"]
+    fn status(&self) -> u16;
+    #[doc = "Get the `statusText` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ResponseInit`*"]
+    fn status_text(&self) -> &str;
+}
+impl ResponseInitGetters for ResponseInit {
+    fn headers(&self) -> &::wasm_bindgen::JsValue {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("headers"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn status(&self) -> u16 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("status"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn status_text(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("statusText"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl ResponseInit {
     #[doc = "Construct a new `ResponseInit`."]
     #[doc = ""]

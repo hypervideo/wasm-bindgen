@@ -11,6 +11,53 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `RegisteredKey`*"]
     pub type RegisteredKey;
 }
+#[doc = "The trait to access properties on the `RegisteredKey` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `RegisteredKey`*"]
+pub trait RegisteredKeyGetters {
+    #[doc = "Get the `appId` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RegisteredKey`*"]
+    fn app_id(&self) -> Option<&str>;
+    #[doc = "Get the `keyHandle` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RegisteredKey`*"]
+    fn key_handle(&self) -> &str;
+    #[doc = "Get the `transports` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RegisteredKey`*"]
+    fn transports(&self) -> Option<&::wasm_bindgen::JsValue>;
+    #[doc = "Get the `version` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RegisteredKey`*"]
+    fn version(&self) -> &str;
+}
+impl RegisteredKeyGetters for RegisteredKey {
+    fn app_id(&self) -> Option<&str> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("appId"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn key_handle(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("keyHandle"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn transports(&self) -> Option<&::wasm_bindgen::JsValue> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("transports"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn version(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("version"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl RegisteredKey {
     #[doc = "Construct a new `RegisteredKey`."]
     #[doc = ""]

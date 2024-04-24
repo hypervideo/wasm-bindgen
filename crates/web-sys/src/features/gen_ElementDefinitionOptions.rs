@@ -11,6 +11,23 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `ElementDefinitionOptions`*"]
     pub type ElementDefinitionOptions;
 }
+#[doc = "The trait to access properties on the `ElementDefinitionOptions` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `ElementDefinitionOptions`*"]
+pub trait ElementDefinitionOptionsGetters {
+    #[doc = "Get the `extends` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ElementDefinitionOptions`*"]
+    fn extends(&self) -> &str;
+}
+impl ElementDefinitionOptionsGetters for ElementDefinitionOptions {
+    fn extends(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("extends"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl ElementDefinitionOptions {
     #[doc = "Construct a new `ElementDefinitionOptions`."]
     #[doc = ""]

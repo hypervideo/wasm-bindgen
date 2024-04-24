@@ -11,6 +11,59 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `CacheBatchOperation`*"]
     pub type CacheBatchOperation;
 }
+#[doc = "The trait to access properties on the `CacheBatchOperation` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `CacheBatchOperation`*"]
+pub trait CacheBatchOperationGetters {
+    #[cfg(feature = "CacheQueryOptions")]
+    #[doc = "Get the `options` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `CacheBatchOperation`, `CacheQueryOptions`*"]
+    fn options(&self) -> &CacheQueryOptions;
+    #[cfg(feature = "Request")]
+    #[doc = "Get the `request` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `CacheBatchOperation`, `Request`*"]
+    fn request(&self) -> &Request;
+    #[cfg(feature = "Response")]
+    #[doc = "Get the `response` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `CacheBatchOperation`, `Response`*"]
+    fn response(&self) -> &Response;
+    #[doc = "Get the `type` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `CacheBatchOperation`*"]
+    fn type_(&self) -> &str;
+}
+impl CacheBatchOperationGetters for CacheBatchOperation {
+    #[cfg(feature = "CacheQueryOptions")]
+    fn options(&self) -> &CacheQueryOptions {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("options"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "Request")]
+    fn request(&self) -> &Request {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("request"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "Response")]
+    fn response(&self) -> &Response {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("response"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn type_(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("type"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl CacheBatchOperation {
     #[doc = "Construct a new `CacheBatchOperation`."]
     #[doc = ""]

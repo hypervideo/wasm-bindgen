@@ -11,6 +11,23 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `HttpConnDict`*"]
     pub type HttpConnDict;
 }
+#[doc = "The trait to access properties on the `HttpConnDict` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `HttpConnDict`*"]
+pub trait HttpConnDictGetters {
+    #[doc = "Get the `connections` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `HttpConnDict`*"]
+    fn connections(&self) -> &::wasm_bindgen::JsValue;
+}
+impl HttpConnDictGetters for HttpConnDict {
+    fn connections(&self) -> &::wasm_bindgen::JsValue {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("connections"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl HttpConnDict {
     #[doc = "Construct a new `HttpConnDict`."]
     #[doc = ""]

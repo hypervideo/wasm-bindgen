@@ -11,6 +11,53 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `RtcRtpSynchronizationSource`*"]
     pub type RtcRtpSynchronizationSource;
 }
+#[doc = "The trait to access properties on the `RtcRtpSynchronizationSource` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `RtcRtpSynchronizationSource`*"]
+pub trait RtcRtpSynchronizationSourceGetters {
+    #[doc = "Get the `audioLevel` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcRtpSynchronizationSource`*"]
+    fn audio_level(&self) -> f64;
+    #[doc = "Get the `source` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcRtpSynchronizationSource`*"]
+    fn source(&self) -> u32;
+    #[doc = "Get the `timestamp` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcRtpSynchronizationSource`*"]
+    fn timestamp(&self) -> f64;
+    #[doc = "Get the `voiceActivityFlag` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcRtpSynchronizationSource`*"]
+    fn voice_activity_flag(&self) -> Option<bool>;
+}
+impl RtcRtpSynchronizationSourceGetters for RtcRtpSynchronizationSource {
+    fn audio_level(&self) -> f64 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("audioLevel"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn source(&self) -> u32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("source"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn timestamp(&self) -> f64 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("timestamp"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn voice_activity_flag(&self) -> Option<bool> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("voiceActivityFlag"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl RtcRtpSynchronizationSource {
     #[doc = "Construct a new `RtcRtpSynchronizationSource`."]
     #[doc = ""]

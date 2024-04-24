@@ -11,6 +11,43 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `RsaOtherPrimesInfo`*"]
     pub type RsaOtherPrimesInfo;
 }
+#[doc = "The trait to access properties on the `RsaOtherPrimesInfo` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `RsaOtherPrimesInfo`*"]
+pub trait RsaOtherPrimesInfoGetters {
+    #[doc = "Get the `d` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RsaOtherPrimesInfo`*"]
+    fn d(&self) -> &str;
+    #[doc = "Get the `r` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RsaOtherPrimesInfo`*"]
+    fn r(&self) -> &str;
+    #[doc = "Get the `t` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RsaOtherPrimesInfo`*"]
+    fn t(&self) -> &str;
+}
+impl RsaOtherPrimesInfoGetters for RsaOtherPrimesInfo {
+    fn d(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("d"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn r(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("r"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn t(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("t"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl RsaOtherPrimesInfo {
     #[doc = "Construct a new `RsaOtherPrimesInfo`."]
     #[doc = ""]

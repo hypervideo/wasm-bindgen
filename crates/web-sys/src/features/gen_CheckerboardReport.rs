@@ -11,6 +11,55 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `CheckerboardReport`*"]
     pub type CheckerboardReport;
 }
+#[doc = "The trait to access properties on the `CheckerboardReport` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `CheckerboardReport`*"]
+pub trait CheckerboardReportGetters {
+    #[doc = "Get the `log` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `CheckerboardReport`*"]
+    fn log(&self) -> &str;
+    #[cfg(feature = "CheckerboardReason")]
+    #[doc = "Get the `reason` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `CheckerboardReason`, `CheckerboardReport`*"]
+    fn reason(&self) -> CheckerboardReason;
+    #[doc = "Get the `severity` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `CheckerboardReport`*"]
+    fn severity(&self) -> u32;
+    #[doc = "Get the `timestamp` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `CheckerboardReport`*"]
+    fn timestamp(&self) -> f64;
+}
+impl CheckerboardReportGetters for CheckerboardReport {
+    fn log(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("log"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "CheckerboardReason")]
+    fn reason(&self) -> CheckerboardReason {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("reason"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn severity(&self) -> u32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("severity"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn timestamp(&self) -> f64 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("timestamp"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl CheckerboardReport {
     #[doc = "Construct a new `CheckerboardReport`."]
     #[doc = ""]

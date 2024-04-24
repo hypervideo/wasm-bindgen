@@ -16,6 +16,83 @@ extern "C" {
     pub type GpuStencilFaceState;
 }
 #[cfg(web_sys_unstable_apis)]
+#[doc = "The trait to access properties on the `GpuStencilFaceState` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `GpuStencilFaceState`*"]
+pub trait GpuStencilFaceStateGetters {
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "GpuCompareFunction")]
+    #[doc = "Get the `compare` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `GpuCompareFunction`, `GpuStencilFaceState`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn compare(&self) -> GpuCompareFunction;
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "GpuStencilOperation")]
+    #[doc = "Get the `depthFailOp` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `GpuStencilFaceState`, `GpuStencilOperation`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn depth_fail_op(&self) -> GpuStencilOperation;
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "GpuStencilOperation")]
+    #[doc = "Get the `failOp` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `GpuStencilFaceState`, `GpuStencilOperation`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn fail_op(&self) -> GpuStencilOperation;
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "GpuStencilOperation")]
+    #[doc = "Get the `passOp` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `GpuStencilFaceState`, `GpuStencilOperation`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn pass_op(&self) -> GpuStencilOperation;
+}
+#[cfg(web_sys_unstable_apis)]
+impl GpuStencilFaceStateGetters for GpuStencilFaceState {
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "GpuCompareFunction")]
+    fn compare(&self) -> GpuCompareFunction {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("compare"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "GpuStencilOperation")]
+    fn depth_fail_op(&self) -> GpuStencilOperation {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("depthFailOp"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "GpuStencilOperation")]
+    fn fail_op(&self) -> GpuStencilOperation {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("failOp"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "GpuStencilOperation")]
+    fn pass_op(&self) -> GpuStencilOperation {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("passOp"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
+#[cfg(web_sys_unstable_apis)]
 impl GpuStencilFaceState {
     #[doc = "Construct a new `GpuStencilFaceState`."]
     #[doc = ""]

@@ -11,6 +11,71 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `IntersectionObserverEntryInit`*"]
     pub type IntersectionObserverEntryInit;
 }
+#[doc = "The trait to access properties on the `IntersectionObserverEntryInit` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `IntersectionObserverEntryInit`*"]
+pub trait IntersectionObserverEntryInitGetters {
+    #[cfg(feature = "DomRectInit")]
+    #[doc = "Get the `boundingClientRect` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DomRectInit`, `IntersectionObserverEntryInit`*"]
+    fn bounding_client_rect(&self) -> &DomRectInit;
+    #[cfg(feature = "DomRectInit")]
+    #[doc = "Get the `intersectionRect` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DomRectInit`, `IntersectionObserverEntryInit`*"]
+    fn intersection_rect(&self) -> &DomRectInit;
+    #[cfg(feature = "DomRectInit")]
+    #[doc = "Get the `rootBounds` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DomRectInit`, `IntersectionObserverEntryInit`*"]
+    fn root_bounds(&self) -> &DomRectInit;
+    #[cfg(feature = "Element")]
+    #[doc = "Get the `target` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `Element`, `IntersectionObserverEntryInit`*"]
+    fn target(&self) -> &Element;
+    #[doc = "Get the `time` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `IntersectionObserverEntryInit`*"]
+    fn time(&self) -> f64;
+}
+impl IntersectionObserverEntryInitGetters for IntersectionObserverEntryInit {
+    #[cfg(feature = "DomRectInit")]
+    fn bounding_client_rect(&self) -> &DomRectInit {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("boundingClientRect"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "DomRectInit")]
+    fn intersection_rect(&self) -> &DomRectInit {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("intersectionRect"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "DomRectInit")]
+    fn root_bounds(&self) -> &DomRectInit {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("rootBounds"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "Element")]
+    fn target(&self) -> &Element {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("target"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn time(&self) -> f64 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("time"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl IntersectionObserverEntryInit {
     #[cfg(all(feature = "DomRectInit", feature = "Element",))]
     #[doc = "Construct a new `IntersectionObserverEntryInit`."]

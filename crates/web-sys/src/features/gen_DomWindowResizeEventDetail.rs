@@ -11,6 +11,33 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `DomWindowResizeEventDetail`*"]
     pub type DomWindowResizeEventDetail;
 }
+#[doc = "The trait to access properties on the `DomWindowResizeEventDetail` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `DomWindowResizeEventDetail`*"]
+pub trait DomWindowResizeEventDetailGetters {
+    #[doc = "Get the `height` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DomWindowResizeEventDetail`*"]
+    fn height(&self) -> i32;
+    #[doc = "Get the `width` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DomWindowResizeEventDetail`*"]
+    fn width(&self) -> i32;
+}
+impl DomWindowResizeEventDetailGetters for DomWindowResizeEventDetail {
+    fn height(&self) -> i32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("height"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn width(&self) -> i32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("width"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl DomWindowResizeEventDetail {
     #[doc = "Construct a new `DomWindowResizeEventDetail`."]
     #[doc = ""]

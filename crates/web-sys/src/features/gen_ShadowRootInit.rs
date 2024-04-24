@@ -11,6 +11,25 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `ShadowRootInit`*"]
     pub type ShadowRootInit;
 }
+#[doc = "The trait to access properties on the `ShadowRootInit` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `ShadowRootInit`*"]
+pub trait ShadowRootInitGetters {
+    #[cfg(feature = "ShadowRootMode")]
+    #[doc = "Get the `mode` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ShadowRootInit`, `ShadowRootMode`*"]
+    fn mode(&self) -> ShadowRootMode;
+}
+impl ShadowRootInitGetters for ShadowRootInit {
+    #[cfg(feature = "ShadowRootMode")]
+    fn mode(&self) -> ShadowRootMode {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("mode"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl ShadowRootInit {
     #[cfg(feature = "ShadowRootMode")]
     #[doc = "Construct a new `ShadowRootInit`."]

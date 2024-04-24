@@ -11,6 +11,68 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `BaseComputedKeyframe`*"]
     pub type BaseComputedKeyframe;
 }
+#[doc = "The trait to access properties on the `BaseComputedKeyframe` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `BaseComputedKeyframe`*"]
+pub trait BaseComputedKeyframeGetters {
+    #[cfg(feature = "CompositeOperation")]
+    #[doc = "Get the `composite` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `BaseComputedKeyframe`, `CompositeOperation`*"]
+    fn composite(&self) -> Option<CompositeOperation>;
+    #[doc = "Get the `easing` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `BaseComputedKeyframe`*"]
+    fn easing(&self) -> &str;
+    #[doc = "Get the `offset` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `BaseComputedKeyframe`*"]
+    fn offset(&self) -> Option<f64>;
+    #[doc = "Get the `simulateComputeValuesFailure` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `BaseComputedKeyframe`*"]
+    fn simulate_compute_values_failure(&self) -> bool;
+    #[doc = "Get the `computedOffset` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `BaseComputedKeyframe`*"]
+    fn computed_offset(&self) -> f64;
+}
+impl BaseComputedKeyframeGetters for BaseComputedKeyframe {
+    #[cfg(feature = "CompositeOperation")]
+    fn composite(&self) -> Option<CompositeOperation> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("composite"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn easing(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("easing"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn offset(&self) -> Option<f64> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("offset"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn simulate_compute_values_failure(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(
+            self.as_ref(),
+            &JsValue::from("simulateComputeValuesFailure"),
+        );
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn computed_offset(&self) -> f64 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("computedOffset"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl BaseComputedKeyframe {
     #[doc = "Construct a new `BaseComputedKeyframe`."]
     #[doc = ""]

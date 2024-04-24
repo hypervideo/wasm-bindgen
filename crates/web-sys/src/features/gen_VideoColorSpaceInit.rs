@@ -16,6 +16,81 @@ extern "C" {
     pub type VideoColorSpaceInit;
 }
 #[cfg(web_sys_unstable_apis)]
+#[doc = "The trait to access properties on the `VideoColorSpaceInit` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `VideoColorSpaceInit`*"]
+pub trait VideoColorSpaceInitGetters {
+    #[cfg(web_sys_unstable_apis)]
+    #[doc = "Get the `fullRange` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `VideoColorSpaceInit`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn full_range(&self) -> bool;
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "VideoMatrixCoefficients")]
+    #[doc = "Get the `matrix` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `VideoColorSpaceInit`, `VideoMatrixCoefficients`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn matrix(&self) -> VideoMatrixCoefficients;
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "VideoColorPrimaries")]
+    #[doc = "Get the `primaries` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `VideoColorPrimaries`, `VideoColorSpaceInit`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn primaries(&self) -> VideoColorPrimaries;
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "VideoTransferCharacteristics")]
+    #[doc = "Get the `transfer` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `VideoColorSpaceInit`, `VideoTransferCharacteristics`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn transfer(&self) -> VideoTransferCharacteristics;
+}
+#[cfg(web_sys_unstable_apis)]
+impl VideoColorSpaceInitGetters for VideoColorSpaceInit {
+    #[cfg(web_sys_unstable_apis)]
+    fn full_range(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("fullRange"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "VideoMatrixCoefficients")]
+    fn matrix(&self) -> VideoMatrixCoefficients {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("matrix"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "VideoColorPrimaries")]
+    fn primaries(&self) -> VideoColorPrimaries {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("primaries"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "VideoTransferCharacteristics")]
+    fn transfer(&self) -> VideoTransferCharacteristics {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("transfer"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
+#[cfg(web_sys_unstable_apis)]
 impl VideoColorSpaceInit {
     #[doc = "Construct a new `VideoColorSpaceInit`."]
     #[doc = ""]

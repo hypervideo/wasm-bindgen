@@ -11,6 +11,35 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `RequestMediaKeySystemAccessNotification`*"]
     pub type RequestMediaKeySystemAccessNotification;
 }
+#[doc = "The trait to access properties on the `RequestMediaKeySystemAccessNotification` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `RequestMediaKeySystemAccessNotification`*"]
+pub trait RequestMediaKeySystemAccessNotificationGetters {
+    #[doc = "Get the `keySystem` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RequestMediaKeySystemAccessNotification`*"]
+    fn key_system(&self) -> &str;
+    #[cfg(feature = "MediaKeySystemStatus")]
+    #[doc = "Get the `status` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `MediaKeySystemStatus`, `RequestMediaKeySystemAccessNotification`*"]
+    fn status(&self) -> MediaKeySystemStatus;
+}
+impl RequestMediaKeySystemAccessNotificationGetters for RequestMediaKeySystemAccessNotification {
+    fn key_system(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("keySystem"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "MediaKeySystemStatus")]
+    fn status(&self) -> MediaKeySystemStatus {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("status"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl RequestMediaKeySystemAccessNotification {
     #[cfg(feature = "MediaKeySystemStatus")]
     #[doc = "Construct a new `RequestMediaKeySystemAccessNotification`."]

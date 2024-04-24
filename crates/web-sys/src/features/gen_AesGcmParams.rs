@@ -11,6 +11,53 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `AesGcmParams`*"]
     pub type AesGcmParams;
 }
+#[doc = "The trait to access properties on the `AesGcmParams` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `AesGcmParams`*"]
+pub trait AesGcmParamsGetters {
+    #[doc = "Get the `name` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `AesGcmParams`*"]
+    fn name(&self) -> &str;
+    #[doc = "Get the `additionalData` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `AesGcmParams`*"]
+    fn additional_data(&self) -> &::js_sys::Object;
+    #[doc = "Get the `iv` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `AesGcmParams`*"]
+    fn iv(&self) -> &::js_sys::Object;
+    #[doc = "Get the `tagLength` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `AesGcmParams`*"]
+    fn tag_length(&self) -> u8;
+}
+impl AesGcmParamsGetters for AesGcmParams {
+    fn name(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("name"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn additional_data(&self) -> &::js_sys::Object {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("additionalData"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn iv(&self) -> &::js_sys::Object {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("iv"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn tag_length(&self) -> u8 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("tagLength"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl AesGcmParams {
     #[doc = "Construct a new `AesGcmParams`."]
     #[doc = ""]

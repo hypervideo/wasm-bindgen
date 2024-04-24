@@ -11,6 +11,33 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `FileSystemFlags`*"]
     pub type FileSystemFlags;
 }
+#[doc = "The trait to access properties on the `FileSystemFlags` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `FileSystemFlags`*"]
+pub trait FileSystemFlagsGetters {
+    #[doc = "Get the `create` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `FileSystemFlags`*"]
+    fn create(&self) -> bool;
+    #[doc = "Get the `exclusive` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `FileSystemFlags`*"]
+    fn exclusive(&self) -> bool;
+}
+impl FileSystemFlagsGetters for FileSystemFlags {
+    fn create(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("create"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn exclusive(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("exclusive"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl FileSystemFlags {
     #[doc = "Construct a new `FileSystemFlags`."]
     #[doc = ""]

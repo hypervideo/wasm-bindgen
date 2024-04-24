@@ -11,6 +11,33 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `BrowserElementDownloadOptions`*"]
     pub type BrowserElementDownloadOptions;
 }
+#[doc = "The trait to access properties on the `BrowserElementDownloadOptions` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `BrowserElementDownloadOptions`*"]
+pub trait BrowserElementDownloadOptionsGetters {
+    #[doc = "Get the `filename` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `BrowserElementDownloadOptions`*"]
+    fn filename(&self) -> Option<&str>;
+    #[doc = "Get the `referrer` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `BrowserElementDownloadOptions`*"]
+    fn referrer(&self) -> Option<&str>;
+}
+impl BrowserElementDownloadOptionsGetters for BrowserElementDownloadOptions {
+    fn filename(&self) -> Option<&str> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("filename"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn referrer(&self) -> Option<&str> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("referrer"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl BrowserElementDownloadOptions {
     #[doc = "Construct a new `BrowserElementDownloadOptions`."]
     #[doc = ""]

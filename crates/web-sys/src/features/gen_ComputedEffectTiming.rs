@@ -11,6 +11,147 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `ComputedEffectTiming`*"]
     pub type ComputedEffectTiming;
 }
+#[doc = "The trait to access properties on the `ComputedEffectTiming` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `ComputedEffectTiming`*"]
+pub trait ComputedEffectTimingGetters {
+    #[doc = "Get the `delay` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ComputedEffectTiming`*"]
+    fn delay(&self) -> f64;
+    #[cfg(feature = "PlaybackDirection")]
+    #[doc = "Get the `direction` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ComputedEffectTiming`, `PlaybackDirection`*"]
+    fn direction(&self) -> PlaybackDirection;
+    #[doc = "Get the `duration` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ComputedEffectTiming`*"]
+    fn duration(&self) -> &::wasm_bindgen::JsValue;
+    #[doc = "Get the `easing` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ComputedEffectTiming`*"]
+    fn easing(&self) -> &str;
+    #[doc = "Get the `endDelay` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ComputedEffectTiming`*"]
+    fn end_delay(&self) -> f64;
+    #[cfg(feature = "FillMode")]
+    #[doc = "Get the `fill` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ComputedEffectTiming`, `FillMode`*"]
+    fn fill(&self) -> FillMode;
+    #[doc = "Get the `iterationStart` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ComputedEffectTiming`*"]
+    fn iteration_start(&self) -> f64;
+    #[doc = "Get the `iterations` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ComputedEffectTiming`*"]
+    fn iterations(&self) -> f64;
+    #[doc = "Get the `activeDuration` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ComputedEffectTiming`*"]
+    fn active_duration(&self) -> f64;
+    #[doc = "Get the `currentIteration` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ComputedEffectTiming`*"]
+    fn current_iteration(&self) -> Option<f64>;
+    #[doc = "Get the `endTime` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ComputedEffectTiming`*"]
+    fn end_time(&self) -> f64;
+    #[doc = "Get the `localTime` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ComputedEffectTiming`*"]
+    fn local_time(&self) -> Option<f64>;
+    #[doc = "Get the `progress` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ComputedEffectTiming`*"]
+    fn progress(&self) -> Option<f64>;
+}
+impl ComputedEffectTimingGetters for ComputedEffectTiming {
+    fn delay(&self) -> f64 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("delay"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "PlaybackDirection")]
+    fn direction(&self) -> PlaybackDirection {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("direction"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn duration(&self) -> &::wasm_bindgen::JsValue {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("duration"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn easing(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("easing"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn end_delay(&self) -> f64 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("endDelay"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "FillMode")]
+    fn fill(&self) -> FillMode {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("fill"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn iteration_start(&self) -> f64 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("iterationStart"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn iterations(&self) -> f64 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("iterations"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn active_duration(&self) -> f64 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("activeDuration"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn current_iteration(&self) -> Option<f64> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("currentIteration"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn end_time(&self) -> f64 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("endTime"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn local_time(&self) -> Option<f64> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("localTime"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn progress(&self) -> Option<f64> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("progress"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl ComputedEffectTiming {
     #[doc = "Construct a new `ComputedEffectTiming`."]
     #[doc = ""]

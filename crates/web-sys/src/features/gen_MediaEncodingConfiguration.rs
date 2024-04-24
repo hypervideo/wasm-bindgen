@@ -11,6 +11,49 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `MediaEncodingConfiguration`*"]
     pub type MediaEncodingConfiguration;
 }
+#[doc = "The trait to access properties on the `MediaEncodingConfiguration` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `MediaEncodingConfiguration`*"]
+pub trait MediaEncodingConfigurationGetters {
+    #[cfg(feature = "AudioConfiguration")]
+    #[doc = "Get the `audio` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `AudioConfiguration`, `MediaEncodingConfiguration`*"]
+    fn audio(&self) -> &AudioConfiguration;
+    #[cfg(feature = "VideoConfiguration")]
+    #[doc = "Get the `video` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `MediaEncodingConfiguration`, `VideoConfiguration`*"]
+    fn video(&self) -> &VideoConfiguration;
+    #[cfg(feature = "MediaEncodingType")]
+    #[doc = "Get the `type` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `MediaEncodingConfiguration`, `MediaEncodingType`*"]
+    fn type_(&self) -> MediaEncodingType;
+}
+impl MediaEncodingConfigurationGetters for MediaEncodingConfiguration {
+    #[cfg(feature = "AudioConfiguration")]
+    fn audio(&self) -> &AudioConfiguration {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("audio"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "VideoConfiguration")]
+    fn video(&self) -> &VideoConfiguration {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("video"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "MediaEncodingType")]
+    fn type_(&self) -> MediaEncodingType {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("type"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl MediaEncodingConfiguration {
     #[cfg(feature = "MediaEncodingType")]
     #[doc = "Construct a new `MediaEncodingConfiguration`."]

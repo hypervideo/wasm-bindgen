@@ -11,6 +11,43 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `HmacDerivedKeyParams`*"]
     pub type HmacDerivedKeyParams;
 }
+#[doc = "The trait to access properties on the `HmacDerivedKeyParams` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `HmacDerivedKeyParams`*"]
+pub trait HmacDerivedKeyParamsGetters {
+    #[doc = "Get the `name` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `HmacDerivedKeyParams`*"]
+    fn name(&self) -> &str;
+    #[doc = "Get the `hash` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `HmacDerivedKeyParams`*"]
+    fn hash(&self) -> &::wasm_bindgen::JsValue;
+    #[doc = "Get the `length` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `HmacDerivedKeyParams`*"]
+    fn length(&self) -> u32;
+}
+impl HmacDerivedKeyParamsGetters for HmacDerivedKeyParams {
+    fn name(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("name"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn hash(&self) -> &::wasm_bindgen::JsValue {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("hash"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn length(&self) -> u32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("length"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl HmacDerivedKeyParams {
     #[doc = "Construct a new `HmacDerivedKeyParams`."]
     #[doc = ""]

@@ -11,6 +11,33 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `BasicCardRequest`*"]
     pub type BasicCardRequest;
 }
+#[doc = "The trait to access properties on the `BasicCardRequest` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `BasicCardRequest`*"]
+pub trait BasicCardRequestGetters {
+    #[doc = "Get the `supportedNetworks` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `BasicCardRequest`*"]
+    fn supported_networks(&self) -> &::wasm_bindgen::JsValue;
+    #[doc = "Get the `supportedTypes` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `BasicCardRequest`*"]
+    fn supported_types(&self) -> &::wasm_bindgen::JsValue;
+}
+impl BasicCardRequestGetters for BasicCardRequest {
+    fn supported_networks(&self) -> &::wasm_bindgen::JsValue {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("supportedNetworks"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn supported_types(&self) -> &::wasm_bindgen::JsValue {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("supportedTypes"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl BasicCardRequest {
     #[doc = "Construct a new `BasicCardRequest`."]
     #[doc = ""]

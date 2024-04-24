@@ -11,6 +11,33 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `PushSubscriptionKeys`*"]
     pub type PushSubscriptionKeys;
 }
+#[doc = "The trait to access properties on the `PushSubscriptionKeys` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `PushSubscriptionKeys`*"]
+pub trait PushSubscriptionKeysGetters {
+    #[doc = "Get the `auth` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `PushSubscriptionKeys`*"]
+    fn auth(&self) -> &str;
+    #[doc = "Get the `p256dh` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `PushSubscriptionKeys`*"]
+    fn p256dh(&self) -> &str;
+}
+impl PushSubscriptionKeysGetters for PushSubscriptionKeys {
+    fn auth(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("auth"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn p256dh(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("p256dh"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl PushSubscriptionKeys {
     #[doc = "Construct a new `PushSubscriptionKeys`."]
     #[doc = ""]

@@ -11,6 +11,33 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `DisplayNameResult`*"]
     pub type DisplayNameResult;
 }
+#[doc = "The trait to access properties on the `DisplayNameResult` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `DisplayNameResult`*"]
+pub trait DisplayNameResultGetters {
+    #[doc = "Get the `locale` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DisplayNameResult`*"]
+    fn locale(&self) -> &str;
+    #[doc = "Get the `style` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DisplayNameResult`*"]
+    fn style(&self) -> &str;
+}
+impl DisplayNameResultGetters for DisplayNameResult {
+    fn locale(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("locale"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn style(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("style"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl DisplayNameResult {
     #[doc = "Construct a new `DisplayNameResult`."]
     #[doc = ""]

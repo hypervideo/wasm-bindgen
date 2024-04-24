@@ -11,6 +11,33 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `IterableKeyAndValueResult`*"]
     pub type IterableKeyAndValueResult;
 }
+#[doc = "The trait to access properties on the `IterableKeyAndValueResult` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `IterableKeyAndValueResult`*"]
+pub trait IterableKeyAndValueResultGetters {
+    #[doc = "Get the `done` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `IterableKeyAndValueResult`*"]
+    fn done(&self) -> bool;
+    #[doc = "Get the `value` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `IterableKeyAndValueResult`*"]
+    fn value(&self) -> &::wasm_bindgen::JsValue;
+}
+impl IterableKeyAndValueResultGetters for IterableKeyAndValueResult {
+    fn done(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("done"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn value(&self) -> &::wasm_bindgen::JsValue {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("value"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl IterableKeyAndValueResult {
     #[doc = "Construct a new `IterableKeyAndValueResult`."]
     #[doc = ""]

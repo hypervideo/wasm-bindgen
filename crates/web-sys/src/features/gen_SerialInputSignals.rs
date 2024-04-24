@@ -16,6 +16,75 @@ extern "C" {
     pub type SerialInputSignals;
 }
 #[cfg(web_sys_unstable_apis)]
+#[doc = "The trait to access properties on the `SerialInputSignals` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `SerialInputSignals`*"]
+pub trait SerialInputSignalsGetters {
+    #[cfg(web_sys_unstable_apis)]
+    #[doc = "Get the `clearToSend` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `SerialInputSignals`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn clear_to_send(&self) -> bool;
+    #[cfg(web_sys_unstable_apis)]
+    #[doc = "Get the `dataCarrierDetect` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `SerialInputSignals`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn data_carrier_detect(&self) -> bool;
+    #[cfg(web_sys_unstable_apis)]
+    #[doc = "Get the `dataSetReady` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `SerialInputSignals`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn data_set_ready(&self) -> bool;
+    #[cfg(web_sys_unstable_apis)]
+    #[doc = "Get the `ringIndicator` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `SerialInputSignals`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn ring_indicator(&self) -> bool;
+}
+#[cfg(web_sys_unstable_apis)]
+impl SerialInputSignalsGetters for SerialInputSignals {
+    #[cfg(web_sys_unstable_apis)]
+    fn clear_to_send(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("clearToSend"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(web_sys_unstable_apis)]
+    fn data_carrier_detect(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("dataCarrierDetect"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(web_sys_unstable_apis)]
+    fn data_set_ready(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("dataSetReady"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(web_sys_unstable_apis)]
+    fn ring_indicator(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("ringIndicator"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
+#[cfg(web_sys_unstable_apis)]
 impl SerialInputSignals {
     #[doc = "Construct a new `SerialInputSignals`."]
     #[doc = ""]

@@ -16,6 +16,62 @@ extern "C" {
     pub type GpuComputePassTimestampWrites;
 }
 #[cfg(web_sys_unstable_apis)]
+#[doc = "The trait to access properties on the `GpuComputePassTimestampWrites` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `GpuComputePassTimestampWrites`*"]
+pub trait GpuComputePassTimestampWritesGetters {
+    #[cfg(web_sys_unstable_apis)]
+    #[doc = "Get the `beginningOfPassWriteIndex` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `GpuComputePassTimestampWrites`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn beginning_of_pass_write_index(&self) -> u32;
+    #[cfg(web_sys_unstable_apis)]
+    #[doc = "Get the `endOfPassWriteIndex` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `GpuComputePassTimestampWrites`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn end_of_pass_write_index(&self) -> u32;
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "GpuQuerySet")]
+    #[doc = "Get the `querySet` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `GpuComputePassTimestampWrites`, `GpuQuerySet`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn query_set(&self) -> &GpuQuerySet;
+}
+#[cfg(web_sys_unstable_apis)]
+impl GpuComputePassTimestampWritesGetters for GpuComputePassTimestampWrites {
+    #[cfg(web_sys_unstable_apis)]
+    fn beginning_of_pass_write_index(&self) -> u32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("beginningOfPassWriteIndex"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(web_sys_unstable_apis)]
+    fn end_of_pass_write_index(&self) -> u32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("endOfPassWriteIndex"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "GpuQuerySet")]
+    fn query_set(&self) -> &GpuQuerySet {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("querySet"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
+#[cfg(web_sys_unstable_apis)]
 impl GpuComputePassTimestampWrites {
     #[cfg(feature = "GpuQuerySet")]
     #[doc = "Construct a new `GpuComputePassTimestampWrites`."]

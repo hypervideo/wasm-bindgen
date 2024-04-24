@@ -11,6 +11,23 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `QueuingStrategyInit`*"]
     pub type QueuingStrategyInit;
 }
+#[doc = "The trait to access properties on the `QueuingStrategyInit` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `QueuingStrategyInit`*"]
+pub trait QueuingStrategyInitGetters {
+    #[doc = "Get the `highWaterMark` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `QueuingStrategyInit`*"]
+    fn high_water_mark(&self) -> f64;
+}
+impl QueuingStrategyInitGetters for QueuingStrategyInit {
+    fn high_water_mark(&self) -> f64 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("highWaterMark"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl QueuingStrategyInit {
     #[doc = "Construct a new `QueuingStrategyInit`."]
     #[doc = ""]

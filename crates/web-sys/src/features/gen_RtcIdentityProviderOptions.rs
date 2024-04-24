@@ -11,6 +11,43 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `RtcIdentityProviderOptions`*"]
     pub type RtcIdentityProviderOptions;
 }
+#[doc = "The trait to access properties on the `RtcIdentityProviderOptions` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `RtcIdentityProviderOptions`*"]
+pub trait RtcIdentityProviderOptionsGetters {
+    #[doc = "Get the `peerIdentity` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcIdentityProviderOptions`*"]
+    fn peer_identity(&self) -> &str;
+    #[doc = "Get the `protocol` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcIdentityProviderOptions`*"]
+    fn protocol(&self) -> &str;
+    #[doc = "Get the `usernameHint` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcIdentityProviderOptions`*"]
+    fn username_hint(&self) -> &str;
+}
+impl RtcIdentityProviderOptionsGetters for RtcIdentityProviderOptions {
+    fn peer_identity(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("peerIdentity"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn protocol(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("protocol"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn username_hint(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("usernameHint"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl RtcIdentityProviderOptions {
     #[doc = "Construct a new `RtcIdentityProviderOptions`."]
     #[doc = ""]

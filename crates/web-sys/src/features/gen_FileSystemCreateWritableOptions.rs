@@ -11,6 +11,23 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `FileSystemCreateWritableOptions`*"]
     pub type FileSystemCreateWritableOptions;
 }
+#[doc = "The trait to access properties on the `FileSystemCreateWritableOptions` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `FileSystemCreateWritableOptions`*"]
+pub trait FileSystemCreateWritableOptionsGetters {
+    #[doc = "Get the `keepExistingData` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `FileSystemCreateWritableOptions`*"]
+    fn keep_existing_data(&self) -> bool;
+}
+impl FileSystemCreateWritableOptionsGetters for FileSystemCreateWritableOptions {
+    fn keep_existing_data(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("keepExistingData"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl FileSystemCreateWritableOptions {
     #[doc = "Construct a new `FileSystemCreateWritableOptions`."]
     #[doc = ""]

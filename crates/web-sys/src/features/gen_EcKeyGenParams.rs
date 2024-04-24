@@ -11,6 +11,33 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `EcKeyGenParams`*"]
     pub type EcKeyGenParams;
 }
+#[doc = "The trait to access properties on the `EcKeyGenParams` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `EcKeyGenParams`*"]
+pub trait EcKeyGenParamsGetters {
+    #[doc = "Get the `name` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `EcKeyGenParams`*"]
+    fn name(&self) -> &str;
+    #[doc = "Get the `namedCurve` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `EcKeyGenParams`*"]
+    fn named_curve(&self) -> &str;
+}
+impl EcKeyGenParamsGetters for EcKeyGenParams {
+    fn name(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("name"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn named_curve(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("namedCurve"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl EcKeyGenParams {
     #[doc = "Construct a new `EcKeyGenParams`."]
     #[doc = ""]

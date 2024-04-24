@@ -11,6 +11,33 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `RsaPssParams`*"]
     pub type RsaPssParams;
 }
+#[doc = "The trait to access properties on the `RsaPssParams` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `RsaPssParams`*"]
+pub trait RsaPssParamsGetters {
+    #[doc = "Get the `name` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RsaPssParams`*"]
+    fn name(&self) -> &str;
+    #[doc = "Get the `saltLength` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RsaPssParams`*"]
+    fn salt_length(&self) -> u32;
+}
+impl RsaPssParamsGetters for RsaPssParams {
+    fn name(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("name"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn salt_length(&self) -> u32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("saltLength"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl RsaPssParams {
     #[doc = "Construct a new `RsaPssParams`."]
     #[doc = ""]

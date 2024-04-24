@@ -16,6 +16,94 @@ extern "C" {
     pub type UsbControlTransferParameters;
 }
 #[cfg(web_sys_unstable_apis)]
+#[doc = "The trait to access properties on the `UsbControlTransferParameters` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `UsbControlTransferParameters`*"]
+pub trait UsbControlTransferParametersGetters {
+    #[cfg(web_sys_unstable_apis)]
+    #[doc = "Get the `index` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `UsbControlTransferParameters`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn index(&self) -> u16;
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "UsbRecipient")]
+    #[doc = "Get the `recipient` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `UsbControlTransferParameters`, `UsbRecipient`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn recipient(&self) -> UsbRecipient;
+    #[cfg(web_sys_unstable_apis)]
+    #[doc = "Get the `request` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `UsbControlTransferParameters`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn request(&self) -> u8;
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "UsbRequestType")]
+    #[doc = "Get the `requestType` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `UsbControlTransferParameters`, `UsbRequestType`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn request_type(&self) -> UsbRequestType;
+    #[cfg(web_sys_unstable_apis)]
+    #[doc = "Get the `value` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `UsbControlTransferParameters`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn value(&self) -> u16;
+}
+#[cfg(web_sys_unstable_apis)]
+impl UsbControlTransferParametersGetters for UsbControlTransferParameters {
+    #[cfg(web_sys_unstable_apis)]
+    fn index(&self) -> u16 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("index"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "UsbRecipient")]
+    fn recipient(&self) -> UsbRecipient {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("recipient"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(web_sys_unstable_apis)]
+    fn request(&self) -> u8 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("request"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "UsbRequestType")]
+    fn request_type(&self) -> UsbRequestType {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("requestType"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(web_sys_unstable_apis)]
+    fn value(&self) -> u16 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("value"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
+#[cfg(web_sys_unstable_apis)]
 impl UsbControlTransferParameters {
     #[cfg(all(feature = "UsbRecipient", feature = "UsbRequestType",))]
     #[doc = "Construct a new `UsbControlTransferParameters`."]

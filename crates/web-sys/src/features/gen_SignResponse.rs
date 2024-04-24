@@ -11,6 +11,63 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `SignResponse`*"]
     pub type SignResponse;
 }
+#[doc = "The trait to access properties on the `SignResponse` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `SignResponse`*"]
+pub trait SignResponseGetters {
+    #[doc = "Get the `clientData` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `SignResponse`*"]
+    fn client_data(&self) -> &str;
+    #[doc = "Get the `errorCode` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `SignResponse`*"]
+    fn error_code(&self) -> Option<u16>;
+    #[doc = "Get the `errorMessage` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `SignResponse`*"]
+    fn error_message(&self) -> Option<&str>;
+    #[doc = "Get the `keyHandle` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `SignResponse`*"]
+    fn key_handle(&self) -> &str;
+    #[doc = "Get the `signatureData` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `SignResponse`*"]
+    fn signature_data(&self) -> &str;
+}
+impl SignResponseGetters for SignResponse {
+    fn client_data(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("clientData"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn error_code(&self) -> Option<u16> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("errorCode"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn error_message(&self) -> Option<&str> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("errorMessage"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn key_handle(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("keyHandle"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn signature_data(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("signatureData"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl SignResponse {
     #[doc = "Construct a new `SignResponse`."]
     #[doc = ""]

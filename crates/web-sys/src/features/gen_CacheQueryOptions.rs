@@ -11,6 +11,53 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `CacheQueryOptions`*"]
     pub type CacheQueryOptions;
 }
+#[doc = "The trait to access properties on the `CacheQueryOptions` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `CacheQueryOptions`*"]
+pub trait CacheQueryOptionsGetters {
+    #[doc = "Get the `cacheName` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `CacheQueryOptions`*"]
+    fn cache_name(&self) -> &str;
+    #[doc = "Get the `ignoreMethod` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `CacheQueryOptions`*"]
+    fn ignore_method(&self) -> bool;
+    #[doc = "Get the `ignoreSearch` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `CacheQueryOptions`*"]
+    fn ignore_search(&self) -> bool;
+    #[doc = "Get the `ignoreVary` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `CacheQueryOptions`*"]
+    fn ignore_vary(&self) -> bool;
+}
+impl CacheQueryOptionsGetters for CacheQueryOptions {
+    fn cache_name(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("cacheName"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn ignore_method(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("ignoreMethod"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn ignore_search(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("ignoreSearch"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn ignore_vary(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("ignoreVary"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl CacheQueryOptions {
     #[doc = "Construct a new `CacheQueryOptions`."]
     #[doc = ""]

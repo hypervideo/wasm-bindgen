@@ -11,6 +11,69 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `WaveShaperOptions`*"]
     pub type WaveShaperOptions;
 }
+#[doc = "The trait to access properties on the `WaveShaperOptions` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `WaveShaperOptions`*"]
+pub trait WaveShaperOptionsGetters {
+    #[doc = "Get the `channelCount` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `WaveShaperOptions`*"]
+    fn channel_count(&self) -> u32;
+    #[cfg(feature = "ChannelCountMode")]
+    #[doc = "Get the `channelCountMode` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ChannelCountMode`, `WaveShaperOptions`*"]
+    fn channel_count_mode(&self) -> ChannelCountMode;
+    #[cfg(feature = "ChannelInterpretation")]
+    #[doc = "Get the `channelInterpretation` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ChannelInterpretation`, `WaveShaperOptions`*"]
+    fn channel_interpretation(&self) -> ChannelInterpretation;
+    #[doc = "Get the `curve` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `WaveShaperOptions`*"]
+    fn curve(&self) -> &::wasm_bindgen::JsValue;
+    #[cfg(feature = "OverSampleType")]
+    #[doc = "Get the `oversample` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `OverSampleType`, `WaveShaperOptions`*"]
+    fn oversample(&self) -> OverSampleType;
+}
+impl WaveShaperOptionsGetters for WaveShaperOptions {
+    fn channel_count(&self) -> u32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("channelCount"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "ChannelCountMode")]
+    fn channel_count_mode(&self) -> ChannelCountMode {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("channelCountMode"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "ChannelInterpretation")]
+    fn channel_interpretation(&self) -> ChannelInterpretation {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("channelInterpretation"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn curve(&self) -> &::wasm_bindgen::JsValue {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("curve"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "OverSampleType")]
+    fn oversample(&self) -> OverSampleType {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("oversample"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl WaveShaperOptions {
     #[doc = "Construct a new `WaveShaperOptions`."]
     #[doc = ""]

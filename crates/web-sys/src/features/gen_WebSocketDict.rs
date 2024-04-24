@@ -11,6 +11,23 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `WebSocketDict`*"]
     pub type WebSocketDict;
 }
+#[doc = "The trait to access properties on the `WebSocketDict` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `WebSocketDict`*"]
+pub trait WebSocketDictGetters {
+    #[doc = "Get the `websockets` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `WebSocketDict`*"]
+    fn websockets(&self) -> &::wasm_bindgen::JsValue;
+}
+impl WebSocketDictGetters for WebSocketDict {
+    fn websockets(&self) -> &::wasm_bindgen::JsValue {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("websockets"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl WebSocketDict {
     #[doc = "Construct a new `WebSocketDict`."]
     #[doc = ""]

@@ -11,6 +11,33 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `ConstrainBooleanParameters`*"]
     pub type ConstrainBooleanParameters;
 }
+#[doc = "The trait to access properties on the `ConstrainBooleanParameters` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `ConstrainBooleanParameters`*"]
+pub trait ConstrainBooleanParametersGetters {
+    #[doc = "Get the `exact` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ConstrainBooleanParameters`*"]
+    fn exact(&self) -> bool;
+    #[doc = "Get the `ideal` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ConstrainBooleanParameters`*"]
+    fn ideal(&self) -> bool;
+}
+impl ConstrainBooleanParametersGetters for ConstrainBooleanParameters {
+    fn exact(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("exact"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn ideal(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("ideal"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl ConstrainBooleanParameters {
     #[doc = "Construct a new `ConstrainBooleanParameters`."]
     #[doc = ""]

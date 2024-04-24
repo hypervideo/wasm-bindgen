@@ -11,6 +11,23 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `ConsoleTimerStart`*"]
     pub type ConsoleTimerStart;
 }
+#[doc = "The trait to access properties on the `ConsoleTimerStart` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `ConsoleTimerStart`*"]
+pub trait ConsoleTimerStartGetters {
+    #[doc = "Get the `name` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ConsoleTimerStart`*"]
+    fn name(&self) -> &str;
+}
+impl ConsoleTimerStartGetters for ConsoleTimerStart {
+    fn name(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("name"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl ConsoleTimerStart {
     #[doc = "Construct a new `ConsoleTimerStart`."]
     #[doc = ""]

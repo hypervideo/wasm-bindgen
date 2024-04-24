@@ -11,6 +11,97 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `DynamicsCompressorOptions`*"]
     pub type DynamicsCompressorOptions;
 }
+#[doc = "The trait to access properties on the `DynamicsCompressorOptions` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `DynamicsCompressorOptions`*"]
+pub trait DynamicsCompressorOptionsGetters {
+    #[doc = "Get the `channelCount` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DynamicsCompressorOptions`*"]
+    fn channel_count(&self) -> u32;
+    #[cfg(feature = "ChannelCountMode")]
+    #[doc = "Get the `channelCountMode` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ChannelCountMode`, `DynamicsCompressorOptions`*"]
+    fn channel_count_mode(&self) -> ChannelCountMode;
+    #[cfg(feature = "ChannelInterpretation")]
+    #[doc = "Get the `channelInterpretation` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ChannelInterpretation`, `DynamicsCompressorOptions`*"]
+    fn channel_interpretation(&self) -> ChannelInterpretation;
+    #[doc = "Get the `attack` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DynamicsCompressorOptions`*"]
+    fn attack(&self) -> f32;
+    #[doc = "Get the `knee` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DynamicsCompressorOptions`*"]
+    fn knee(&self) -> f32;
+    #[doc = "Get the `ratio` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DynamicsCompressorOptions`*"]
+    fn ratio(&self) -> f32;
+    #[doc = "Get the `release` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DynamicsCompressorOptions`*"]
+    fn release(&self) -> f32;
+    #[doc = "Get the `threshold` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DynamicsCompressorOptions`*"]
+    fn threshold(&self) -> f32;
+}
+impl DynamicsCompressorOptionsGetters for DynamicsCompressorOptions {
+    fn channel_count(&self) -> u32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("channelCount"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "ChannelCountMode")]
+    fn channel_count_mode(&self) -> ChannelCountMode {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("channelCountMode"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "ChannelInterpretation")]
+    fn channel_interpretation(&self) -> ChannelInterpretation {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("channelInterpretation"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn attack(&self) -> f32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("attack"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn knee(&self) -> f32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("knee"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn ratio(&self) -> f32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("ratio"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn release(&self) -> f32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("release"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn threshold(&self) -> f32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("threshold"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl DynamicsCompressorOptions {
     #[doc = "Construct a new `DynamicsCompressorOptions`."]
     #[doc = ""]

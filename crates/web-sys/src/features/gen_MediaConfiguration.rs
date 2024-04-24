@@ -11,6 +11,37 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `MediaConfiguration`*"]
     pub type MediaConfiguration;
 }
+#[doc = "The trait to access properties on the `MediaConfiguration` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `MediaConfiguration`*"]
+pub trait MediaConfigurationGetters {
+    #[cfg(feature = "AudioConfiguration")]
+    #[doc = "Get the `audio` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `AudioConfiguration`, `MediaConfiguration`*"]
+    fn audio(&self) -> &AudioConfiguration;
+    #[cfg(feature = "VideoConfiguration")]
+    #[doc = "Get the `video` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `MediaConfiguration`, `VideoConfiguration`*"]
+    fn video(&self) -> &VideoConfiguration;
+}
+impl MediaConfigurationGetters for MediaConfiguration {
+    #[cfg(feature = "AudioConfiguration")]
+    fn audio(&self) -> &AudioConfiguration {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("audio"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "VideoConfiguration")]
+    fn video(&self) -> &VideoConfiguration {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("video"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl MediaConfiguration {
     #[doc = "Construct a new `MediaConfiguration`."]
     #[doc = ""]

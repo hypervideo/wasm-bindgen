@@ -11,6 +11,63 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `UnderlyingSink`*"]
     pub type UnderlyingSink;
 }
+#[doc = "The trait to access properties on the `UnderlyingSink` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `UnderlyingSink`*"]
+pub trait UnderlyingSinkGetters {
+    #[doc = "Get the `abort` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `UnderlyingSink`*"]
+    fn abort(&self) -> &::js_sys::Function;
+    #[doc = "Get the `close` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `UnderlyingSink`*"]
+    fn close(&self) -> &::js_sys::Function;
+    #[doc = "Get the `start` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `UnderlyingSink`*"]
+    fn start(&self) -> &::js_sys::Function;
+    #[doc = "Get the `type` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `UnderlyingSink`*"]
+    fn type_(&self) -> &::wasm_bindgen::JsValue;
+    #[doc = "Get the `write` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `UnderlyingSink`*"]
+    fn write(&self) -> &::js_sys::Function;
+}
+impl UnderlyingSinkGetters for UnderlyingSink {
+    fn abort(&self) -> &::js_sys::Function {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("abort"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn close(&self) -> &::js_sys::Function {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("close"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn start(&self) -> &::js_sys::Function {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("start"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn type_(&self) -> &::wasm_bindgen::JsValue {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("type"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn write(&self) -> &::js_sys::Function {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("write"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl UnderlyingSink {
     #[doc = "Construct a new `UnderlyingSink`."]
     #[doc = ""]

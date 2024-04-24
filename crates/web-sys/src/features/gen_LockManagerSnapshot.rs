@@ -16,6 +16,45 @@ extern "C" {
     pub type LockManagerSnapshot;
 }
 #[cfg(web_sys_unstable_apis)]
+#[doc = "The trait to access properties on the `LockManagerSnapshot` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `LockManagerSnapshot`*"]
+pub trait LockManagerSnapshotGetters {
+    #[cfg(web_sys_unstable_apis)]
+    #[doc = "Get the `held` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `LockManagerSnapshot`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn held(&self) -> &::wasm_bindgen::JsValue;
+    #[cfg(web_sys_unstable_apis)]
+    #[doc = "Get the `pending` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `LockManagerSnapshot`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn pending(&self) -> &::wasm_bindgen::JsValue;
+}
+#[cfg(web_sys_unstable_apis)]
+impl LockManagerSnapshotGetters for LockManagerSnapshot {
+    #[cfg(web_sys_unstable_apis)]
+    fn held(&self) -> &::wasm_bindgen::JsValue {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("held"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(web_sys_unstable_apis)]
+    fn pending(&self) -> &::wasm_bindgen::JsValue {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("pending"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
+#[cfg(web_sys_unstable_apis)]
 impl LockManagerSnapshot {
     #[doc = "Construct a new `LockManagerSnapshot`."]
     #[doc = ""]

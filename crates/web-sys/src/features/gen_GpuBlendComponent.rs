@@ -16,6 +16,66 @@ extern "C" {
     pub type GpuBlendComponent;
 }
 #[cfg(web_sys_unstable_apis)]
+#[doc = "The trait to access properties on the `GpuBlendComponent` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `GpuBlendComponent`*"]
+pub trait GpuBlendComponentGetters {
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "GpuBlendFactor")]
+    #[doc = "Get the `dstFactor` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `GpuBlendComponent`, `GpuBlendFactor`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn dst_factor(&self) -> GpuBlendFactor;
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "GpuBlendOperation")]
+    #[doc = "Get the `operation` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `GpuBlendComponent`, `GpuBlendOperation`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn operation(&self) -> GpuBlendOperation;
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "GpuBlendFactor")]
+    #[doc = "Get the `srcFactor` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `GpuBlendComponent`, `GpuBlendFactor`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn src_factor(&self) -> GpuBlendFactor;
+}
+#[cfg(web_sys_unstable_apis)]
+impl GpuBlendComponentGetters for GpuBlendComponent {
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "GpuBlendFactor")]
+    fn dst_factor(&self) -> GpuBlendFactor {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("dstFactor"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "GpuBlendOperation")]
+    fn operation(&self) -> GpuBlendOperation {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("operation"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "GpuBlendFactor")]
+    fn src_factor(&self) -> GpuBlendFactor {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("srcFactor"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
+#[cfg(web_sys_unstable_apis)]
 impl GpuBlendComponent {
     #[doc = "Construct a new `GpuBlendComponent`."]
     #[doc = ""]

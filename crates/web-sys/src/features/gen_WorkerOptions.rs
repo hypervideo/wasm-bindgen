@@ -11,6 +11,47 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `WorkerOptions`*"]
     pub type WorkerOptions;
 }
+#[doc = "The trait to access properties on the `WorkerOptions` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `WorkerOptions`*"]
+pub trait WorkerOptionsGetters {
+    #[cfg(feature = "RequestCredentials")]
+    #[doc = "Get the `credentials` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RequestCredentials`, `WorkerOptions`*"]
+    fn credentials(&self) -> RequestCredentials;
+    #[doc = "Get the `name` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `WorkerOptions`*"]
+    fn name(&self) -> &str;
+    #[cfg(feature = "WorkerType")]
+    #[doc = "Get the `type` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `WorkerOptions`, `WorkerType`*"]
+    fn type_(&self) -> WorkerType;
+}
+impl WorkerOptionsGetters for WorkerOptions {
+    #[cfg(feature = "RequestCredentials")]
+    fn credentials(&self) -> RequestCredentials {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("credentials"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn name(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("name"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "WorkerType")]
+    fn type_(&self) -> WorkerType {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("type"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl WorkerOptions {
     #[doc = "Construct a new `WorkerOptions`."]
     #[doc = ""]

@@ -11,6 +11,53 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `Pbkdf2Params`*"]
     pub type Pbkdf2Params;
 }
+#[doc = "The trait to access properties on the `Pbkdf2Params` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `Pbkdf2Params`*"]
+pub trait Pbkdf2ParamsGetters {
+    #[doc = "Get the `name` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `Pbkdf2Params`*"]
+    fn name(&self) -> &str;
+    #[doc = "Get the `hash` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `Pbkdf2Params`*"]
+    fn hash(&self) -> &::wasm_bindgen::JsValue;
+    #[doc = "Get the `iterations` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `Pbkdf2Params`*"]
+    fn iterations(&self) -> u32;
+    #[doc = "Get the `salt` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `Pbkdf2Params`*"]
+    fn salt(&self) -> &::js_sys::Object;
+}
+impl Pbkdf2ParamsGetters for Pbkdf2Params {
+    fn name(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("name"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn hash(&self) -> &::wasm_bindgen::JsValue {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("hash"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn iterations(&self) -> u32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("iterations"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn salt(&self) -> &::js_sys::Object {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("salt"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl Pbkdf2Params {
     #[doc = "Construct a new `Pbkdf2Params`."]
     #[doc = ""]

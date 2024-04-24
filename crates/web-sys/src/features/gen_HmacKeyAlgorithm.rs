@@ -11,6 +11,45 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `HmacKeyAlgorithm`*"]
     pub type HmacKeyAlgorithm;
 }
+#[doc = "The trait to access properties on the `HmacKeyAlgorithm` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `HmacKeyAlgorithm`*"]
+pub trait HmacKeyAlgorithmGetters {
+    #[doc = "Get the `name` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `HmacKeyAlgorithm`*"]
+    fn name(&self) -> &str;
+    #[cfg(feature = "KeyAlgorithm")]
+    #[doc = "Get the `hash` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `HmacKeyAlgorithm`, `KeyAlgorithm`*"]
+    fn hash(&self) -> &KeyAlgorithm;
+    #[doc = "Get the `length` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `HmacKeyAlgorithm`*"]
+    fn length(&self) -> u32;
+}
+impl HmacKeyAlgorithmGetters for HmacKeyAlgorithm {
+    fn name(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("name"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "KeyAlgorithm")]
+    fn hash(&self) -> &KeyAlgorithm {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("hash"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn length(&self) -> u32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("length"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl HmacKeyAlgorithm {
     #[cfg(feature = "KeyAlgorithm")]
     #[doc = "Construct a new `HmacKeyAlgorithm`."]

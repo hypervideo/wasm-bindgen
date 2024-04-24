@@ -11,6 +11,33 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `DisplayMediaStreamConstraints`*"]
     pub type DisplayMediaStreamConstraints;
 }
+#[doc = "The trait to access properties on the `DisplayMediaStreamConstraints` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `DisplayMediaStreamConstraints`*"]
+pub trait DisplayMediaStreamConstraintsGetters {
+    #[doc = "Get the `audio` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DisplayMediaStreamConstraints`*"]
+    fn audio(&self) -> &::wasm_bindgen::JsValue;
+    #[doc = "Get the `video` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `DisplayMediaStreamConstraints`*"]
+    fn video(&self) -> &::wasm_bindgen::JsValue;
+}
+impl DisplayMediaStreamConstraintsGetters for DisplayMediaStreamConstraints {
+    fn audio(&self) -> &::wasm_bindgen::JsValue {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("audio"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn video(&self) -> &::wasm_bindgen::JsValue {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("video"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl DisplayMediaStreamConstraints {
     #[doc = "Construct a new `DisplayMediaStreamConstraints`."]
     #[doc = ""]

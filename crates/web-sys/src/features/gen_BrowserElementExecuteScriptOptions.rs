@@ -11,6 +11,33 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `BrowserElementExecuteScriptOptions`*"]
     pub type BrowserElementExecuteScriptOptions;
 }
+#[doc = "The trait to access properties on the `BrowserElementExecuteScriptOptions` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `BrowserElementExecuteScriptOptions`*"]
+pub trait BrowserElementExecuteScriptOptionsGetters {
+    #[doc = "Get the `origin` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `BrowserElementExecuteScriptOptions`*"]
+    fn origin(&self) -> Option<&str>;
+    #[doc = "Get the `url` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `BrowserElementExecuteScriptOptions`*"]
+    fn url(&self) -> Option<&str>;
+}
+impl BrowserElementExecuteScriptOptionsGetters for BrowserElementExecuteScriptOptions {
+    fn origin(&self) -> Option<&str> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("origin"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn url(&self) -> Option<&str> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("url"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl BrowserElementExecuteScriptOptions {
     #[doc = "Construct a new `BrowserElementExecuteScriptOptions`."]
     #[doc = ""]

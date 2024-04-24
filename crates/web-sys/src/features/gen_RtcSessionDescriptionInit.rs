@@ -11,6 +11,35 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `RtcSessionDescriptionInit`*"]
     pub type RtcSessionDescriptionInit;
 }
+#[doc = "The trait to access properties on the `RtcSessionDescriptionInit` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `RtcSessionDescriptionInit`*"]
+pub trait RtcSessionDescriptionInitGetters {
+    #[doc = "Get the `sdp` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcSessionDescriptionInit`*"]
+    fn sdp(&self) -> &str;
+    #[cfg(feature = "RtcSdpType")]
+    #[doc = "Get the `type` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcSdpType`, `RtcSessionDescriptionInit`*"]
+    fn type_(&self) -> RtcSdpType;
+}
+impl RtcSessionDescriptionInitGetters for RtcSessionDescriptionInit {
+    fn sdp(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("sdp"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "RtcSdpType")]
+    fn type_(&self) -> RtcSdpType {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("type"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl RtcSessionDescriptionInit {
     #[cfg(feature = "RtcSdpType")]
     #[doc = "Construct a new `RtcSessionDescriptionInit`."]

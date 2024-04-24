@@ -11,6 +11,43 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `RtcIceCandidateInit`*"]
     pub type RtcIceCandidateInit;
 }
+#[doc = "The trait to access properties on the `RtcIceCandidateInit` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `RtcIceCandidateInit`*"]
+pub trait RtcIceCandidateInitGetters {
+    #[doc = "Get the `candidate` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcIceCandidateInit`*"]
+    fn candidate(&self) -> &str;
+    #[doc = "Get the `sdpMLineIndex` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcIceCandidateInit`*"]
+    fn sdp_m_line_index(&self) -> Option<u16>;
+    #[doc = "Get the `sdpMid` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcIceCandidateInit`*"]
+    fn sdp_mid(&self) -> Option<&str>;
+}
+impl RtcIceCandidateInitGetters for RtcIceCandidateInit {
+    fn candidate(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("candidate"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn sdp_m_line_index(&self) -> Option<u16> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("sdpMLineIndex"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn sdp_mid(&self) -> Option<&str> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("sdpMid"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl RtcIceCandidateInit {
     #[doc = "Construct a new `RtcIceCandidateInit`."]
     #[doc = ""]

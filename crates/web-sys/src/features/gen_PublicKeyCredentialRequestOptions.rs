@@ -11,6 +11,77 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `PublicKeyCredentialRequestOptions`*"]
     pub type PublicKeyCredentialRequestOptions;
 }
+#[doc = "The trait to access properties on the `PublicKeyCredentialRequestOptions` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `PublicKeyCredentialRequestOptions`*"]
+pub trait PublicKeyCredentialRequestOptionsGetters {
+    #[doc = "Get the `allowCredentials` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `PublicKeyCredentialRequestOptions`*"]
+    fn allow_credentials(&self) -> &::wasm_bindgen::JsValue;
+    #[doc = "Get the `challenge` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `PublicKeyCredentialRequestOptions`*"]
+    fn challenge(&self) -> &::js_sys::Object;
+    #[cfg(feature = "AuthenticationExtensionsClientInputs")]
+    #[doc = "Get the `extensions` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `AuthenticationExtensionsClientInputs`, `PublicKeyCredentialRequestOptions`*"]
+    fn extensions(&self) -> &AuthenticationExtensionsClientInputs;
+    #[doc = "Get the `rpId` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `PublicKeyCredentialRequestOptions`*"]
+    fn rp_id(&self) -> &str;
+    #[doc = "Get the `timeout` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `PublicKeyCredentialRequestOptions`*"]
+    fn timeout(&self) -> u32;
+    #[cfg(feature = "UserVerificationRequirement")]
+    #[doc = "Get the `userVerification` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `PublicKeyCredentialRequestOptions`, `UserVerificationRequirement`*"]
+    fn user_verification(&self) -> UserVerificationRequirement;
+}
+impl PublicKeyCredentialRequestOptionsGetters for PublicKeyCredentialRequestOptions {
+    fn allow_credentials(&self) -> &::wasm_bindgen::JsValue {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("allowCredentials"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn challenge(&self) -> &::js_sys::Object {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("challenge"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "AuthenticationExtensionsClientInputs")]
+    fn extensions(&self) -> &AuthenticationExtensionsClientInputs {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("extensions"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn rp_id(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("rpId"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn timeout(&self) -> u32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("timeout"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "UserVerificationRequirement")]
+    fn user_verification(&self) -> UserVerificationRequirement {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("userVerification"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl PublicKeyCredentialRequestOptions {
     #[doc = "Construct a new `PublicKeyCredentialRequestOptions`."]
     #[doc = ""]

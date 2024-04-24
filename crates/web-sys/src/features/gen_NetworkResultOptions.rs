@@ -11,6 +11,363 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `NetworkResultOptions`*"]
     pub type NetworkResultOptions;
 }
+#[doc = "The trait to access properties on the `NetworkResultOptions` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `NetworkResultOptions`*"]
+pub trait NetworkResultOptionsGetters {
+    #[doc = "Get the `broadcast` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `NetworkResultOptions`*"]
+    fn broadcast(&self) -> bool;
+    #[doc = "Get the `curExternalIfname` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `NetworkResultOptions`*"]
+    fn cur_external_ifname(&self) -> &str;
+    #[doc = "Get the `curInternalIfname` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `NetworkResultOptions`*"]
+    fn cur_internal_ifname(&self) -> &str;
+    #[doc = "Get the `dns1` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `NetworkResultOptions`*"]
+    fn dns1(&self) -> i32;
+    #[doc = "Get the `dns1_str` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `NetworkResultOptions`*"]
+    fn dns1_str(&self) -> &str;
+    #[doc = "Get the `dns2` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `NetworkResultOptions`*"]
+    fn dns2(&self) -> i32;
+    #[doc = "Get the `dns2_str` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `NetworkResultOptions`*"]
+    fn dns2_str(&self) -> &str;
+    #[doc = "Get the `enable` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `NetworkResultOptions`*"]
+    fn enable(&self) -> bool;
+    #[doc = "Get the `error` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `NetworkResultOptions`*"]
+    fn error(&self) -> bool;
+    #[doc = "Get the `flag` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `NetworkResultOptions`*"]
+    fn flag(&self) -> &str;
+    #[doc = "Get the `gateway` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `NetworkResultOptions`*"]
+    fn gateway(&self) -> i32;
+    #[doc = "Get the `gateway_str` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `NetworkResultOptions`*"]
+    fn gateway_str(&self) -> &str;
+    #[doc = "Get the `id` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `NetworkResultOptions`*"]
+    fn id(&self) -> i32;
+    #[doc = "Get the `interfaceList` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `NetworkResultOptions`*"]
+    fn interface_list(&self) -> &::wasm_bindgen::JsValue;
+    #[doc = "Get the `ipAddr` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `NetworkResultOptions`*"]
+    fn ip_addr(&self) -> &str;
+    #[doc = "Get the `ipaddr` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `NetworkResultOptions`*"]
+    fn ipaddr(&self) -> i32;
+    #[doc = "Get the `ipaddr_str` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `NetworkResultOptions`*"]
+    fn ipaddr_str(&self) -> &str;
+    #[doc = "Get the `lease` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `NetworkResultOptions`*"]
+    fn lease(&self) -> i32;
+    #[doc = "Get the `macAddr` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `NetworkResultOptions`*"]
+    fn mac_addr(&self) -> &str;
+    #[doc = "Get the `mask` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `NetworkResultOptions`*"]
+    fn mask(&self) -> i32;
+    #[doc = "Get the `mask_str` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `NetworkResultOptions`*"]
+    fn mask_str(&self) -> &str;
+    #[doc = "Get the `netId` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `NetworkResultOptions`*"]
+    fn net_id(&self) -> &str;
+    #[doc = "Get the `prefixLength` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `NetworkResultOptions`*"]
+    fn prefix_length(&self) -> i32;
+    #[doc = "Get the `reason` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `NetworkResultOptions`*"]
+    fn reason(&self) -> &str;
+    #[doc = "Get the `reply` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `NetworkResultOptions`*"]
+    fn reply(&self) -> &str;
+    #[doc = "Get the `result` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `NetworkResultOptions`*"]
+    fn result(&self) -> bool;
+    #[doc = "Get the `resultCode` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `NetworkResultOptions`*"]
+    fn result_code(&self) -> i32;
+    #[doc = "Get the `resultReason` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `NetworkResultOptions`*"]
+    fn result_reason(&self) -> &str;
+    #[doc = "Get the `ret` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `NetworkResultOptions`*"]
+    fn ret(&self) -> bool;
+    #[doc = "Get the `route` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `NetworkResultOptions`*"]
+    fn route(&self) -> &str;
+    #[doc = "Get the `server` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `NetworkResultOptions`*"]
+    fn server(&self) -> i32;
+    #[doc = "Get the `server_str` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `NetworkResultOptions`*"]
+    fn server_str(&self) -> &str;
+    #[doc = "Get the `success` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `NetworkResultOptions`*"]
+    fn success(&self) -> bool;
+    #[doc = "Get the `topic` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `NetworkResultOptions`*"]
+    fn topic(&self) -> &str;
+    #[doc = "Get the `vendor_str` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `NetworkResultOptions`*"]
+    fn vendor_str(&self) -> &str;
+}
+impl NetworkResultOptionsGetters for NetworkResultOptions {
+    fn broadcast(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("broadcast"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn cur_external_ifname(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("curExternalIfname"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn cur_internal_ifname(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("curInternalIfname"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn dns1(&self) -> i32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("dns1"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn dns1_str(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("dns1_str"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn dns2(&self) -> i32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("dns2"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn dns2_str(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("dns2_str"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn enable(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("enable"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn error(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("error"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn flag(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("flag"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn gateway(&self) -> i32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("gateway"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn gateway_str(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("gateway_str"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn id(&self) -> i32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("id"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn interface_list(&self) -> &::wasm_bindgen::JsValue {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("interfaceList"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn ip_addr(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("ipAddr"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn ipaddr(&self) -> i32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("ipaddr"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn ipaddr_str(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("ipaddr_str"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn lease(&self) -> i32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("lease"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn mac_addr(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("macAddr"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn mask(&self) -> i32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("mask"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn mask_str(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("mask_str"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn net_id(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("netId"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn prefix_length(&self) -> i32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("prefixLength"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn reason(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("reason"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn reply(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("reply"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn result(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("result"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn result_code(&self) -> i32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("resultCode"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn result_reason(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("resultReason"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn ret(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("ret"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn route(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("route"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn server(&self) -> i32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("server"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn server_str(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("server_str"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn success(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("success"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn topic(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("topic"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn vendor_str(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("vendor_str"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl NetworkResultOptions {
     #[doc = "Construct a new `NetworkResultOptions`."]
     #[doc = ""]

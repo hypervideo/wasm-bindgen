@@ -11,6 +11,53 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `SvgBoundingBoxOptions`*"]
     pub type SvgBoundingBoxOptions;
 }
+#[doc = "The trait to access properties on the `SvgBoundingBoxOptions` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `SvgBoundingBoxOptions`*"]
+pub trait SvgBoundingBoxOptionsGetters {
+    #[doc = "Get the `clipped` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `SvgBoundingBoxOptions`*"]
+    fn clipped(&self) -> bool;
+    #[doc = "Get the `fill` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `SvgBoundingBoxOptions`*"]
+    fn fill(&self) -> bool;
+    #[doc = "Get the `markers` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `SvgBoundingBoxOptions`*"]
+    fn markers(&self) -> bool;
+    #[doc = "Get the `stroke` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `SvgBoundingBoxOptions`*"]
+    fn stroke(&self) -> bool;
+}
+impl SvgBoundingBoxOptionsGetters for SvgBoundingBoxOptions {
+    fn clipped(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("clipped"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn fill(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("fill"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn markers(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("markers"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn stroke(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("stroke"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl SvgBoundingBoxOptions {
     #[doc = "Construct a new `SvgBoundingBoxOptions`."]
     #[doc = ""]

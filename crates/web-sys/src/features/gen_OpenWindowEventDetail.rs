@@ -11,6 +11,55 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `OpenWindowEventDetail`*"]
     pub type OpenWindowEventDetail;
 }
+#[doc = "The trait to access properties on the `OpenWindowEventDetail` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `OpenWindowEventDetail`*"]
+pub trait OpenWindowEventDetailGetters {
+    #[doc = "Get the `features` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `OpenWindowEventDetail`*"]
+    fn features(&self) -> &str;
+    #[cfg(feature = "Node")]
+    #[doc = "Get the `frameElement` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `Node`, `OpenWindowEventDetail`*"]
+    fn frame_element(&self) -> Option<&Node>;
+    #[doc = "Get the `name` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `OpenWindowEventDetail`*"]
+    fn name(&self) -> &str;
+    #[doc = "Get the `url` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `OpenWindowEventDetail`*"]
+    fn url(&self) -> &str;
+}
+impl OpenWindowEventDetailGetters for OpenWindowEventDetail {
+    fn features(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("features"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "Node")]
+    fn frame_element(&self) -> Option<&Node> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("frameElement"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn name(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("name"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn url(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("url"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl OpenWindowEventDetail {
     #[doc = "Construct a new `OpenWindowEventDetail`."]
     #[doc = ""]

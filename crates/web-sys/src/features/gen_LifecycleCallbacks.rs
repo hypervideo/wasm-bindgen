@@ -11,6 +11,53 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `LifecycleCallbacks`*"]
     pub type LifecycleCallbacks;
 }
+#[doc = "The trait to access properties on the `LifecycleCallbacks` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `LifecycleCallbacks`*"]
+pub trait LifecycleCallbacksGetters {
+    #[doc = "Get the `adoptedCallback` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `LifecycleCallbacks`*"]
+    fn adopted_callback(&self) -> &::js_sys::Function;
+    #[doc = "Get the `attributeChangedCallback` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `LifecycleCallbacks`*"]
+    fn attribute_changed_callback(&self) -> &::js_sys::Function;
+    #[doc = "Get the `connectedCallback` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `LifecycleCallbacks`*"]
+    fn connected_callback(&self) -> &::js_sys::Function;
+    #[doc = "Get the `disconnectedCallback` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `LifecycleCallbacks`*"]
+    fn disconnected_callback(&self) -> &::js_sys::Function;
+}
+impl LifecycleCallbacksGetters for LifecycleCallbacks {
+    fn adopted_callback(&self) -> &::js_sys::Function {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("adoptedCallback"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn attribute_changed_callback(&self) -> &::js_sys::Function {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("attributeChangedCallback"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn connected_callback(&self) -> &::js_sys::Function {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("connectedCallback"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn disconnected_callback(&self) -> &::js_sys::Function {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("disconnectedCallback"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl LifecycleCallbacks {
     #[doc = "Construct a new `LifecycleCallbacks`."]
     #[doc = ""]

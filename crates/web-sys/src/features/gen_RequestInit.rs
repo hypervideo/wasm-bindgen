@@ -11,6 +11,147 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `RequestInit`*"]
     pub type RequestInit;
 }
+#[doc = "The trait to access properties on the `RequestInit` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `RequestInit`*"]
+pub trait RequestInitGetters {
+    #[doc = "Get the `body` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RequestInit`*"]
+    fn body(&self) -> Option<&::wasm_bindgen::JsValue>;
+    #[cfg(feature = "RequestCache")]
+    #[doc = "Get the `cache` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RequestCache`, `RequestInit`*"]
+    fn cache(&self) -> RequestCache;
+    #[cfg(feature = "RequestCredentials")]
+    #[doc = "Get the `credentials` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RequestCredentials`, `RequestInit`*"]
+    fn credentials(&self) -> RequestCredentials;
+    #[doc = "Get the `headers` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RequestInit`*"]
+    fn headers(&self) -> &::wasm_bindgen::JsValue;
+    #[doc = "Get the `integrity` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RequestInit`*"]
+    fn integrity(&self) -> &str;
+    #[doc = "Get the `method` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RequestInit`*"]
+    fn method(&self) -> &str;
+    #[cfg(feature = "RequestMode")]
+    #[doc = "Get the `mode` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RequestInit`, `RequestMode`*"]
+    fn mode(&self) -> RequestMode;
+    #[cfg(feature = "ObserverCallback")]
+    #[doc = "Get the `observe` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ObserverCallback`, `RequestInit`*"]
+    fn observe(&self) -> &ObserverCallback;
+    #[cfg(feature = "RequestRedirect")]
+    #[doc = "Get the `redirect` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RequestInit`, `RequestRedirect`*"]
+    fn redirect(&self) -> RequestRedirect;
+    #[doc = "Get the `referrer` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RequestInit`*"]
+    fn referrer(&self) -> &str;
+    #[cfg(feature = "ReferrerPolicy")]
+    #[doc = "Get the `referrerPolicy` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ReferrerPolicy`, `RequestInit`*"]
+    fn referrer_policy(&self) -> ReferrerPolicy;
+    #[cfg(feature = "AbortSignal")]
+    #[doc = "Get the `signal` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `AbortSignal`, `RequestInit`*"]
+    fn signal(&self) -> Option<&AbortSignal>;
+}
+impl RequestInitGetters for RequestInit {
+    fn body(&self) -> Option<&::wasm_bindgen::JsValue> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("body"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "RequestCache")]
+    fn cache(&self) -> RequestCache {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("cache"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "RequestCredentials")]
+    fn credentials(&self) -> RequestCredentials {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("credentials"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn headers(&self) -> &::wasm_bindgen::JsValue {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("headers"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn integrity(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("integrity"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn method(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("method"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "RequestMode")]
+    fn mode(&self) -> RequestMode {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("mode"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "ObserverCallback")]
+    fn observe(&self) -> &ObserverCallback {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("observe"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "RequestRedirect")]
+    fn redirect(&self) -> RequestRedirect {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("redirect"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn referrer(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("referrer"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "ReferrerPolicy")]
+    fn referrer_policy(&self) -> ReferrerPolicy {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("referrerPolicy"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "AbortSignal")]
+    fn signal(&self) -> Option<&AbortSignal> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("signal"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl RequestInit {
     #[doc = "Construct a new `RequestInit`."]
     #[doc = ""]

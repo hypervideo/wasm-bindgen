@@ -11,6 +11,73 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `RcwnStatus`*"]
     pub type RcwnStatus;
 }
+#[doc = "The trait to access properties on the `RcwnStatus` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `RcwnStatus`*"]
+pub trait RcwnStatusGetters {
+    #[doc = "Get the `cacheNotSlowCount` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RcwnStatus`*"]
+    fn cache_not_slow_count(&self) -> u32;
+    #[doc = "Get the `cacheSlowCount` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RcwnStatus`*"]
+    fn cache_slow_count(&self) -> u32;
+    #[doc = "Get the `perfStats` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RcwnStatus`*"]
+    fn perf_stats(&self) -> &::wasm_bindgen::JsValue;
+    #[doc = "Get the `rcwnCacheWonCount` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RcwnStatus`*"]
+    fn rcwn_cache_won_count(&self) -> u32;
+    #[doc = "Get the `rcwnNetWonCount` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RcwnStatus`*"]
+    fn rcwn_net_won_count(&self) -> u32;
+    #[doc = "Get the `totalNetworkRequests` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RcwnStatus`*"]
+    fn total_network_requests(&self) -> u32;
+}
+impl RcwnStatusGetters for RcwnStatus {
+    fn cache_not_slow_count(&self) -> u32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("cacheNotSlowCount"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn cache_slow_count(&self) -> u32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("cacheSlowCount"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn perf_stats(&self) -> &::wasm_bindgen::JsValue {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("perfStats"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn rcwn_cache_won_count(&self) -> u32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("rcwnCacheWonCount"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn rcwn_net_won_count(&self) -> u32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("rcwnNetWonCount"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn total_network_requests(&self) -> u32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("totalNetworkRequests"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl RcwnStatus {
     #[doc = "Construct a new `RcwnStatus`."]
     #[doc = ""]

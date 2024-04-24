@@ -11,6 +11,45 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `RtcRtpTransceiverInit`*"]
     pub type RtcRtpTransceiverInit;
 }
+#[doc = "The trait to access properties on the `RtcRtpTransceiverInit` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `RtcRtpTransceiverInit`*"]
+pub trait RtcRtpTransceiverInitGetters {
+    #[cfg(feature = "RtcRtpTransceiverDirection")]
+    #[doc = "Get the `direction` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcRtpTransceiverDirection`, `RtcRtpTransceiverInit`*"]
+    fn direction(&self) -> RtcRtpTransceiverDirection;
+    #[doc = "Get the `sendEncodings` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcRtpTransceiverInit`*"]
+    fn send_encodings(&self) -> &::wasm_bindgen::JsValue;
+    #[doc = "Get the `streams` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcRtpTransceiverInit`*"]
+    fn streams(&self) -> &::wasm_bindgen::JsValue;
+}
+impl RtcRtpTransceiverInitGetters for RtcRtpTransceiverInit {
+    #[cfg(feature = "RtcRtpTransceiverDirection")]
+    fn direction(&self) -> RtcRtpTransceiverDirection {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("direction"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn send_encodings(&self) -> &::wasm_bindgen::JsValue {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("sendEncodings"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn streams(&self) -> &::wasm_bindgen::JsValue {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("streams"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl RtcRtpTransceiverInit {
     #[doc = "Construct a new `RtcRtpTransceiverInit`."]
     #[doc = ""]

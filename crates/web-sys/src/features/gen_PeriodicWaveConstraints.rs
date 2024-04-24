@@ -11,6 +11,23 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `PeriodicWaveConstraints`*"]
     pub type PeriodicWaveConstraints;
 }
+#[doc = "The trait to access properties on the `PeriodicWaveConstraints` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `PeriodicWaveConstraints`*"]
+pub trait PeriodicWaveConstraintsGetters {
+    #[doc = "Get the `disableNormalization` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `PeriodicWaveConstraints`*"]
+    fn disable_normalization(&self) -> bool;
+}
+impl PeriodicWaveConstraintsGetters for PeriodicWaveConstraints {
+    fn disable_normalization(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("disableNormalization"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl PeriodicWaveConstraints {
     #[doc = "Construct a new `PeriodicWaveConstraints`."]
     #[doc = ""]

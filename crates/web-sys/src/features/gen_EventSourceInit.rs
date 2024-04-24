@@ -11,6 +11,23 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `EventSourceInit`*"]
     pub type EventSourceInit;
 }
+#[doc = "The trait to access properties on the `EventSourceInit` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `EventSourceInit`*"]
+pub trait EventSourceInitGetters {
+    #[doc = "Get the `withCredentials` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `EventSourceInit`*"]
+    fn with_credentials(&self) -> bool;
+}
+impl EventSourceInitGetters for EventSourceInit {
+    fn with_credentials(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("withCredentials"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl EventSourceInit {
     #[doc = "Construct a new `EventSourceInit`."]
     #[doc = ""]

@@ -11,6 +11,63 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `RtcRtpCodecParameters`*"]
     pub type RtcRtpCodecParameters;
 }
+#[doc = "The trait to access properties on the `RtcRtpCodecParameters` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `RtcRtpCodecParameters`*"]
+pub trait RtcRtpCodecParametersGetters {
+    #[doc = "Get the `channels` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcRtpCodecParameters`*"]
+    fn channels(&self) -> u16;
+    #[doc = "Get the `clockRate` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcRtpCodecParameters`*"]
+    fn clock_rate(&self) -> u32;
+    #[doc = "Get the `mimeType` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcRtpCodecParameters`*"]
+    fn mime_type(&self) -> &str;
+    #[doc = "Get the `payloadType` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcRtpCodecParameters`*"]
+    fn payload_type(&self) -> u16;
+    #[doc = "Get the `sdpFmtpLine` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcRtpCodecParameters`*"]
+    fn sdp_fmtp_line(&self) -> &str;
+}
+impl RtcRtpCodecParametersGetters for RtcRtpCodecParameters {
+    fn channels(&self) -> u16 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("channels"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn clock_rate(&self) -> u32 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("clockRate"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn mime_type(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("mimeType"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn payload_type(&self) -> u16 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("payloadType"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn sdp_fmtp_line(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("sdpFmtpLine"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl RtcRtpCodecParameters {
     #[doc = "Construct a new `RtcRtpCodecParameters`."]
     #[doc = ""]

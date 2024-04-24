@@ -11,6 +11,23 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `BlockParsingOptions`*"]
     pub type BlockParsingOptions;
 }
+#[doc = "The trait to access properties on the `BlockParsingOptions` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `BlockParsingOptions`*"]
+pub trait BlockParsingOptionsGetters {
+    #[doc = "Get the `blockScriptCreated` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `BlockParsingOptions`*"]
+    fn block_script_created(&self) -> bool;
+}
+impl BlockParsingOptionsGetters for BlockParsingOptions {
+    fn block_script_created(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("blockScriptCreated"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl BlockParsingOptions {
     #[doc = "Construct a new `BlockParsingOptions`."]
     #[doc = ""]

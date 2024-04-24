@@ -11,6 +11,65 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `PresentationConnectionCloseEventInit`*"]
     pub type PresentationConnectionCloseEventInit;
 }
+#[doc = "The trait to access properties on the `PresentationConnectionCloseEventInit` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `PresentationConnectionCloseEventInit`*"]
+pub trait PresentationConnectionCloseEventInitGetters {
+    #[doc = "Get the `bubbles` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `PresentationConnectionCloseEventInit`*"]
+    fn bubbles(&self) -> bool;
+    #[doc = "Get the `cancelable` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `PresentationConnectionCloseEventInit`*"]
+    fn cancelable(&self) -> bool;
+    #[doc = "Get the `composed` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `PresentationConnectionCloseEventInit`*"]
+    fn composed(&self) -> bool;
+    #[doc = "Get the `message` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `PresentationConnectionCloseEventInit`*"]
+    fn message(&self) -> &str;
+    #[cfg(feature = "PresentationConnectionClosedReason")]
+    #[doc = "Get the `reason` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `PresentationConnectionCloseEventInit`, `PresentationConnectionClosedReason`*"]
+    fn reason(&self) -> PresentationConnectionClosedReason;
+}
+impl PresentationConnectionCloseEventInitGetters for PresentationConnectionCloseEventInit {
+    fn bubbles(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("bubbles"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn cancelable(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("cancelable"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn composed(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("composed"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn message(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("message"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "PresentationConnectionClosedReason")]
+    fn reason(&self) -> PresentationConnectionClosedReason {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("reason"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl PresentationConnectionCloseEventInit {
     #[cfg(feature = "PresentationConnectionClosedReason")]
     #[doc = "Construct a new `PresentationConnectionCloseEventInit`."]

@@ -11,6 +11,33 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `RegisterRequest`*"]
     pub type RegisterRequest;
 }
+#[doc = "The trait to access properties on the `RegisterRequest` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `RegisterRequest`*"]
+pub trait RegisterRequestGetters {
+    #[doc = "Get the `challenge` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RegisterRequest`*"]
+    fn challenge(&self) -> &str;
+    #[doc = "Get the `version` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RegisterRequest`*"]
+    fn version(&self) -> &str;
+}
+impl RegisterRequestGetters for RegisterRequest {
+    fn challenge(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("challenge"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn version(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("version"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl RegisterRequest {
     #[doc = "Construct a new `RegisterRequest`."]
     #[doc = ""]

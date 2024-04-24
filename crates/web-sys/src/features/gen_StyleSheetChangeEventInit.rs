@@ -11,6 +11,65 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `StyleSheetChangeEventInit`*"]
     pub type StyleSheetChangeEventInit;
 }
+#[doc = "The trait to access properties on the `StyleSheetChangeEventInit` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `StyleSheetChangeEventInit`*"]
+pub trait StyleSheetChangeEventInitGetters {
+    #[doc = "Get the `bubbles` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `StyleSheetChangeEventInit`*"]
+    fn bubbles(&self) -> bool;
+    #[doc = "Get the `cancelable` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `StyleSheetChangeEventInit`*"]
+    fn cancelable(&self) -> bool;
+    #[doc = "Get the `composed` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `StyleSheetChangeEventInit`*"]
+    fn composed(&self) -> bool;
+    #[doc = "Get the `documentSheet` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `StyleSheetChangeEventInit`*"]
+    fn document_sheet(&self) -> bool;
+    #[cfg(feature = "CssStyleSheet")]
+    #[doc = "Get the `stylesheet` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `CssStyleSheet`, `StyleSheetChangeEventInit`*"]
+    fn stylesheet(&self) -> Option<&CssStyleSheet>;
+}
+impl StyleSheetChangeEventInitGetters for StyleSheetChangeEventInit {
+    fn bubbles(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("bubbles"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn cancelable(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("cancelable"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn composed(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("composed"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn document_sheet(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("documentSheet"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "CssStyleSheet")]
+    fn stylesheet(&self) -> Option<&CssStyleSheet> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("stylesheet"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl StyleSheetChangeEventInit {
     #[doc = "Construct a new `StyleSheetChangeEventInit`."]
     #[doc = ""]

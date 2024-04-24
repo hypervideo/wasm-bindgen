@@ -11,6 +11,75 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `ConsoleInstanceOptions`*"]
     pub type ConsoleInstanceOptions;
 }
+#[doc = "The trait to access properties on the `ConsoleInstanceOptions` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `ConsoleInstanceOptions`*"]
+pub trait ConsoleInstanceOptionsGetters {
+    #[doc = "Get the `consoleID` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ConsoleInstanceOptions`*"]
+    fn console_id(&self) -> &str;
+    #[doc = "Get the `dump` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ConsoleInstanceOptions`*"]
+    fn dump(&self) -> &::js_sys::Function;
+    #[doc = "Get the `innerID` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ConsoleInstanceOptions`*"]
+    fn inner_id(&self) -> &str;
+    #[cfg(feature = "ConsoleLogLevel")]
+    #[doc = "Get the `maxLogLevel` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ConsoleInstanceOptions`, `ConsoleLogLevel`*"]
+    fn max_log_level(&self) -> ConsoleLogLevel;
+    #[doc = "Get the `maxLogLevelPref` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ConsoleInstanceOptions`*"]
+    fn max_log_level_pref(&self) -> &str;
+    #[doc = "Get the `prefix` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ConsoleInstanceOptions`*"]
+    fn prefix(&self) -> &str;
+}
+impl ConsoleInstanceOptionsGetters for ConsoleInstanceOptions {
+    fn console_id(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("consoleID"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn dump(&self) -> &::js_sys::Function {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("dump"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn inner_id(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("innerID"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "ConsoleLogLevel")]
+    fn max_log_level(&self) -> ConsoleLogLevel {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("maxLogLevel"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn max_log_level_pref(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("maxLogLevelPref"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn prefix(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("prefix"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl ConsoleInstanceOptions {
     #[doc = "Construct a new `ConsoleInstanceOptions`."]
     #[doc = ""]

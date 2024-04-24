@@ -11,6 +11,93 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `FontFaceDescriptors`*"]
     pub type FontFaceDescriptors;
 }
+#[doc = "The trait to access properties on the `FontFaceDescriptors` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `FontFaceDescriptors`*"]
+pub trait FontFaceDescriptorsGetters {
+    #[doc = "Get the `display` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `FontFaceDescriptors`*"]
+    fn display(&self) -> &str;
+    #[doc = "Get the `featureSettings` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `FontFaceDescriptors`*"]
+    fn feature_settings(&self) -> &str;
+    #[doc = "Get the `stretch` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `FontFaceDescriptors`*"]
+    fn stretch(&self) -> &str;
+    #[doc = "Get the `style` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `FontFaceDescriptors`*"]
+    fn style(&self) -> &str;
+    #[doc = "Get the `unicodeRange` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `FontFaceDescriptors`*"]
+    fn unicode_range(&self) -> &str;
+    #[doc = "Get the `variant` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `FontFaceDescriptors`*"]
+    fn variant(&self) -> &str;
+    #[doc = "Get the `variationSettings` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `FontFaceDescriptors`*"]
+    fn variation_settings(&self) -> &str;
+    #[doc = "Get the `weight` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `FontFaceDescriptors`*"]
+    fn weight(&self) -> &str;
+}
+impl FontFaceDescriptorsGetters for FontFaceDescriptors {
+    fn display(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("display"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn feature_settings(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("featureSettings"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn stretch(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("stretch"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn style(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("style"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn unicode_range(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("unicodeRange"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn variant(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("variant"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn variation_settings(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("variationSettings"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn weight(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("weight"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl FontFaceDescriptors {
     #[doc = "Construct a new `FontFaceDescriptors`."]
     #[doc = ""]

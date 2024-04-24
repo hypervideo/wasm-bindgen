@@ -11,6 +11,33 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `RtcRtpCapabilities`*"]
     pub type RtcRtpCapabilities;
 }
+#[doc = "The trait to access properties on the `RtcRtpCapabilities` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `RtcRtpCapabilities`*"]
+pub trait RtcRtpCapabilitiesGetters {
+    #[doc = "Get the `codecs` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcRtpCapabilities`*"]
+    fn codecs(&self) -> &::wasm_bindgen::JsValue;
+    #[doc = "Get the `headerExtensions` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcRtpCapabilities`*"]
+    fn header_extensions(&self) -> &::wasm_bindgen::JsValue;
+}
+impl RtcRtpCapabilitiesGetters for RtcRtpCapabilities {
+    fn codecs(&self) -> &::wasm_bindgen::JsValue {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("codecs"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn header_extensions(&self) -> &::wasm_bindgen::JsValue {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("headerExtensions"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl RtcRtpCapabilities {
     #[doc = "Construct a new `RtcRtpCapabilities`."]
     #[doc = ""]

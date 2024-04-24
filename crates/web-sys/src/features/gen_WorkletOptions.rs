@@ -11,6 +11,25 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `WorkletOptions`*"]
     pub type WorkletOptions;
 }
+#[doc = "The trait to access properties on the `WorkletOptions` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `WorkletOptions`*"]
+pub trait WorkletOptionsGetters {
+    #[cfg(feature = "RequestCredentials")]
+    #[doc = "Get the `credentials` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RequestCredentials`, `WorkletOptions`*"]
+    fn credentials(&self) -> RequestCredentials;
+}
+impl WorkletOptionsGetters for WorkletOptions {
+    #[cfg(feature = "RequestCredentials")]
+    fn credentials(&self) -> RequestCredentials {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("credentials"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl WorkletOptions {
     #[doc = "Construct a new `WorkletOptions`."]
     #[doc = ""]

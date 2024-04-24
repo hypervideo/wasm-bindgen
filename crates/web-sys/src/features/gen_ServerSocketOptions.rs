@@ -11,6 +11,25 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `ServerSocketOptions`*"]
     pub type ServerSocketOptions;
 }
+#[doc = "The trait to access properties on the `ServerSocketOptions` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `ServerSocketOptions`*"]
+pub trait ServerSocketOptionsGetters {
+    #[cfg(feature = "TcpSocketBinaryType")]
+    #[doc = "Get the `binaryType` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `ServerSocketOptions`, `TcpSocketBinaryType`*"]
+    fn binary_type(&self) -> TcpSocketBinaryType;
+}
+impl ServerSocketOptionsGetters for ServerSocketOptions {
+    #[cfg(feature = "TcpSocketBinaryType")]
+    fn binary_type(&self) -> TcpSocketBinaryType {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("binaryType"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl ServerSocketOptions {
     #[doc = "Construct a new `ServerSocketOptions`."]
     #[doc = ""]

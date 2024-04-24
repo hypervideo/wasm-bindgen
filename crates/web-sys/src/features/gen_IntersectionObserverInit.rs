@@ -11,6 +11,45 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `IntersectionObserverInit`*"]
     pub type IntersectionObserverInit;
 }
+#[doc = "The trait to access properties on the `IntersectionObserverInit` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `IntersectionObserverInit`*"]
+pub trait IntersectionObserverInitGetters {
+    #[cfg(feature = "Element")]
+    #[doc = "Get the `root` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `Element`, `IntersectionObserverInit`*"]
+    fn root(&self) -> Option<&Element>;
+    #[doc = "Get the `rootMargin` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `IntersectionObserverInit`*"]
+    fn root_margin(&self) -> &str;
+    #[doc = "Get the `threshold` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `IntersectionObserverInit`*"]
+    fn threshold(&self) -> &::wasm_bindgen::JsValue;
+}
+impl IntersectionObserverInitGetters for IntersectionObserverInit {
+    #[cfg(feature = "Element")]
+    fn root(&self) -> Option<&Element> {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("root"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn root_margin(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("rootMargin"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn threshold(&self) -> &::wasm_bindgen::JsValue {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("threshold"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl IntersectionObserverInit {
     #[doc = "Construct a new `IntersectionObserverInit`."]
     #[doc = ""]

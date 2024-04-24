@@ -11,6 +11,87 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `MediaKeySystemConfiguration`*"]
     pub type MediaKeySystemConfiguration;
 }
+#[doc = "The trait to access properties on the `MediaKeySystemConfiguration` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `MediaKeySystemConfiguration`*"]
+pub trait MediaKeySystemConfigurationGetters {
+    #[doc = "Get the `audioCapabilities` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `MediaKeySystemConfiguration`*"]
+    fn audio_capabilities(&self) -> &::wasm_bindgen::JsValue;
+    #[cfg(feature = "MediaKeysRequirement")]
+    #[doc = "Get the `distinctiveIdentifier` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `MediaKeySystemConfiguration`, `MediaKeysRequirement`*"]
+    fn distinctive_identifier(&self) -> MediaKeysRequirement;
+    #[doc = "Get the `initDataTypes` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `MediaKeySystemConfiguration`*"]
+    fn init_data_types(&self) -> &::wasm_bindgen::JsValue;
+    #[doc = "Get the `label` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `MediaKeySystemConfiguration`*"]
+    fn label(&self) -> &str;
+    #[cfg(feature = "MediaKeysRequirement")]
+    #[doc = "Get the `persistentState` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `MediaKeySystemConfiguration`, `MediaKeysRequirement`*"]
+    fn persistent_state(&self) -> MediaKeysRequirement;
+    #[doc = "Get the `sessionTypes` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `MediaKeySystemConfiguration`*"]
+    fn session_types(&self) -> &::wasm_bindgen::JsValue;
+    #[doc = "Get the `videoCapabilities` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `MediaKeySystemConfiguration`*"]
+    fn video_capabilities(&self) -> &::wasm_bindgen::JsValue;
+}
+impl MediaKeySystemConfigurationGetters for MediaKeySystemConfiguration {
+    fn audio_capabilities(&self) -> &::wasm_bindgen::JsValue {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("audioCapabilities"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "MediaKeysRequirement")]
+    fn distinctive_identifier(&self) -> MediaKeysRequirement {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("distinctiveIdentifier"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn init_data_types(&self) -> &::wasm_bindgen::JsValue {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("initDataTypes"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn label(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("label"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(feature = "MediaKeysRequirement")]
+    fn persistent_state(&self) -> MediaKeysRequirement {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("persistentState"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn session_types(&self) -> &::wasm_bindgen::JsValue {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("sessionTypes"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn video_capabilities(&self) -> &::wasm_bindgen::JsValue {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("videoCapabilities"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl MediaKeySystemConfiguration {
     #[doc = "Construct a new `MediaKeySystemConfiguration`."]
     #[doc = ""]

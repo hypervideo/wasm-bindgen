@@ -16,6 +16,79 @@ extern "C" {
     pub type LockOptions;
 }
 #[cfg(web_sys_unstable_apis)]
+#[doc = "The trait to access properties on the `LockOptions` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `LockOptions`*"]
+pub trait LockOptionsGetters {
+    #[cfg(web_sys_unstable_apis)]
+    #[doc = "Get the `ifAvailable` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `LockOptions`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn if_available(&self) -> bool;
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "LockMode")]
+    #[doc = "Get the `mode` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `LockMode`, `LockOptions`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn mode(&self) -> LockMode;
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "AbortSignal")]
+    #[doc = "Get the `signal` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `AbortSignal`, `LockOptions`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn signal(&self) -> &AbortSignal;
+    #[cfg(web_sys_unstable_apis)]
+    #[doc = "Get the `steal` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `LockOptions`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn steal(&self) -> bool;
+}
+#[cfg(web_sys_unstable_apis)]
+impl LockOptionsGetters for LockOptions {
+    #[cfg(web_sys_unstable_apis)]
+    fn if_available(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("ifAvailable"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "LockMode")]
+    fn mode(&self) -> LockMode {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("mode"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(web_sys_unstable_apis)]
+    #[cfg(feature = "AbortSignal")]
+    fn signal(&self) -> &AbortSignal {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("signal"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(web_sys_unstable_apis)]
+    fn steal(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("steal"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
+#[cfg(web_sys_unstable_apis)]
 impl LockOptions {
     #[doc = "Construct a new `LockOptions`."]
     #[doc = ""]

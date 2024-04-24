@@ -11,6 +11,23 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `FileCallback`*"]
     pub type FileCallback;
 }
+#[doc = "The trait to access properties on the `FileCallback` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `FileCallback`*"]
+pub trait FileCallbackGetters {
+    #[doc = "Get the `handleEvent` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `FileCallback`*"]
+    fn handle_event(&self) -> &::js_sys::Function;
+}
+impl FileCallbackGetters for FileCallback {
+    fn handle_event(&self) -> &::js_sys::Function {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("handleEvent"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl FileCallback {
     #[doc = "Construct a new `FileCallback`."]
     #[doc = ""]

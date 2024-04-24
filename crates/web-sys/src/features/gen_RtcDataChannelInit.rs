@@ -11,6 +11,83 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `RtcDataChannelInit`*"]
     pub type RtcDataChannelInit;
 }
+#[doc = "The trait to access properties on the `RtcDataChannelInit` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `RtcDataChannelInit`*"]
+pub trait RtcDataChannelInitGetters {
+    #[doc = "Get the `id` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcDataChannelInit`*"]
+    fn id(&self) -> u16;
+    #[doc = "Get the `maxPacketLifeTime` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcDataChannelInit`*"]
+    fn max_packet_life_time(&self) -> u16;
+    #[doc = "Get the `maxRetransmitTime` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcDataChannelInit`*"]
+    fn max_retransmit_time(&self) -> u16;
+    #[doc = "Get the `maxRetransmits` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcDataChannelInit`*"]
+    fn max_retransmits(&self) -> u16;
+    #[doc = "Get the `negotiated` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcDataChannelInit`*"]
+    fn negotiated(&self) -> bool;
+    #[doc = "Get the `ordered` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcDataChannelInit`*"]
+    fn ordered(&self) -> bool;
+    #[doc = "Get the `protocol` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcDataChannelInit`*"]
+    fn protocol(&self) -> &str;
+}
+impl RtcDataChannelInitGetters for RtcDataChannelInit {
+    fn id(&self) -> u16 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("id"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn max_packet_life_time(&self) -> u16 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("maxPacketLifeTime"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn max_retransmit_time(&self) -> u16 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("maxRetransmitTime"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn max_retransmits(&self) -> u16 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("maxRetransmits"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn negotiated(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("negotiated"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn ordered(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("ordered"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn protocol(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("protocol"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl RtcDataChannelInit {
     #[doc = "Construct a new `RtcDataChannelInit`."]
     #[doc = ""]

@@ -11,6 +11,33 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `StorageEstimate`*"]
     pub type StorageEstimate;
 }
+#[doc = "The trait to access properties on the `StorageEstimate` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `StorageEstimate`*"]
+pub trait StorageEstimateGetters {
+    #[doc = "Get the `quota` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `StorageEstimate`*"]
+    fn quota(&self) -> f64;
+    #[doc = "Get the `usage` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `StorageEstimate`*"]
+    fn usage(&self) -> f64;
+}
+impl StorageEstimateGetters for StorageEstimate {
+    fn quota(&self) -> f64 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("quota"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn usage(&self) -> f64 {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("usage"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl StorageEstimate {
     #[doc = "Construct a new `StorageEstimate`."]
     #[doc = ""]

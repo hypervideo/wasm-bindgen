@@ -16,6 +16,60 @@ extern "C" {
     pub type AllowedBluetoothDevice;
 }
 #[cfg(web_sys_unstable_apis)]
+#[doc = "The trait to access properties on the `AllowedBluetoothDevice` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `AllowedBluetoothDevice`*"]
+pub trait AllowedBluetoothDeviceGetters {
+    #[cfg(web_sys_unstable_apis)]
+    #[doc = "Get the `allowedServices` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `AllowedBluetoothDevice`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn allowed_services(&self) -> &::wasm_bindgen::JsValue;
+    #[cfg(web_sys_unstable_apis)]
+    #[doc = "Get the `deviceId` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `AllowedBluetoothDevice`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn device_id(&self) -> &str;
+    #[cfg(web_sys_unstable_apis)]
+    #[doc = "Get the `mayUseGATT` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `AllowedBluetoothDevice`*"]
+    #[doc = ""]
+    #[doc = "*This API is unstable and requires `--cfg=web_sys_unstable_apis` to be activated, as"]
+    #[doc = "[described in the `wasm-bindgen` guide](https://rustwasm.github.io/docs/wasm-bindgen/web-sys/unstable-apis.html)*"]
+    fn may_use_gatt(&self) -> bool;
+}
+#[cfg(web_sys_unstable_apis)]
+impl AllowedBluetoothDeviceGetters for AllowedBluetoothDevice {
+    #[cfg(web_sys_unstable_apis)]
+    fn allowed_services(&self) -> &::wasm_bindgen::JsValue {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("allowedServices"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(web_sys_unstable_apis)]
+    fn device_id(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("deviceId"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    #[cfg(web_sys_unstable_apis)]
+    fn may_use_gatt(&self) -> bool {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("mayUseGATT"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
+#[cfg(web_sys_unstable_apis)]
 impl AllowedBluetoothDevice {
     #[doc = "Construct a new `AllowedBluetoothDevice`."]
     #[doc = ""]

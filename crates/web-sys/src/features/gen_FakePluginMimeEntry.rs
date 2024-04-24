@@ -11,6 +11,43 @@ extern "C" {
     #[doc = "*This API requires the following crate features to be activated: `FakePluginMimeEntry`*"]
     pub type FakePluginMimeEntry;
 }
+#[doc = "The trait to access properties on the `FakePluginMimeEntry` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `FakePluginMimeEntry`*"]
+pub trait FakePluginMimeEntryGetters {
+    #[doc = "Get the `description` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `FakePluginMimeEntry`*"]
+    fn description(&self) -> &str;
+    #[doc = "Get the `extension` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `FakePluginMimeEntry`*"]
+    fn extension(&self) -> &str;
+    #[doc = "Get the `type` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `FakePluginMimeEntry`*"]
+    fn type_(&self) -> &str;
+}
+impl FakePluginMimeEntryGetters for FakePluginMimeEntry {
+    fn description(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("description"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn extension(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("extension"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+    fn type_(&self) -> &str {
+        use wasm_bindgen::JsValue;
+        let r = ::js_sys::Reflect::get(self.as_ref(), &JsValue::from("type"));
+        let r = r.expect("getting properties should never fail on our dictionary objects");
+        ::wasm_bindgen::JsCast::unchecked_into(r)
+    }
+}
 impl FakePluginMimeEntry {
     #[doc = "Construct a new `FakePluginMimeEntry`."]
     #[doc = ""]
