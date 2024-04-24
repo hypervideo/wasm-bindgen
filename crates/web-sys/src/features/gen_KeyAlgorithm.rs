@@ -10,8 +10,24 @@ extern "C" {
     #[doc = ""]
     #[doc = "*This API requires the following crate features to be activated: `KeyAlgorithm`*"]
     pub type KeyAlgorithm;
+    #[wasm_bindgen(method, getter = "name")]
+    fn name_shim(this: &KeyAlgorithm) -> String;
     #[wasm_bindgen(method, setter = "name")]
-    fn name_shim(this: &KeyAlgorithm, val: &str);
+    fn set_name_shim(this: &KeyAlgorithm, val: &str);
+}
+#[doc = "The trait to access properties on the `KeyAlgorithm` dictionary."]
+#[doc = ""]
+#[doc = "*This API requires the following crate features to be activated: `KeyAlgorithm`*"]
+pub trait KeyAlgorithmGetters {
+    #[doc = "Get the `name` field of this object."]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `KeyAlgorithm`*"]
+    fn name(&self) -> String;
+}
+impl KeyAlgorithmGetters for KeyAlgorithm {
+    fn name(&self) -> String {
+        self.name_shim()
+    }
 }
 impl KeyAlgorithm {
     #[doc = "Construct a new `KeyAlgorithm`."]
@@ -20,14 +36,14 @@ impl KeyAlgorithm {
     pub fn new(name: &str) -> Self {
         #[allow(unused_mut)]
         let mut ret: Self = ::wasm_bindgen::JsCast::unchecked_into(::js_sys::Object::new());
-        ret.name(name);
+        Self::name(&mut ret, name);
         ret
     }
     #[doc = "Change the `name` field of this object."]
     #[doc = ""]
     #[doc = "*This API requires the following crate features to be activated: `KeyAlgorithm`*"]
     pub fn name(&mut self, val: &str) -> &mut Self {
-        self.name_shim(val);
+        self.set_name_shim(val);
         self
     }
 }
