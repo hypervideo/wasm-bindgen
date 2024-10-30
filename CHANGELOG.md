@@ -14,6 +14,9 @@
 * Added JSDoc type annotations to C-style enums.
   [#4192](https://github.com/rustwasm/wasm-bindgen/pull/4192)
 
+* Added bindings for `MediaStreamTrack.getCapabilities`.
+  [#4236](https://github.com/rustwasm/wasm-bindgen/pull/4236)
+
 ### Changed
 
 * String enums now generate private TypeScript types but only if used.
@@ -33,6 +36,9 @@
 
 * Deprecate `--reference-types` in favor of automatic target feature detection.
   [#4237](https://github.com/rustwasm/wasm-bindgen/pull/4237)
+
+* Stabilized `MediaTrackCapabilities`.
+  [#4236](https://github.com/rustwasm/wasm-bindgen/pull/4236)
 
 ### Fixed
 

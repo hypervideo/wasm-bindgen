@@ -129,6 +129,14 @@ extern "C" {
     #[doc = ""]
     #[doc = "*This API requires the following crate features to be activated: `MediaStreamTrack`*"]
     pub fn clone(this: &MediaStreamTrack) -> MediaStreamTrack;
+    #[cfg(feature = "MediaTrackCapabilities")]
+    # [wasm_bindgen (method , structural , js_class = "MediaStreamTrack" , js_name = getCapabilities)]
+    #[doc = "The `getCapabilities()` method."]
+    #[doc = ""]
+    #[doc = "[MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/getCapabilities)"]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `MediaStreamTrack`, `MediaTrackCapabilities`*"]
+    pub fn get_capabilities(this: &MediaStreamTrack) -> MediaTrackCapabilities;
     #[cfg(feature = "MediaTrackConstraints")]
     # [wasm_bindgen (method , structural , js_class = "MediaStreamTrack" , js_name = getConstraints)]
     #[doc = "The `getConstraints()` method."]

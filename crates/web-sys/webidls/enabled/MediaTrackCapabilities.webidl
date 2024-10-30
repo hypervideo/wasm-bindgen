@@ -33,4 +33,5 @@ dictionary MediaTrackCapabilities {
   ULongRange channelCount;
   DOMString deviceId;
   DOMString groupId;
+  sequence<boolean> backgroundBlur;
 };
